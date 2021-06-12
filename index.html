@@ -2,220 +2,374 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dev.to</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dev.to</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="container-xl">
+<!---------------------------------------------------------------------HEADER-------------------------------------------------------------------------------->
+	<header>
+		<nav class=" container-xl navbar navbar-expand-lg  justify-content-between">
+			<div class="nav-left d-flex ">
+				<button class="toggle-sidebar">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+						viewBox="0 0 24 24" role="img" class="crayons-icon">
+						<title id="a929szdjh3ohyvhk5gvpm45msg0k0ldy">Navigation menu</title>
+						<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+					</svg>
+				</button>
+				<a href="/" class="site-logo" aria-label="DEV Community Home">
+					<svg width="50" height="40" viewBox="0 0 50 40"
+						xmlns="http://www.w3.org/2000/svg">
+						<rect width="50" height="40" rx="3"></rect>
+						<path fill="white"
+							d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z">
+						</path>
+					</svg>
+				</a>
+				<form class="form-inline">
+					<input class="form-control type=" search" placeholder="Search"
+						aria-label="Search">
+				</form>
+			</div>
+			<div class="nav-right">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div>
-                    <img class="nav-logo" src="images/icon_nav/devlogo-pwa-128.png" alt="dev icon">
-                    <a class="navbar-brand" href="#"></a>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                </div>
-                <div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+					<div class="flex items-center h-100 ml-auto hidden">
+						<a class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded m:hidden"
+							id="search-link" aria-label="Search" href="/search">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24" role="img"
+								aria-labelledby="aia68oivpoujh0fct2bsyxufz1z6bss1"
+								class="crayons-icon">
+								<title id="aia68oivpoujh0fct2bsyxufz1z6bss1">Search
+								</title>
+								<path
+									d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+								</path>
+							</svg>
 
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-                            </li>
-                        </ul>
-                        <div>
-                            <form class="form-inline my-2 my-lg-0">
-                                <button class="btn btn-nav my-2 my-sm-0" type="submit">Log in</button>
-                                <button class="btn btn-nav2 my-2 my-sm-0" type="submit">Create account</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+						</a>
+						<a href="/new"
+							class="crayons-btn hidden mr-2 whitespace-nowrap m:block ml-auto">Create
+							Post</a>
 
-        </div>
-        </nav>
-        </div>
-    </header>
+						<span class="trusted-visible-block">
+							<a id="moderation-link"
+								class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded m:flex hidden"
+								aria-label="Moderation" href="/mod">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24"
+									height="24" viewBox="0 0 24 24" role="img"
+									aria-labelledby="aknn7rzd0yc6jyjol2j6jvtjoyhz974a"
+									class="crayons-icon">
+									<title id="aknn7rzd0yc6jyjol2j6jvtjoyhz974a">
+										Moderation</title>
+									<path
+										d="M3.783 2.826L12 1l8.217 1.826a1 1 0 01.783.976v9.987a6 6 0 01-2.672 4.992L12 23l-6.328-4.219A6 6 0 013 13.79V3.802a1 1 0 01.783-.976zM5 4.604v9.185a4 4 0 001.781 3.328L12 20.597l5.219-3.48A4 4 0 0019 13.79V4.604L12 3.05 5 4.604zM13 10h3l-5 7v-5H8l5-7v5z">
+									</path>
+								</svg>
 
-    <main class="container-xl">
-        <div class="sidebar"></div>
+							</a>
+						</span>
 
-        <div class="row">
-            <aside class="col-3"></aside>
-            <section class="col-6">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                            aria-controls="pills-home" aria-selected="true">Home</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                            aria-controls="pills-profile" aria-selected="false">Profile</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                            aria-controls="pills-contact" aria-selected="false">Contact</a>
-                    </li>
-                </ul>
+						<a href="/connect" id="connect-link"
+							class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded"
+							aria-label="Connect">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24" role="img"
+								aria-labelledby="a5x22v5go6x9qq3ysc4dzugs2pejrtv3"
+								class="crayons-icon">
+								<title id="a5x22v5go6x9qq3ysc4dzugs2pejrtv3">Connect
+								</title>
+								<path
+									d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10H2l2.929-2.929A9.969 9.969 0 012 12zm4.828 8H12a8 8 0 10-8-8c0 2.152.851 4.165 2.343 5.657l1.414 1.414-.929.929zM8 13h8a4 4 0 11-8 0z">
+								</path>
+							</svg>
 
+							<span class="crayons-indicator crayons-indicator--accent hidden"
+								id="connect-number"></span>
+						</a>
 
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-feed" role="tab"
-                            aria-controls="nav-home" aria-selected="true">Feed</a>
-                        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                            aria-controls="nav-profile" aria-selected="false">Week</a>
-                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-                            aria-controls="nav-contact" aria-selected="false">Moth</a>
-                        <!--<a class="nav-link" id="nav-1" data-toggle="tab" href="#nav-1" role="tab"
-                            aria-controls="nav-contact" aria-selected="false">Year</a>
-                        <a class="nav-link" id="nav-2" data-toggle="tab" href="#nav-2" role="tab"
-                            aria-controls="nav-contact" aria-selected="false">Infinity</a>
-                        <a class="nav-link" id="nav-3" data-toggle="tab" href="#nav-3" role="tab"
-                            aria-controls="nav-contact" aria-selected="false">Latest</a>-->
-                    </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-feed" role="tabpanel" aria-labelledby="nav-feed-tab">
-                        <div class="card">
-                            <img src="https://picsum.photos/540/280" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/540/280" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
+						<a href="/notifications" id="notifications-link"
+							class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded"
+							aria-label="Notifications">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24" role="img"
+								aria-labelledby="asoe2anazr3tuen5atvrxcepo81jj2nd"
+								class="crayons-icon">
+								<title id="asoe2anazr3tuen5atvrxcepo81jj2nd">
+									Notifications</title>
+								<path
+									d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z">
+								</path>
+							</svg>
 
-                    </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...
-                    </div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...
+							<span class="crayons-indicator crayons-indicator--critical hidden"
+								id="notifications-number"></span>
+						</a>
 
-                    </div>
-            </section>
-            <aside class="col-3"></aside>
-        </div>
-    </main>
-    <footer class="container-xl footer-container bg-gray">
-        <div class="row ">
-            <nav class="col-12">
-                <a>Home</a>
-                <a>astings</a>
-                <a>Podcasts</a>
-                <a>Videos</a>
-                <a>Tags</a>
-                <a>Code of Conduct</a>
-                <a>FAQ</a>
-                <a>DEV Shop</a>
-                <a>Sponsors</a>
-                <a>About</a>
-                <a>Privacy Poacy</li>
-                    <a>Terms of use</a>
-                    <a>Contact</a>
-            </nav>
-        </div>
+						<div class="crayons-header__menu" id="crayons-header__menu">
+							<button type="button" class="crayons-header__menu__trigger"
+								id="member-menu-button" aria-label="Navigation menu"
+								aria-expanded="false">
+								<span class="crayons-avatar crayons-avatar--l"><img
+										class="crayons-avatar__image" alt=""
+										id="nav-profile-image"
+										src="https://res.cloudinary.com/practicaldev/image/fetch/s--IjCb_ILa--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/647885/81bdd7eb-d4eb-4f9e-94a3-0ce06183465b.png"></span>
+							</button>
+							<div
+								class="crayons-dropdown left-2 right-2 s:right-4 s:left-auto p-0 crayons-header__menu__dropdown inline-block">
+								<ul class="p-0"
+									id="crayons-header__menu__dropdown__list">
+									<li id="user-profile-link-placeholder"
+										class="border-0 border-b-1 border-solid border-base-20 p-1 mb-1">
+										<a id="first-nav-link"
+											class="crayons-link crayons-link--block"
+											href="/alfredopizana">
+											<div>
+												<span
+													class="fw-medium block">alfredopizana</span>
+												<small
+													class="fs-s color-base-50">@alfredopizana</small>
+											</div>
+										</a>
+									</li>
 
-        <div class="pt-4"> <a href="https://twitter.com/thepracticaldev" target="_blank"
-                class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
-                    aria-labelledby="a4csmpur5bau3h8pgr0i56lh1mo9uiub" class="crayons-icon">
-                    <title id="a4csmpur5bau3h8pgr0i56lh1mo9uiub">Twitter</title>
-                    <path
-                        d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z"
-                        fill="#65bbf2"></path>
-                </svg>
+									<li
+										class="px-1 js-header-menu-admin-link hidden">
+										<a href="/admin"
+											class="crayons-link crayons-link--block"
+											data-no-instant="">Admin</a>
+									</li>
+									<li class="px-1"><a href="/dashboard"
+											class="crayons-link crayons-link--block">Dashboard</a>
+									</li>
+									<li class="px-1"><a href="/mod"
+											class="crayons-link crayons-link--block trusted-visible-block">Moderator
+											Center</a></li>
+									<li class="px-1"><a href="/new"
+											class="crayons-link crayons-link--block">Create
+											Post</a></li>
+									<li class="px-1"><a href="/readinglist"
+											class="crayons-link crayons-link--block">Reading
+											list</a></li>
+									<li
+										class="border-0 border-b-1 border-solid border-base-20 px-1 pb-1">
+										<a href="/settings"
+											class="crayons-link crayons-link--block"
+											id="second-last-nav-link">Settings</a>
+									</li>
 
-            </a>
-            <a href="https://facebook.com/thepracticaldev" target="_blank"
-                class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
-                    aria-labelledby="ac31fpoghxwkll3q0drxvun946pcwsjm" class="crayons-icon">
-                    <title id="ac31fpoghxwkll3q0drxvun946pcwsjm">Facebook</title>
-                    <path
-                        d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z">
-                    </path>
-                </svg>
+									<li class="px-1 py-1">
+										<a href="/signout_confirm"
+											class="crayons-link crayons-link--block"
+											id="last-nav-link">Sign Out</a>
+									</li>
+								</ul>
+							</div>
 
-            </a>
-            <a href="https://github.com/thepracticaldev" target="_blank"
-                class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
-                    aria-labelledby="ai6lld7kjm6poyq60j95yecmly52o9ed" class="crayons-icon">
-                    <title id="ai6lld7kjm6poyq60j95yecmly52o9ed">Github</title>
-                    <path
-                        d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z">
-                    </path>
-                </svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-            </a>
-            <a href="https://instagram.com/thepracticaldev" target="_blank"
-                class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
-                    aria-labelledby="a9mxmwigmxprdyj9potffal635l5wjv" class="crayons-icon">
-                    <title id="a9mxmwigmxprdyj9potffal635l5wjv">Instagram</title>
-                    <path
-                        d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z">
-                    </path>
-                </svg>
+<!--------------------------------------------------------------------------------------MAIN----------------------------------------------------------------->
+	<main class="container-xl">
+		<div class="sidebar"></div>
 
-            </a>
-            <a href="https://twitch.com/thepracticaldev" target="_blank"
-                class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
-                    aria-labelledby="amq08i61uidl7kemu36j24uvj7tdj05b" class="crayons-icon">
-                    <title id="amq08i61uidl7kemu36j24uvj7tdj05b">Twitch</title>
-                    <path
-                        d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z">
-                    </path>
-                </svg>
+		<div class="row">
+			<!-------------------------------------------------------------------ASIDE LEFT----------------------------------------------------------------------------------------->
+			<aside class="col-3">
 
-            </a>
-        </div>
-        <p><span>DEV Community</span>-A constructive and inclusive social network for software. With you every step
-            of your journey</p>
-        <p>Built on<span>Forem</span>-the<span>open source</span>software that powers <span>DEV</span>and other
-            inclusive communties commuties.</p>
-        <p>Made with love and<span>Ruby on Rails.</span>DEV Community 2016-2021.</p>
+				
+			</aside>
+			<!------------------------------------------------------------------------CARDS--------------------------------------------------------------------------->
+			<section class="col-6">
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+				    <li class="nav-item" role="presentation">
+					<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+					    aria-controls="pills-home" aria-selected="true">Home</a>
+				    </li>
+				    <li class="nav-item" role="presentation">
+					<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+					    aria-controls="pills-profile" aria-selected="false">Profile</a>
+				    </li>
+				    <li class="nav-item" role="presentation">
+					<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+					    aria-controls="pills-contact" aria-selected="false">Contact</a>
+				    </li>
+				</ul>
+		
+		
+				<nav>
+				    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+					<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-feed" role="tab"
+					    aria-controls="nav-home" aria-selected="true">Feed</a>
+					<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+					    aria-controls="nav-profile" aria-selected="false">Week</a>
+					<a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+					    aria-controls="nav-contact" aria-selected="false">Moth</a>
+					<!--<a class="nav-link" id="nav-1" data-toggle="tab" href="#nav-1" role="tab"
+					    aria-controls="nav-contact" aria-selected="false">Year</a>
+					<a class="nav-link" id="nav-2" data-toggle="tab" href="#nav-2" role="tab"
+					    aria-controls="nav-contact" aria-selected="false">Infinity</a>
+					<a class="nav-link" id="nav-3" data-toggle="tab" href="#nav-3" role="tab"
+					    aria-controls="nav-contact" aria-selected="false">Latest</a>-->
+				    </div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+				    <div class="tab-pane fade show active" id="nav-feed" role="tabpanel" aria-labelledby="nav-feed-tab">
+					<div class="card">
+					    <img src="https://picsum.photos/540/280" class="card-img-top" alt="...">
+					    <div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural
+						    lead-in to additional content. This content is a little bit longer.</p>
+						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					    </div>
+					</div>
+					<div class="card">
+					    <img src="https://picsum.photos/540/280" class="card-img-top" alt="...">
+					    <div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural
+						    lead-in to additional content. This content is a little bit longer.</p>
+						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					    </div>
+					</div>
+		
+				    </div>
+				    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...
+				    </div>
+				    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...
+		
+				    </div>
+			    </section>
+<!------------------------------------------------------------------ ASIDE RIGHT---------------------------------------------------------------------->
+			    	<aside class="col-3">
+					<div class="card">
+						<img class="a-r-img" src="img/photos/changelog.png" alt="">
+						<div class="card-body">
+							<p class="card-text">New Forem Changelog Entries!</p>
+							<p class="card-text">-> "Lock Discussions on Posts"</p>
+							<p class="card-text">-> "Accessibility Enhancements"</p>
+						</div>
+					</div>
 
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+				</aside>
+		</div>
+	</main>
+
+<!--------------------------------------------------------------------------FOOTER--------------------------------------------------------------------------->
+	<footer class="container-xl footer-container bg-gray  ">
+		<div class="row ">
+			<nav class="col-12">
+				<a>Home</a>
+				<a>astings</a>
+				<a>Podcasts</a>
+				<a>Videos</a>
+				<a>Tags</a>
+				<a>Code of Conduct</a>
+				<a>FAQ</a>s just
+				<a>DEV Shop</a>
+				<a>Sponsors</a>
+				<a>About</a>
+				<a>Privacy Poacy</li>
+					<a>Terms of use</a>
+					<a>Contact</a>
+			</nav>
+		</div>
+
+		<div class="pt-4"> <a href="https://twitter.com/thepracticaldev" target="_blank"
+				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+					role="img" aria-labelledby="a4csmpur5bau3h8pgr0i56lh1mo9uiub"
+					class="crayons-icon">
+					<title id="a4csmpur5bau3h8pgr0i56lh1mo9uiub">Twitter</title>
+					<path d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z"
+						fill="#65bbf2"></path>
+				</svg>
+
+			</a>
+			<a href="https://facebook.com/thepracticaldev" target="_blank"
+				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+					role="img" aria-labelledby="ac31fpoghxwkll3q0drxvun946pcwsjm"
+					class="crayons-icon">
+					<title id="ac31fpoghxwkll3q0drxvun946pcwsjm">Facebook</title>
+					<path
+						d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z">
+					</path>
+				</svg>
+
+			</a>
+			<a href="https://github.com/thepracticaldev" target="_blank"
+				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+					role="img" aria-labelledby="ai6lld7kjm6poyq60j95yecmly52o9ed"
+					class="crayons-icon">
+					<title id="ai6lld7kjm6poyq60j95yecmly52o9ed">Github</title>
+					<path
+						d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z">
+					</path>
+				</svg>
+
+			</a>
+			<a href="https://instagram.com/thepracticaldev" target="_blank"
+				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+					role="img" aria-labelledby="a9mxmwigmxprdyj9potffal635l5wjv"
+					class="crayons-icon">
+					<title id="a9mxmwigmxprdyj9potffal635l5wjv">Instagram</title>
+					<path
+						d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z">
+					</path>
+				</svg>
+
+			</a>
+			<a href="https://twitch.com/thepracticaldev" target="_blank"
+				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+					role="img" aria-labelledby="amq08i61uidl7kemu36j24uvj7tdj05b"
+					class="crayons-icon">
+					<title id="amq08i61uidl7kemu36j24uvj7tdj05b">Twitch</title>
+					<path
+						d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z">
+					</path>
+				</svg>
+
+			</a>
+		</div>
+		<p><span>DEV Community</span>-A constructive and inclusive social network for software. With you every
+			step
+			of your journey</p>
+		<p>Built on<span>Forem</span>-the<span>open source</span>software that powers <span>DEV</span>and other
+			inclusive communties commuties.</p>
+		<p>Made with love and<span>Ruby on Rails.</span>DEV Community 2016-2021.</p>
+
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>

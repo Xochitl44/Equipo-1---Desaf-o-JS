@@ -16,6 +16,11 @@ main {
   border-radius: 6px;
 }
 
+.btn-nav {
+  background-color: blue;
+  color: white;
+}
+
 /* End of Header */
 /* Sidebar */
 /* End of Sidebar */

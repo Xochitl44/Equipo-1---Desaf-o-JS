@@ -16,10 +16,18 @@ main{
     border-radius: 6px;
 }
 
-.btn-nav{
+.btn-nav{   
+    background-color: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.btn-nav2{
     background-color: blue;
     color: white;
+    font-weight: bold;
 }
+
 .dropdown-menu-class{
     position: absolute;
     right: 1rem;

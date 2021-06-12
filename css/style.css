@@ -17,8 +17,15 @@ main {
 }
 
 .btn-nav {
+  background-color: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.btn-nav2 {
   background-color: blue;
   color: white;
+  font-weight: bold;
 }
 
 .dropdown-menu-class {
@@ -39,9 +46,5 @@ main {
 /* Aside Right */
 /* End of Aside Right */
 /* Footer */
-.bg-gray{
-    background-color: rgb(120, 129, 141);
-
-}
 /* End of Footer */
 /*# sourceMappingURL=style.css.map */

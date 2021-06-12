@@ -21,14 +21,6 @@ main {
   color: white;
 }
 
-.dropdown-menu-class {
-  position: absolute;
-  right: 1rem;
-  z-index: 1;
-  background: beige;
-  padding: 1rem;
-}
-
 /* End of Header */
 /* Sidebar */
 /* End of Sidebar */
@@ -43,5 +35,7 @@ main {
     background-color: rgb(120, 129, 141);
 
 }
+
+
 /* End of Footer */
 /*# sourceMappingURL=style.css.map */

@@ -67,7 +67,23 @@ header{
 /* End of Aside Right */
 
 /* Footer */
+
+footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+a{
+    padding: 10px;
+}
+
 .bg-gray{
     background-color: rgb(210, 214, 219);
+}
+
+span{
+    font-weight: bold;
 }
 /* End of Footer */

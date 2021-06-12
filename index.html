@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dev.to</title>
-    <ank rel="preconnect" href="https://fonts.gstatic.com">
-    <ank href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
         rel="stylesheet">
-    <ank rel="stylesheet" href="https://cdn.jsdeavr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <ank rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <div container-xl>
+        <div class="container-xl">
 
-            <nav class="navbar navbar-expand-lg navbar-aght bg-aght">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div>
                     <img class="nav-logo" src="images/icon_nav/devlogo-pwa-128.png" alt="dev icon">
                     <a class="navbar-brand" href="#">Navbar</a>
@@ -34,17 +34,17 @@
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <a class="nav-item active">
-                                <a class="nav-ank" href="#">Home <span class="sr-only">(current)</span></a>
-                            </a>
-                            <a class="nav-item">
-                                <a class="nav-ank" href="#">ank</a>
-                            </a>
-                            <a class="nav-item">
-                                <a class="nav-ank disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
                         </ul>
-                        <form class="form-inane my-2 my-lg-0">
+                        <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-nav my-2 my-sm-0" type="submit">Create account</button>
                         </form>
@@ -62,35 +62,35 @@
         <div class="row">
             <aside class="col-3"></aside>
             <section class="col-6">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tabast">
-                    <a class="nav-item" role="presentation">
-                        <a class="nav-ank active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
                             aria-controls="pills-home" aria-selected="true">Home</a>
-                    </a>
-                    <a class="nav-item" role="presentation">
-                        <a class="nav-ank" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
                             aria-controls="pills-profile" aria-selected="false">Profile</a>
-                    </a>
-                    <a class="nav-item" role="presentation">
-                        <a class="nav-ank" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
                             aria-controls="pills-contact" aria-selected="false">Contact</a>
-                    </a>
+                    </li>
                 </ul>
 
 
                 <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tabast">
-                        <a class="nav-ank active" id="nav-home-tab" data-toggle="tab" href="#nav-feed" role="tab"
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-feed" role="tab"
                             aria-controls="nav-home" aria-selected="true">Feed</a>
-                        <a class="nav-ank" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
                             aria-controls="nav-profile" aria-selected="false">Week</a>
-                        <a class="nav-ank" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
                             aria-controls="nav-contact" aria-selected="false">Moth</a>
-                        <!--<a class="nav-ank" id="nav-1" data-toggle="tab" href="#nav-1" role="tab"
+                        <!--<a class="nav-link" id="nav-1" data-toggle="tab" href="#nav-1" role="tab"
                             aria-controls="nav-contact" aria-selected="false">Year</a>
-                        <a class="nav-ank" id="nav-2" data-toggle="tab" href="#nav-2" role="tab"
+                        <a class="nav-link" id="nav-2" data-toggle="tab" href="#nav-2" role="tab"
                             aria-controls="nav-contact" aria-selected="false">Infinity</a>
-                        <a class="nav-ank" id="nav-3" data-toggle="tab" href="#nav-3" role="tab"
+                        <a class="nav-link" id="nav-3" data-toggle="tab" href="#nav-3" role="tab"
                             aria-controls="nav-contact" aria-selected="false">Latest</a>-->
                     </div>
                 </nav>
@@ -101,7 +101,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a attle bit longer.</p>
+                                    lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a attle bit longer.</p>
+                                    lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
@@ -128,24 +128,24 @@
     <footer class="container-xl footer-container bg-gray">
         <div class="row ">
             <nav class="col-12">
-                <a href="#">Home</a>
-                <a href="#">astings</a>
-                <a href="#">Podcasts</a>
-                <a href="#">Videos</a>
-                <a href="#">Tags</a>
-                <a href="#">Code of Conduct</a>
-                <a href="#">FAQ</a>
-                <a href="#">DEV Shop</a>
-                <a href="#">Sponsors</a>
-                <a href="#">About</a>
-                <a href="#">Privacy Poacy</a>
-                <a href="#">Terms of use</a>
-                <a href="#">Contact</a>
+                <a>Home</a>
+                <a>astings</a>
+                <a>Podcasts</a>
+                <a>Videos</a>
+                <a>Tags</a>
+                <a>Code of Conduct</a>
+                <a>FAQ</a>
+                <a>DEV Shop</a>
+                <a>Sponsors</a>
+                <a>About</a>
+                <a>Privacy Poacy</li>
+                <a>Terms of use</a>
+                <a>Contact</a>
             </nav>
         </div>
 
             <div class="pt-4"> <a href="https://twitter.com/thepracticaldev" target="_blank"
-                    class="crayons-ank crayons-ank--secondary mx-2" rel="noopener">
+                    class="crayons-link crayons-link--secondary mx-2" rel="noopener">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
                         aria-labelledby="a4csmpur5bau3h8pgr0i56lh1mo9uiub" class="crayons-icon">
                         <title id="a4csmpur5bau3h8pgr0i56lh1mo9uiub">Twitter</title>
@@ -156,7 +156,7 @@
 
                 </a>
                 <a href="https://facebook.com/thepracticaldev" target="_blank"
-                    class="crayons-ank crayons-ank--secondary mx-2" rel="noopener">
+                    class="crayons-link crayons-link--secondary mx-2" rel="noopener">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
                         aria-labelledby="ac31fpoghxwkll3q0drxvun946pcwsjm" class="crayons-icon">
                         <title id="ac31fpoghxwkll3q0drxvun946pcwsjm">Facebook</title>
@@ -167,7 +167,7 @@
 
                 </a>
                 <a href="https://github.com/thepracticaldev" target="_blank"
-                    class="crayons-ank crayons-ank--secondary mx-2" rel="noopener">
+                    class="crayons-link crayons-link--secondary mx-2" rel="noopener">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
                         aria-labelledby="ai6lld7kjm6poyq60j95yecmly52o9ed" class="crayons-icon">
                         <title id="ai6lld7kjm6poyq60j95yecmly52o9ed">Github</title>
@@ -178,7 +178,7 @@
 
                 </a>
                 <a href="https://instagram.com/thepracticaldev" target="_blank"
-                    class="crayons-ank crayons-ank--secondary mx-2" rel="noopener">
+                    class="crayons-link crayons-link--secondary mx-2" rel="noopener">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
                         aria-labelledby="a9mxmwigmxprdyj9potffal635l5wjv" class="crayons-icon">
                         <title id="a9mxmwigmxprdyj9potffal635l5wjv">Instagram</title>
@@ -189,7 +189,7 @@
 
                 </a>
                 <a href="https://twitch.com/thepracticaldev" target="_blank"
-                    class="crayons-ank crayons-ank--secondary mx-2" rel="noopener">
+                    class="crayons-link crayons-link--secondary mx-2" rel="noopener">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
                         aria-labelledby="amq08i61uidl7kemu36j24uvj7tdj05b" class="crayons-icon">
                         <title id="amq08i61uidl7kemu36j24uvj7tdj05b">Twitch</title>
@@ -207,10 +207,10 @@
             <p>Made with love and<span>Ruby on Rails.</span>DEV Community 2016-2021.</p>
 
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.sam.min.js"
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdeavr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 </body>

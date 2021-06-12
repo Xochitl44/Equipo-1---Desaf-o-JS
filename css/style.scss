@@ -54,6 +54,9 @@ header{
 /* End of Aside Left */
 
 /* Main */
+.c-header{
+    align-items: center;
+}
 
 /* End of Main */
 
@@ -68,7 +71,7 @@ header{
 
 /* Footer */
 
-footer{
+.container-xl{
     flex-direction: column;
     justify-content: center;
     align-items: center;

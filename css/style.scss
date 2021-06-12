@@ -8,6 +8,12 @@ main{
     margin-top: 56px;
     padding: 1rem;
 }
+
+h4:hover, li:hover, p:hover{
+    color: blue;
+}
+
+
 /* Header */
 header{
     background-color: white;
@@ -59,10 +65,43 @@ header{
 
 /* Aside Right */
 .a-r-img{
-    height: 294;
+    height: 500;
     width: 124;
     margin-bottom: 15px;
 }
+
+.arrow {
+    width: 30px;
+  }
+  
+  .line {
+    margin-top: 14px;
+    width: 10px;
+    background: blue;
+    height: 10px;
+    float: left;
+  }
+  
+  .point {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid blue;
+    float: right;
+  }
+
+.btn-new{
+    background-color: blue;
+    border-radius: 8px;
+    width: 15%;
+    margin-left: 1em;
+    color: white;
+    font-size: small;
+}
+
+
+
 
 /* End of Aside Right */
 

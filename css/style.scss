@@ -8,6 +8,12 @@ main{
     margin-top: 56px;
     padding: 1rem;
 }
+
+h4:hover, li:hover, p:hover{
+    color: blue;
+}
+
+
 /* Header */
 header{
     background-color: white;
@@ -50,6 +56,16 @@ header{
 /* End of Sidebar */
 
 /* Aside Left */
+.a-l-text-color{
+    text-align: center;
+    color: red;
+}
+
+.a-l-card{
+    margin-top: 75vh;
+    margin-right: 50rem;
+    width: 15vw;
+}
 
 /* End of Aside Left */
 
@@ -61,11 +77,26 @@ header{
 /* End of Main */
 
 /* Aside Right */
-.a-r-img{
-    height: 294;
-    width: 124;
-    margin-bottom: 15px;
+
+
+.c-text-color{
+    color: blue;
 }
+
+.btn-new{
+    background-color: blue;
+    border-radius: 8px;
+    width: 15%;
+    margin-left: 1em;
+    color: white;
+    font-size: small;
+}
+
+h4:hover, li:hover{
+    color: blue;
+}
+
+
 
 /* End of Aside Right */
 

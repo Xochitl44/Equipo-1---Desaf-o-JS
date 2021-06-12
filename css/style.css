@@ -21,6 +21,14 @@ main {
   color: white;
 }
 
+.dropdown-menu-class {
+  position: absolute;
+  right: 1rem;
+  z-index: 1;
+  background: beige;
+  padding: 1rem;
+}
+
 /* End of Header */
 /* Sidebar */
 /* End of Sidebar */
@@ -31,5 +39,9 @@ main {
 /* Aside Right */
 /* End of Aside Right */
 /* Footer */
+.bg-gray {
+  background-color: #d2d6db;
+}
+
 /* End of Footer */
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+/* Global Variables */
+body {
+  background-color: #eef0f1;
+}
+
+main {
+  margin-top: 56px;
+  padding: 1rem;
+}
+
+/* Header */
+.nav-logo {
+  width: 60px;
+  height: 50px;
+  margin: 1em;
+  border-radius: 6px;
+}
+
+.btn-nav {
+  background-color: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.btn-nav2 {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+.dropdown-menu-class {
+  position: absolute;
+  right: 1rem;
+  z-index: 1;
+  background: beige;
+  padding: 1rem;
+}
+
+/* End of Header */
+/* Sidebar */
+/* End of Sidebar */
+/* Aside Left */
+/* End of Aside Left */
+/* Main */
+/* End of Main */
+/* Aside Right */
+/* End of Aside Right */
+/* Footer */
+/* End of Footer */
+/*# sourceMappingURL=style.css.map */

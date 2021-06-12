@@ -56,6 +56,16 @@ header{
 /* End of Sidebar */
 
 /* Aside Left */
+.a-l-text-color{
+    text-align: center;
+    color: red;
+}
+
+.a-l-card{
+    margin-top: 75vh;
+    margin-right: 50rem;
+    width: 15vw;
+}
 
 /* End of Aside Left */
 
@@ -64,32 +74,11 @@ header{
 /* End of Main */
 
 /* Aside Right */
-.a-r-img{
-    height: 500;
-    width: 124;
-    margin-bottom: 15px;
-}
 
-.arrow {
-    width: 30px;
-  }
-  
-  .line {
-    margin-top: 14px;
-    width: 10px;
-    background: blue;
-    height: 10px;
-    float: left;
-  }
-  
-  .point {
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 30px solid blue;
-    float: right;
-  }
+
+.c-text-color{
+    color: blue;
+}
 
 .btn-new{
     background-color: blue;
@@ -100,6 +89,9 @@ header{
     font-size: small;
 }
 
+h4:hover, li:hover{
+    color: blue;
+}
 
 
 

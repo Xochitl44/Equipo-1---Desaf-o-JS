@@ -17,8 +17,18 @@ main {
 }
 
 .btn-nav {
+  background-color: none;
+  color: blue;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-nav2 {
   background-color: blue;
   color: white;
+  font-weight: bold;
 }
 
 .dropdown-menu-class {

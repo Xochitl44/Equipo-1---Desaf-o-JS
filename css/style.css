@@ -14,6 +14,68 @@ header {
   height: 56px;
 }
 
+header .navbar {
+  padding: 0px;
+  height: 56px;
+  background: transparent;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .navbar .profile-badge {
+  max-height: 50px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 3px solid transparent;
+  background-color: transparent;
+}
+
+header .navbar .profile-badge span.circle-badge {
+  padding: 1px;
+  background-color: #4d5760;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #424a52;
+}
+
+header .navbar .profile-badge span.circle-badge img {
+  width: 30px;
+}
+
+header .navbar .profile-badge:hover {
+  border: 3px solid #eef0f1;
+}
+
+header .navbar .profile-badge:after {
+  display: none;
+}
+
+header .navbar .profile-badge + .dropdown-menu {
+  left: auto;
+  right: 0px;
+  background: white;
+  border: 2px solid;
+  -webkit-box-shadow: 4px 4px 0 #08090a;
+          box-shadow: 4px 4px 0 #08090a;
+  color: #08090a;
+}
+
+@media (min-width: 768px) {
+  header .navbar .profile-badge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .navbar .navbar-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 /*
 .nav-logo{
     width: 60px;

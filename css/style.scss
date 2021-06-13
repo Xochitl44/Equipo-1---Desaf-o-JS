@@ -287,7 +287,7 @@ margin-left: 15px;
     /*height: 25vh;*/
     .card-body{
         padding-top: 0px;
-        p{
+            p{
             margin-bottom: 0px;
         }
     }
@@ -297,18 +297,23 @@ margin-left: 15px;
     }
     .c-text-color{
         color: $main-blue;
-    }
+        font-size: x-small;
+    }   
 
     
 }
 
-
+.l-text{
+   margin-top: .3em;
+   font-size: small;
+}
 
 .btn-new{
     background-color: $main-blue;
     border-radius: 8px;
-    width: 15%;
-    margin-left: 1rem;
+    width: 53px;
+    margin-left: 0;
+    margin-top: .5em;
     color: white;
     font-size: small;
 }

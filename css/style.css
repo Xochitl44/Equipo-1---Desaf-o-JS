@@ -354,13 +354,20 @@ header .navbar .btn-create-post {
 
 .div-card .c-text-color {
   color: #323ebe;
+  font-size: x-small;
+}
+
+.l-text {
+  margin-top: .3em;
+  font-size: small;
 }
 
 .btn-new {
   background-color: #323ebe;
   border-radius: 8px;
-  width: 15%;
-  margin-left: 1rem;
+  width: 53px;
+  margin-left: 0;
+  margin-top: .5em;
   color: white;
   font-size: small;
 }

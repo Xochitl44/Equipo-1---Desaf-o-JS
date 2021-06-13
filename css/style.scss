@@ -1,6 +1,8 @@
 /* Global Variables */
 
+$black-shadow: #08090a;
 $light-gray: #eef0f1;
+$profile-mask:  #4d5760;
 body{
     background-color: $light-gray;
 }
@@ -18,8 +20,60 @@ h4:hover, li:hover, p:hover{
 header{
     background-color: white;
     height: 56px;
+    .navbar{
+        padding: 0px;
+        height: 56px;
+        background: transparent;
+        justify-content: space-between;
+        .profile-badge{
+            max-height: 50px;
+            border-radius: 50%;
+            padding: 5px;
+            border: 3px solid transparent;
+            background-color: transparent;
+
+            span{
+                &.circle-badge{
+                    padding: 1px;
+                    background-color: $profile-mask;
+                    border-radius: 50%;
+                    display: flex;
+                    border: 1px solid darken($profile-mask, 5%);
+                    img{
+                        width: 30px;
+                    }
+                }
+            }
+            &:hover{
+                border: 3px solid $light-gray;
+            }
+            &:after{
+                display: none;
+            }
+            &+ .dropdown-menu{
+                left: auto;
+                right: 0px;
+                background: white;
+                border: 2px solid ;
+                box-shadow: 4px 4px 0 $black-shadow;
+                color: $black-shadow;
+            }
+        }
+    }
 }
 
+@media (min-width:768px){
+    header{ 
+        .navbar{
+            .profile-badge{
+                display: flex;
+            }
+            .navbar-right{
+                display: flex;
+            }
+        }
+    }
+}
 
 /*
 .nav-logo{

@@ -14,7 +14,9 @@ main{
 h4:hover, li:hover, p:hover{
     color: blue;
 }
-
+.custom-container{
+    max-width: 1280px;
+}
 
 /* Header */
 header{
@@ -25,6 +27,11 @@ header{
         height: 56px;
         background: transparent;
         justify-content: space-between;
+        flex-wrap: nowrap;
+        .site-logo{
+            padding: 0px;
+            margin-right: 16px;
+        }
         .profile-badge{
             max-height: 50px;
             border-radius: 50%;
@@ -51,6 +58,7 @@ header{
                 display: none;
             }
             &+ .dropdown-menu{
+                min-width: 250px;
                 left: auto;
                 right: 0px;
                 background: white;
@@ -58,6 +66,18 @@ header{
                 box-shadow: 4px 4px 0 $black-shadow;
                 color: $black-shadow;
             }
+        }
+        .seach{
+            display: none;
+            flex-basis: 400px;
+            flex-shrink: 1;
+        }
+        .btn-create-post{
+            height: 40px;
+            display: flex;
+            white-space: nowrap;
+            margin-left: 10px;
+            font-weight: 600;
         }
     }
 }
@@ -68,7 +88,11 @@ header{
             .profile-badge{
                 display: flex;
             }
+            .seach{
+                display: flex;
+            }
             .navbar-right{
+                margin-left: auto;
                 display: flex;
             }
         }
@@ -107,6 +131,34 @@ header{
 
 /* Sidebar */
 
+.sidebar{
+    position: fixed;
+
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1031;
+    .sidebar-content{
+        background: white;
+        position: relative;
+        width: 90%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .sidebar-overlay{
+        background: #08090a;
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
 /* End of Sidebar */
 
 /* Aside Left */

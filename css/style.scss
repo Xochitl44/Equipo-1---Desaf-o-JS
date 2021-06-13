@@ -5,6 +5,9 @@ $light-gray: #eef0f1;
 $profile-mask:  #4d5760;
 $main-blue:#323ebe;
 $main-black: #202428;
+$hover-tabs-color: #3b49df;
+$transparent-blue-bg: rgba(59, 73, 223, 0.1);
+
 body{
     background-color: $light-gray;
     color: $main-black;
@@ -31,6 +34,9 @@ header{
         background: transparent;
         justify-content: space-between;
         flex-wrap: nowrap;
+        .navbar-toggler{
+            margin-right: 1rem;
+        }
         .site-logo{
             padding: 0px;
             margin-right: 16px;
@@ -181,7 +187,7 @@ header{
         
         &:hover{
             color: $main-blue;
-            background-color: rgba(8, 9, 10, 0.05);;
+            background-color: rgba(8, 9, 10, 0.05);
         }
     }
 }
@@ -208,6 +214,47 @@ header{
 /* End of Aside Left */
 
 /* Main */
+.cards-section{
+    .cards-navigation{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .title{
+            display:flex;
+        }
+
+    }
+    .nav.nav-tabs{
+        border-bottom: none;
+        .nav-link{
+            position: relative;
+            &:hover{
+                color: $hover-tabs-color;
+                background-color: $transparent-blue-bg;
+            }
+            &.active{
+                background-color: transparent;
+                border: none;
+                &:after{
+                    content: " ";
+                    position: absolute;
+                    background: $main-blue;
+                    height: 4px;
+                    bottom: 0px;
+                    left: 1rem;
+                    right: 1rem;
+                }
+                &:hover{
+                    &:after{
+                        left: 0rem;
+                        right: 0rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
 
 .br-post{
     border-radius: 15px;
@@ -287,7 +334,7 @@ margin-left: 15px;
     /*height: 25vh;*/
     .card-body{
         padding-top: 0px;
-        p{
+            p{
             margin-bottom: 0px;
         }
     }
@@ -297,18 +344,23 @@ margin-left: 15px;
     }
     .c-text-color{
         color: $main-blue;
-    }
+        font-size: x-small;
+    }   
 
     
 }
 
-
+.l-text{
+   margin-top: .3em;
+   font-size: small;
+}
 
 .btn-new{
     background-color: $main-blue;
     border-radius: 8px;
-    width: 15%;
-    margin-left: 1rem;
+    width: 53px;
+    margin-left: 0;
+    margin-top: .5em;
     color: white;
     font-size: small;
 }

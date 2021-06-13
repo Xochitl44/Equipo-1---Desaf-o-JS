@@ -22,7 +22,7 @@
 				<div class="col-12">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
 						<div class="navbar-left d-flex align-items-center">
-							<button class="navbar-toggler" type="button" data-toggle="collapse"
+							<button class="navbar-toggler d-flex d-md-none" type="button" data-toggle="collapse"
 								data-target="#sidebar" aria-controls="navbarProfileInfo"
 								aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
@@ -43,7 +43,8 @@
 								aria-label="Search...">
 						</form>
 						<div class="navbar-right d-flex  align-items-center">
-							<button class="btn btn-primary btn-create-post">Create Post</button>
+							<button class="btn btn-primary btn-create-post d-none d-md-flex">Create Post</button>
+							<a href="" class="d-flex d-md-none"><img src="img/icons/search.svg" alt="seach"></a>
 							<a href=""><img src="img/icons/moderation.svg" alt="moderation"></a>
 							<a href=""><img src="img/icons/connect.svg" alt="connect"></a>
 							<a href=""><img src="img/icons/notifications.svg" alt="notifications"></a>
@@ -233,23 +234,12 @@
 				</div>
 			</aside>
 			<!------------------------------------------------------------------------MAIN CARDS--------------------------------------------------------------------------->
-			<section class="col-12 col-md-8 col-xl-6">
-				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-					<li class="nav-item" role="presentation">
-						<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
-							role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-					</li>
-					<li class="nav-item" role="presentation">
-						<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-							role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-					</li>
-					<li class="nav-item" role="presentation">
-						<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
-							role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
-					</li>
-				</ul>
-
-				<nav>
+			<section class="col-12 col-md-8 col-xl-6 cards-section">
+				
+				<nav class="cards-navigation">
+					<div class="title">
+						<h2>Posts</h2>
+					</div>
 					<div class="nav nav-tabs" id="nav-tab" role="tablist">
 						<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-feed"
 							role="tab" aria-controls="nav-home" aria-selected="true">Feed</a>

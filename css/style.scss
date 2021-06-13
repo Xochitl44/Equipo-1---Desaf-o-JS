@@ -5,6 +5,9 @@ $light-gray: #eef0f1;
 $profile-mask:  #4d5760;
 $main-blue:#323ebe;
 $main-black: #202428;
+$hover-tabs-color: #3b49df;
+$transparent-blue-bg: rgba(59, 73, 223, 0.1);
+
 body{
     background-color: $light-gray;
     color: $main-black;
@@ -184,7 +187,7 @@ header{
         
         &:hover{
             color: $main-blue;
-            background-color: rgba(8, 9, 10, 0.05);;
+            background-color: rgba(8, 9, 10, 0.05);
         }
     }
 }
@@ -211,6 +214,47 @@ header{
 /* End of Aside Left */
 
 /* Main */
+.cards-section{
+    .cards-navigation{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .title{
+            display:flex;
+        }
+
+    }
+    .nav.nav-tabs{
+        border-bottom: none;
+        .nav-link{
+            position: relative;
+            &:hover{
+                color: $hover-tabs-color;
+                background-color: $transparent-blue-bg;
+            }
+            &.active{
+                background-color: transparent;
+                border: none;
+                &:after{
+                    content: " ";
+                    position: absolute;
+                    background: $main-blue;
+                    height: 4px;
+                    bottom: 0px;
+                    left: 1rem;
+                    right: 1rem;
+                }
+                &:hover{
+                    &:after{
+                        left: 0rem;
+                        right: 0rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
 
 .br-post{
     border-radius: 15px;

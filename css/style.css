@@ -384,7 +384,8 @@ h4:hover, li:hover {
 
 /* End of Aside Right */
 /* Footer */
-.container-xl {
+footer > .custom-container {
+  max-width: 768px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

@@ -335,12 +335,15 @@ h4:hover, li:hover{
 /* End of Aside Right */
 
 /* Footer */
-
-.container-xl{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+footer{
+    > .custom-container{
+        max-width: 768px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
 
 a{
     padding: 10px;

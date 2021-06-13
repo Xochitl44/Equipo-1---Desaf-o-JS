@@ -260,6 +260,19 @@ margin-left: 15px;
     margin-top: 10px;
 }
 
+.post-list{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    
+    &:hover{
+        color: $main-blue;
+        text-decoration: none;
+    }
+}
 /* End of Main */
 
 /* Aside Right */

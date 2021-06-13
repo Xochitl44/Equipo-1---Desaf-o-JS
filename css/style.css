@@ -368,6 +368,24 @@ header .navbar .btn-create-post {
   margin-top: 10px;
 }
 
+.post-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5px;
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+}
+
+.post-list:hover {
+  color: #323ebe;
+  text-decoration: none;
+}
+
 /* End of Main */
 /* Aside Right */
 .div-card {
@@ -389,13 +407,20 @@ header .navbar .btn-create-post {
 
 .div-card .c-text-color {
   color: #323ebe;
+  font-size: x-small;
+}
+
+.l-text {
+  margin-top: .3em;
+  font-size: small;
 }
 
 .btn-new {
   background-color: #323ebe;
   border-radius: 8px;
-  width: 15%;
-  margin-left: 1rem;
+  width: 53px;
+  margin-left: 0;
+  margin-top: .5em;
   color: white;
   font-size: small;
 }

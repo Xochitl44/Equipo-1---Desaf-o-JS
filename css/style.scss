@@ -70,8 +70,59 @@ header{
 /* End of Aside Left */
 
 /* Main */
+
+.br-post{
+    border-radius: 15px;
+    overflow: hidden;
+}
+
 .c-header{
-    align-items: center;
+    align-items: center;  
+}
+
+.br-100{
+border-radius: 100%;
+height: 40px;
+margin-bottom: 7px;
+margin-left: 15px;
+}
+
+
+
+.c-name{
+    flex-direction: column;
+    justify-content: center;
+    .nickname{
+        font-weight: bolder;
+    }
+}
+
+.custom-a{
+    background-color: darkblue;
+    color: rgb(140, 255, 249);
+    border-radius: 5px;
+}
+
+.h-order{
+    justify-self: flex-start;
+}
+  
+.comment{
+    background-color: white;
+    border: none;
+}
+
+.save{
+    background-color: rgb(203, 216, 223);
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.read{
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 10px;
 }
 
 /* End of Main */

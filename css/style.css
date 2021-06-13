@@ -63,10 +63,68 @@ header {
 
 /* End of Aside Left */
 /* Main */
+.br-post {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
 .c-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.br-100 {
+  border-radius: 100%;
+  height: 40px;
+  margin-bottom: 7px;
+  margin-left: 15px;
+}
+
+.c-name {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-name .nickname {
+  font-weight: bolder;
+}
+
+.custom-a {
+  background-color: darkblue;
+  color: #8cfff9;
+  border-radius: 5px;
+}
+
+.h-order {
+  justify-self: flex-start;
+}
+
+.comment {
+  background-color: white;
+  border: none;
+}
+
+.save {
+  background-color: #cbd8df;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.read {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-top: 10px;
 }
 
 /* End of Main */

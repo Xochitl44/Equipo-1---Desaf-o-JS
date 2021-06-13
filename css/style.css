@@ -96,6 +96,7 @@ header .navbar .btn-create-post {
   white-space: nowrap;
   margin-left: 10px;
   font-weight: 600;
+  background-color: #323ebe;
 }
 
 @media (min-width: 768px) {

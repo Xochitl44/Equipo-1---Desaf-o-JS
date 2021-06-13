@@ -10,6 +10,12 @@ main{
     margin-top: 56px;
     padding: 1rem;
 }
+
+h4:hover, li:hover, p:hover{
+    color: blue;
+}
+
+
 /* Header */
 header{
     background-color: white;
@@ -104,26 +110,170 @@ header{
 /* End of Sidebar */
 
 /* Aside Left */
+.a-l-text-color{
+    text-align: center;
+    color: red;
+}
+
+.a-l-card{
+    margin-top: 100vh;
+    width: 15vw;
+    text-align: center;
+}
 
 /* End of Aside Left */
 
 /* Main */
 
+.br-post{
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.c-header{
+    align-items: center;  
+}
+
+.br-100{
+border-radius: 100%;
+height: 40px;
+margin-bottom: 7px;
+margin-left: 15px;
+}
+
+.not-b{
+    font-weight: lighter;
+}
+
+
+.c-name{
+    flex-direction: column;
+    justify-content: center;
+    .nickname{
+        font-weight: bolder;
+    }
+}
+
+.custom-a{
+    background-color: darkblue;
+    color: rgb(140, 255, 249);
+    border-radius: 5px;
+}
+
+.h-order{
+    justify-self: flex-start;
+}
+  
+.comment{
+    background-color: white;
+    border: none;
+}
+
+.save{
+    background-color: rgb(203, 216, 223);
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.read{
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 10px;
+}
+
 /* End of Main */
 
 /* Aside Right */
-.a-r-img{
-    height: 294;
-    width: 124;
-    margin-bottom: 15px;
+
+.div-card{
+    height: 25vh;
+}
+.img-aside-right{
+    padding: 1em;
+    border-radius: 8px;
 }
 
+.c-text-color{
+    color: blue;
+}
+
+.btn-new{
+    background-color: blue;
+    border-radius: 8px;
+    width: 15%;
+    margin-left: 1em;
+    color: white;
+    font-size: small;
+}
+
+h4:hover, li:hover{
+    color: blue;
+}
+/*CARD 2ND PAGE RIGHT ASIDE*/
+
+
+.img-size{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-bottom: 1em;
+}
+.follow-btn{
+    background-color: blue;
+    width: 100%;
+    height: 3em;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.laptop-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.list-style{
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 1em 1em 0;
+}
+
+.card-span{
+    opacity: .40; 
+}
+
+.card-txt{
+    color: gray;
+    font-size: small;
+    font-weight: normal;
+    padding-top: .25em;
+}
+
+.simon-txt{
+    font-size: x-small;
+    color: gray;
+}
 /* End of Aside Right */
 
 /* Footer */
+
+.container-xl{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+a{
+    padding: 10px;
+}
+
 .bg-gray{
     background-color: rgb(210, 214, 219);
 }
 
-
+span{
+    font-weight: bold;
+}
 /* End of Footer */

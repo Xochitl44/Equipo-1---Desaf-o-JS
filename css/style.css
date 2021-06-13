@@ -224,9 +224,14 @@ header .navbar .btn-create-post {
           flex-direction: column;
 }
 
-.a-l-text-color {
+.ad-img-left {
+  border-radius: 6px;
+}
+
+.a-l-txt-color {
   text-align: center;
-  color: red;
+  color: #323ebe;
+  font-weight: bold;
 }
 
 .a-l-card {
@@ -331,23 +336,31 @@ header .navbar .btn-create-post {
 /* End of Main */
 /* Aside Right */
 .div-card {
-  height: 25vh;
+  /*height: 25vh;*/
 }
 
-.img-aside-right {
-  padding: 1em;
+.div-card .card-body {
+  padding-top: 0px;
+}
+
+.div-card .card-body p {
+  margin-bottom: 0px;
+}
+
+.div-card .img-aside-right {
+  padding: 1rem;
   border-radius: 8px;
 }
 
-.c-text-color {
-  color: blue;
+.div-card .c-text-color {
+  color: #323ebe;
 }
 
 .btn-new {
-  background-color: blue;
+  background-color: #323ebe;
   border-radius: 8px;
   width: 15%;
-  margin-left: 1em;
+  margin-left: 1rem;
   color: white;
   font-size: small;
 }

@@ -10,916 +10,1114 @@
 	<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-		crossorigin="anonymous">
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<!---------------------------------------------------------------------HEADER-------------------------------------------------------------------------------->
-	<header>
-		<nav class=" container-xl navbar navbar-expand-lg  justify-content-between custom-container">
-			<div class="nav-left d-flex ">
-				<button class="toggle-sidebar">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-						viewBox="0 0 24 24" role="img" class="crayons-icon">
-						<title id="a929szdjh3ohyvhk5gvpm45msg0k0ldy">Navigation menu</title>
-						<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
-					</svg>
-				</button>
-				<a href="/" class="site-logo" aria-label="DEV Community Home">
-					<svg width="50" height="40" viewBox="0 0 50 40"
-						xmlns="http://www.w3.org/2000/svg">
-						<rect width="50" height="40" rx="3"> </rect>
-						<path fill="white"
-							d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z">
-						</path>
-					</svg>
-				</a>
-				<form class="form-inline">
-					<input class="form-control type=" search" placeholder="Search"
-						aria-label="Search">
-				</form>
-			</div>
-			<div class="nav-right">
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-					aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"> <img
-										class="crayons-avatar__image" alt=""
-										id="nav-profile-image"
-										src="https://res.cloudinary.com/practicaldev/image/fetch/s--IjCb_ILa--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/647885/81bdd7eb-d4eb-4f9e-94a3-0ce06183465b.png"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-					<div class="flex items-center h-100 ml-auto hidden">
-						<a class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded m:hidden"
-							id="search-link" aria-label="Search" href="/search">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								viewBox="0 0 24 24" role="img"
-								aria-labelledby="aia68oivpoujh0fct2bsyxufz1z6bss1"
-								class="crayons-icon">
-								<title id="aia68oivpoujh0fct2bsyxufz1z6bss1">Search
-								</title>
-								<path
-									d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
-								</path>
-							</svg>
-
-						</a>
-						<a href="/new"
-							class="crayons-btn hidden mr-2 whitespace-nowrap m:block ml-auto">Create
-							Post</a>
-
-						<span class="trusted-visible-block">
-							<a id="moderation-link"
-								class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded m:flex hidden"
-								aria-label="Moderation" href="/mod">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24"
-									height="24" viewBox="0 0 24 24" role="img"
-									aria-labelledby="aknn7rzd0yc6jyjol2j6jvtjoyhz974a"
-									class="crayons-icon">
-									<title id="aknn7rzd0yc6jyjol2j6jvtjoyhz974a">
-										Moderation</title>
-									<path
-										d="M3.783 2.826L12 1l8.217 1.826a1 1 0 01.783.976v9.987a6 6 0 01-2.672 4.992L12 23l-6.328-4.219A6 6 0 013 13.79V3.802a1 1 0 01.783-.976zM5 4.604v9.185a4 4 0 001.781 3.328L12 20.597l5.219-3.48A4 4 0 0019 13.79V4.604L12 3.05 5 4.604zM13 10h3l-5 7v-5H8l5-7v5z">
+	<!---------------------------------------------------------------------HEADER-------------------------------------------------------------------------------->
+	<header class="fixed-top">
+		<div class="container-xl custom-container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+						<div class="navbar-left d-flex align-items-center">
+							<button class="navbar-toggler" type="button" data-toggle="collapse"
+								data-target="#sidebar" aria-controls="navbarProfileInfo"
+								aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<a href="/" class="site-logo" aria-label="DEV Community Home">
+								<svg width="50" height="40" viewBox="0 0 50 40"
+									xmlns="http://www.w3.org/2000/svg">
+									<rect width="50" height="40" rx="3"> </rect>
+									<path fill="white"
+										d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z">
 									</path>
 								</svg>
-
 							</a>
-						</span>
-
-						<a href="/connect" id="connect-link"
-							class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded"
-							aria-label="Connect">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								viewBox="0 0 24 24" role="img"
-								aria-labelledby="a5x22v5go6x9qq3ysc4dzugs2pejrtv3"
-								class="crayons-icon">
-								<title id="a5x22v5go6x9qq3ysc4dzugs2pejrtv3">Connect
-								</title>
-								<path
-									d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10H2l2.929-2.929A9.969 9.969 0 012 12zm4.828 8H12a8 8 0 10-8-8c0 2.152.851 4.165 2.343 5.657l1.414 1.414-.929.929zM8 13h8a4 4 0 11-8 0z">
-								</path>
-							</svg>
-
-							<span class="crayons-indicator crayons-indicator--accent hidden"
-								id="connect-number"></span>
-						</a>
-
-						<a href="/notifications" id="notifications-link"
-							class="crayons-header__link crayons-btn crayons-btn--ghost crayons-btn--icon-rounded"
-							aria-label="Notifications">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								viewBox="0 0 24 24" role="img"
-								aria-labelledby="asoe2anazr3tuen5atvrxcepo81jj2nd"
-								class="crayons-icon">
-								<title id="asoe2anazr3tuen5atvrxcepo81jj2nd">
-									Notifications</title>
-								<path
-									d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z">
-								</path>
-							</svg>
-
-							<span class="crayons-indicator crayons-indicator--critical hidden"
-								id="notifications-number"></span>
-						</a>
-
-						<div class="crayons-header__menu" id="crayons-header__menu">
-							<button type="button" class="crayons-header__menu__trigger"
-								id="member-menu-button" aria-label="Navigation menu"
-								aria-expanded="false">
-								<span class="crayons-avatar crayons-avatar--l"><img
-										class="crayons-avatar__image" alt=""
-										id="nav-profile-image"
-										src="https://res.cloudinary.com/practicaldev/image/fetch/s--IjCb_ILa--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/647885/81bdd7eb-d4eb-4f9e-94a3-0ce06183465b.png"></span>
-							</button>
-							<div
-								class="crayons-dropdown left-2 right-2 s:right-4 s:left-auto p-0 crayons-header__menu__dropdown inline-block">
-								<ul class="p-0"
-									id="crayons-header__menu__dropdown__list">
-									<li id="user-profile-link-placeholder"
-										class="border-0 border-b-1 border-solid border-base-20 p-1 mb-1">
-										<a id="first-nav-link"
-											class="crayons-link crayons-link--block"
-											href="/alfredopizana">
-											<div>
-												<span
-													class="fw-medium block">alfredopizana</span>
-												<small
-													class="fs-s color-base-50">@alfredopizana</small>
-											</div>
-										</a>
-									</li>
-
-									<li
-										class="px-1 js-header-menu-admin-link hidden">
-										<a href="/admin"
-											class="crayons-link crayons-link--block"
-											data-no-instant="">Admin</a>
-									</li>
-									<li class="px-1"><a href="/dashboard"
-											class="crayons-link crayons-link--block">Dashboard</a>
-									</li>
-									<li class="px-1"><a href="/mod"
-											class="crayons-link crayons-link--block trusted-visible-block">Moderator
-											Center</a></li>
-									<li class="px-1"><a href="/new"
-											class="crayons-link crayons-link--block">Create
-											Post</a></li>
-									<li class="px-1"><a href="/readinglist"
-											class="crayons-link crayons-link--block">Reading
-											list</a></li>
-									<li
-										class="border-0 border-b-1 border-solid border-base-20 px-1 pb-1">
-										<a href="/settings"
-											class="crayons-link crayons-link--block"
-											id="second-last-nav-link">Settings</a>
-									</li>
-
-									<li class="px-1 py-1">
-										<a href="/signout_confirm"
-											class="crayons-link crayons-link--block"
-											id="last-nav-link">Sign Out</a>
-									</li>
-								</ul>
-							</div>
 
 						</div>
-					</div>
+						<form class="seach">
+							<input class="form-control " type="search" placeholder="Search..."
+								aria-label="Search...">
+						</form>
+						<div class="navbar-right d-flex  align-items-center">
+							<button class="btn btn-primary btn-create-post">Create Post</button>
+							<a href=""><img src="img/icons/moderation.svg" alt="moderation"></a>
+							<a href=""><img src="img/icons/connect.svg" alt="connect"></a>
+							<a href=""><img src="img/icons/notifications.svg" alt="notifications"></a>
+
+							<div class="nav-item dropdown">
+
+								<button id="navbarScrollingDropdown"
+									class="nav-link dropdown-toggle profile-badge" type="button"
+									data-toggle="dropdown" data-target="#navbarProfileInfoToggler"
+									aria-controls="navbarSidebarToggler" aria-expanded="false"
+									aria-label="Toggle navigation">
+									<span class="circle-badge">
+										<img class="crayons-avatar__image" alt="profile image"
+											id="nav-profile-image"
+											src="https://res.cloudinary.com/practicaldev/image/fetch/s--IjCb_ILa--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/647885/81bdd7eb-d4eb-4f9e-94a3-0ce06183465b.png">
+									</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+
+									<li>
+										<a id="first-nav-link" href="#">
+
+											<span class="fw-medium block">alfredopizana</span>
+											<small
+												class="fs-s color-base-50">@alfredopizana</small>
+
+										</a>
+									</li>
+									<li><a class="dropdown-item" href="#">Dashboard</a></li>
+									<li><a class="dropdown-item" href="#">Create Post</a></li>
+									<li><a class="dropdown-item" href="#">Reading List </a></li>
+									<li><a class="dropdown-item" href="#">Settings</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="#">Sign Out</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</nav>
 				</div>
 			</div>
-		</nav>
+		</div>
 	</header>
+	<div class="sidebar" id="sidebar">
+		<button type="button" class="" aria-label="Close" data-toggle="collapse" data-target="#sidebar"
+			aria-expanded="true" aria-label="Toggle navigation">
+			<span aria-hidden="true">&times;</span>
+		</button>
 
-<!--------------------------------------------------------------------------------------MAIN----------------------------------------------------------------->
+		<div class="sidebar-content">
+			<h5 class="h4">Collapsed content</h5>
+			<h5 class="h4">Collapsed content</h5>
+			<h5 class=" h4">Collapsed content</h5>
+			<h5 class="h4">Collapsed content</h5>
+			<h5 class="h4">Collapsed content</h5>
+			<span class="text-muted">Toggleable via the navbar brand.</span>
+		</div>
+		<div class="sidebar-overlay">
+
+		</div>
+
+	</div>
+
+	<!--------------------------------------------------------------------------------------MAIN----------------------------------------------------------------->
 	<main class="container-xl">
 		<div class="sidebar"></div>
 
 		<div class="row">
-<!-------------------------------------------------------------------ASIDE LEFT----------------------------------------------------------------------------------------->
-	<aside class="col-3">
-			<nav class="d-flex icons">
-				<a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24" aria-hidden="true" class="crayons-icon crayons-icon--default">
-					<g class="nc-icon-wrapper">
-						<path fill="#A0041E" d="M13.344 18.702h-2a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v7a.5.5 0 01-.5.5z"></path>
-						<path fill="#FFE8B6" d="M9 20L22 7l13 13v17H9z"></path>
-						<path fill="#FFCC4D" d="M22 20h1v16h-1z"></path>
-						<path fill="#66757F" d="M35 21a.997.997 0 01-.707-.293L22 8.414 9.707 20.707a1 1 0 11-1.414-1.414l13-13a.999.999 0 011.414 0l13 13A.999.999 0 0135 21z"></path>
-						<path fill="#66757F" d="M22 21a.999.999 0 01-.707-1.707l6.5-6.5a1 1 0 111.414 1.414l-6.5 6.5A.997.997 0 0122 21z"></path>
-						<path fill="#C1694F" d="M14 30h4v6h-4z"></path>
-						<path fill="#55ACEE" d="M14 21h4v4h-4zm12.5 0h4v4h-4zm0 9h4v4h-4z"></path>
-						<path fill="#5C913B" d="M37.5 37.5A1.5 1.5 0 0136 39H8a1.5 1.5 0 010-3h28a1.5 1.5 0 011.5 1.5z"></path>
-					</g>
-				</svg>Home</a>
-				<a><span class="crayons-icon crayons-icon--default">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-				  <g class="nc-icon-wrapper">
-					  <path fill="#67757F" d="M39 24c0 2.209-1.791 2-4 2H9c-2.209 0-4 .209-4-2l2-12c.125-1.917 1.791-4 4-4h22c2.209 0 3.791 2.208 4 4l2 12z"></path>
-					  <path fill="#CCD6DD" d="M32 17a2 2 0 01-2 2H14a2 2 0 01-2-2V9a2 2 0 012-2h16a2 2 0 012 2v8z"></path>
-					  <path fill="#E1E8ED" d="M34 21a2 2 0 01-2 2H12a2 2 0 01-2-2v-8a2 2 0 012-2h20a2 2 0 012 2v8z"></path>
-					  <path fill="#F5F8FA" d="M36 25a2 2 0 01-2 2H10a2 2 0 01-2-2v-8a2 2 0 012-2h24a2 2 0 012 2v8z"></path>
-					  <path fill="#9AAAB4" d="M39 35a4 4 0 01-4 4H9a4 4 0 01-4-4V24a4 4 0 014-4h26a4 4 0 014 4v11z"></path>
-					  <path fill="#67757F" d="M18 16zm0 0z"></path>
-					  <path fill="#FCAB40" d="M26 5h-5a2 2 0 00-2 2v1h4a2 2 0 012 2h1a2 2 0 002-2V7a2 2 0 00-2-2z"></path>
-					  <path fill="#5DADEC" d="M22 9h-5a2 2 0 00-2 2v1h4a2 2 0 012 2h1a2 2 0 002-2v-1a2 2 0 00-2-2z"></path>
-					  <path fill="#E75A70" d="M20 16a2 2 0 01-2 2h-5a2 2 0 01-2-2v-1a2 2 0 012-2h5a2 2 0 012 2v1z"></path>
-					  <path fill="#67757F" d="M29 32a2 2 0 01-2 2H17a2 2 0 01-2-2v-5a2 2 0 012-2h10a2 2 0 012 2v5zm-11-4z"></path>
-					  <path fill="#E1E8ED" d="M27 31a1 1 0 01-1 1h-8a1 1 0 01-1-1v-3a1 1 0 011-1h8a1 1 0 011 1v3z"></path>
-				  </g>
-			  </svg>
-			  
-				  </span>Reading List</a>
-				<a><span class="crayons-icon crayons-icon--default">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-				  <g class="nc-icon-wrapper">
-					  <path fill="#FFD983" d="M36 4H14a4 4 0 00-4 4v24H8a4 4 0 000 8h24a4 4 0 004-4V12a4 4 0 000-8z"></path>
-					  <path fill="#E39F3D" d="M12 14h24v-2H14l-2-1z"></path>
-					  <path fill="#FFE8B6" d="M14 4a4 4 0 00-4 4v24.555A3.955 3.955 0 008 32a4 4 0 104 4V11.445c.59.344 1.268.555 2 .555a4 4 0 000-8z"></path>
-					  <path fill="#C1694F" d="M16 8a2 2 0 11-4.001-.001A2 2 0 0116 8m-6 28a2 2 0 11-4.001-.001A2 2 0 0110 36m24-17a1 1 0 01-1 1H15a1 1 0 010-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1"></path>
-				  </g>
-			  </svg>
-			  
-				  </span>Listings</a>
-				<a><span class="crayons-icon crayons-icon--default">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-				  <g class="nc-icon-wrapper">
-					  <path fill="#292F33" d="M10 19h24v2H10zm15 15c0 2.208-.792 4-3 4-2.209 0-3-1.792-3-4s.791-2 3-2c2.208 0 3-.208 3 2z"></path>
-					  <path fill="#66757F" d="M22 35c-6.627 0-10 1.343-10 3v2h20v-2c0-1.657-3.373-3-10-3z"></path>
-					  <path fill="#99AAB5" d="M22 4a9 9 0 00-9 9v7h18v-7a9 9 0 00-9-9z"></path>
-					  <g fill="#292F33" transform="translate(4 4)">
-						  <circle cx="15.5" cy="2.5" r="1.5"></circle>
-						  <circle cx="20.5" cy="2.5" r="1.5"></circle>
-						  <circle cx="17.5" cy="6.5" r="1.5"></circle>
-						  <circle cx="22.5" cy="6.5" r="1.5"></circle>
-						  <circle cx="12.5" cy="6.5" r="1.5"></circle>
-						  <circle cx="15.5" cy="10.5" r="1.5"></circle>
-						  <circle cx="10.5" cy="10.5" r="1.5"></circle>
-						  <circle cx="20.5" cy="10.5" r="1.5"></circle>
-						  <circle cx="25.5" cy="10.5" r="1.5"></circle>
-						  <circle cx="17.5" cy="14.5" r="1.5"></circle>
-						  <circle cx="22.5" cy="14.5" r="1.5"></circle>
-						  <circle cx="12.5" cy="14.5" r="1.5"></circle>
-					  </g>
-					  <path fill="#66757F" d="M13 19.062V21c0 4.971 4.029 9 9 9s9-4.029 9-9v-1.938H13z"></path>
-					  <path fill="#66757F" d="M34 18a1 1 0 00-1 1v2c0 6.074-4.925 11-11 11s-11-4.926-11-11v-2a1 1 0 00-2 0v2c0 7.18 5.82 13 13 13s13-5.82 13-13v-2a1 1 0 00-1-1z"></path>
-				  </g>
-			  </svg>
-			  
-				  </span>Podcasts</a>
-				<a><span class="crayons-icon crayons-icon--default">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-				  <g transform="translate(4 4)">
-					  <path fill="#31373D" d="M34.074 18l-4.832 3H28v-4c0-.088-.02-.169-.026-.256C31.436 15.864 34 12.735 34 9a8 8 0 00-16.001 0c0 1.463.412 2.822 1.099 4H14.92c.047-.328.08-.66.08-1a7 7 0 10-14 0 6.995 6.995 0 004 6.317V29a4 4 0 004 4h15a4 4 0 004-4v-3h1.242l4.832 3H35V18h-.926zM28.727 3.977a5.713 5.713 0 012.984 4.961L28.18 8.35a2.276 2.276 0 00-.583-.982l1.13-3.391zm-.9 6.342l3.552.592a5.713 5.713 0 01-4.214 3.669 3.985 3.985 0 00-1.392-1.148l.625-2.19a2.425 2.425 0 001.429-.923zM26 3.285c.282 0 .557.027.828.067l-1.131 3.392c-.404.054-.772.21-1.081.446L21.42 5.592A5.703 5.703 0 0126 3.285zM20.285 9c0-.563.085-1.106.236-1.62l3.194 1.597-.002.023c0 .657.313 1.245.771 1.662L23.816 13h-1.871a5.665 5.665 0 01-1.66-4zm-9.088-.385A4.64 4.64 0 0112.667 12c0 .344-.043.677-.113 1H10.1c.145-.304.233-.641.233-1a2.32 2.32 0 00-.392-1.292l1.256-2.093zM8 7.333c.519 0 1.01.105 1.476.261L8.22 9.688c-.073-.007-.145-.022-.22-.022a2.32 2.32 0 00-1.292.392L4.615 8.803A4.64 4.64 0 018 7.333zM3.333 12c0-.519.105-1.01.261-1.477l2.095 1.257c-.007.073-.022.144-.022.22 0 .75.36 1.41.91 1.837a3.987 3.987 0 00-1.353 1.895C4.083 14.881 3.333 13.533 3.333 12z"></path>
-					  <circle fill="#8899A6" cx="24" cy="19" r="2"></circle>
-					  <circle fill="#8899A6" cx="9" cy="19" r="2"></circle>
-					  <path fill="#8899A6" d="M24 27a2 2 0 00-2-2H11a2 2 0 00-2 2v6a2 2 0 002 2h11a2 2 0 002-2v-6z"></path>
-				  </g>
-			  </svg>
-			  
-				  </span>Videos</a>
-				  <a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-					<g class="nc-icon-wrapper">
-						<path fill="#FFD983" d="M36.017 24.181L21.345 9.746C20.687 9.087 19.823 9 18.96 9H8.883C7.029 9 6 10.029 6 11.883v10.082c0 .861.089 1.723.746 2.38L21.3 39.017a3.287 3.287 0 004.688 0l10.059-10.088c1.31-1.312 1.28-3.438-.03-4.748zm-23.596-8.76a1.497 1.497 0 11-2.118-2.117 1.497 1.497 0 012.118 2.117z"></path>
-						<path fill="#D99E82" d="M13.952 11.772a3.66 3.66 0 00-5.179 0 3.663 3.663 0 105.18 5.18 3.664 3.664 0 00-.001-5.18zm-1.53 3.65a1.499 1.499 0 11-2.119-2.12 1.499 1.499 0 012.119 2.12z"></path>
-						<path fill="#C1694F" d="M12.507 14.501a1 1 0 11-1.415-1.414l8.485-8.485a1 1 0 111.415 1.414l-8.485 8.485z"></path>
-					</g>
-				</svg>Tags</a>
-				  <a class="pl-4 ml-2">More</a>
-			</nav>
-		<div class="a-l-card mt-5">
-			<img src="img/photos/ads.png" alt="aside-ad">
-			<h3>Do you have your sticker pack yet?</h3>		
-		</div>
-	</aside>
-<!------------------------------------------------------------------------CARDS--------------------------------------------------------------------------->
+			<!-------------------------------------------------------------------ASIDE LEFT----------------------------------------------------------------------------------------->
+			<aside class="col-3">
+				<nav class="d-flex icons">
+					<a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24"
+							aria-hidden="true" class="crayons-icon crayons-icon--default">
+							<g class="nc-icon-wrapper">
+								<path fill="#A0041E"
+									d="M13.344 18.702h-2a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v7a.5.5 0 01-.5.5z">
+								</path>
+								<path fill="#FFE8B6" d="M9 20L22 7l13 13v17H9z"></path>
+								<path fill="#FFCC4D" d="M22 20h1v16h-1z"></path>
+								<path fill="#66757F"
+									d="M35 21a.997.997 0 01-.707-.293L22 8.414 9.707 20.707a1 1 0 11-1.414-1.414l13-13a.999.999 0 011.414 0l13 13A.999.999 0 0135 21z">
+								</path>
+								<path fill="#66757F"
+									d="M22 21a.999.999 0 01-.707-1.707l6.5-6.5a1 1 0 111.414 1.414l-6.5 6.5A.997.997 0 0122 21z">
+								</path>
+								<path fill="#C1694F" d="M14 30h4v6h-4z"></path>
+								<path fill="#55ACEE" d="M14 21h4v4h-4zm12.5 0h4v4h-4zm0 9h4v4h-4z">
+								</path>
+								<path fill="#5C913B"
+									d="M37.5 37.5A1.5 1.5 0 0136 39H8a1.5 1.5 0 010-3h28a1.5 1.5 0 011.5 1.5z">
+								</path>
+							</g>
+						</svg>Home</a>
+					<a><span class="crayons-icon crayons-icon--default">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+								height="24">
+								<g class="nc-icon-wrapper">
+									<path fill="#67757F"
+										d="M39 24c0 2.209-1.791 2-4 2H9c-2.209 0-4 .209-4-2l2-12c.125-1.917 1.791-4 4-4h22c2.209 0 3.791 2.208 4 4l2 12z">
+									</path>
+									<path fill="#CCD6DD"
+										d="M32 17a2 2 0 01-2 2H14a2 2 0 01-2-2V9a2 2 0 012-2h16a2 2 0 012 2v8z">
+									</path>
+									<path fill="#E1E8ED"
+										d="M34 21a2 2 0 01-2 2H12a2 2 0 01-2-2v-8a2 2 0 012-2h20a2 2 0 012 2v8z">
+									</path>
+									<path fill="#F5F8FA"
+										d="M36 25a2 2 0 01-2 2H10a2 2 0 01-2-2v-8a2 2 0 012-2h24a2 2 0 012 2v8z">
+									</path>
+									<path fill="#9AAAB4"
+										d="M39 35a4 4 0 01-4 4H9a4 4 0 01-4-4V24a4 4 0 014-4h26a4 4 0 014 4v11z">
+									</path>
+									<path fill="#67757F" d="M18 16zm0 0z"></path>
+									<path fill="#FCAB40"
+										d="M26 5h-5a2 2 0 00-2 2v1h4a2 2 0 012 2h1a2 2 0 002-2V7a2 2 0 00-2-2z">
+									</path>
+									<path fill="#5DADEC"
+										d="M22 9h-5a2 2 0 00-2 2v1h4a2 2 0 012 2h1a2 2 0 002-2v-1a2 2 0 00-2-2z">
+									</path>
+									<path fill="#E75A70"
+										d="M20 16a2 2 0 01-2 2h-5a2 2 0 01-2-2v-1a2 2 0 012-2h5a2 2 0 012 2v1z">
+									</path>
+									<path fill="#67757F"
+										d="M29 32a2 2 0 01-2 2H17a2 2 0 01-2-2v-5a2 2 0 012-2h10a2 2 0 012 2v5zm-11-4z">
+									</path>
+									<path fill="#E1E8ED"
+										d="M27 31a1 1 0 01-1 1h-8a1 1 0 01-1-1v-3a1 1 0 011-1h8a1 1 0 011 1v3z">
+									</path>
+								</g>
+							</svg>
+
+						</span>Reading List</a>
+					<a><span class="crayons-icon crayons-icon--default">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+								height="24">
+								<g class="nc-icon-wrapper">
+									<path fill="#FFD983"
+										d="M36 4H14a4 4 0 00-4 4v24H8a4 4 0 000 8h24a4 4 0 004-4V12a4 4 0 000-8z">
+									</path>
+									<path fill="#E39F3D" d="M12 14h24v-2H14l-2-1z"></path>
+									<path fill="#FFE8B6"
+										d="M14 4a4 4 0 00-4 4v24.555A3.955 3.955 0 008 32a4 4 0 104 4V11.445c.59.344 1.268.555 2 .555a4 4 0 000-8z">
+									</path>
+									<path fill="#C1694F"
+										d="M16 8a2 2 0 11-4.001-.001A2 2 0 0116 8m-6 28a2 2 0 11-4.001-.001A2 2 0 0110 36m24-17a1 1 0 01-1 1H15a1 1 0 010-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1">
+									</path>
+								</g>
+							</svg>
+
+						</span>Listings</a>
+					<a><span class="crayons-icon crayons-icon--default">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+								height="24">
+								<g class="nc-icon-wrapper">
+									<path fill="#292F33"
+										d="M10 19h24v2H10zm15 15c0 2.208-.792 4-3 4-2.209 0-3-1.792-3-4s.791-2 3-2c2.208 0 3-.208 3 2z">
+									</path>
+									<path fill="#66757F"
+										d="M22 35c-6.627 0-10 1.343-10 3v2h20v-2c0-1.657-3.373-3-10-3z">
+									</path>
+									<path fill="#99AAB5" d="M22 4a9 9 0 00-9 9v7h18v-7a9 9 0 00-9-9z">
+									</path>
+									<g fill="#292F33" transform="translate(4 4)">
+										<circle cx="15.5" cy="2.5" r="1.5"></circle>
+										<circle cx="20.5" cy="2.5" r="1.5"></circle>
+										<circle cx="17.5" cy="6.5" r="1.5"></circle>
+										<circle cx="22.5" cy="6.5" r="1.5"></circle>
+										<circle cx="12.5" cy="6.5" r="1.5"></circle>
+										<circle cx="15.5" cy="10.5" r="1.5"></circle>
+										<circle cx="10.5" cy="10.5" r="1.5"></circle>
+										<circle cx="20.5" cy="10.5" r="1.5"></circle>
+										<circle cx="25.5" cy="10.5" r="1.5"></circle>
+										<circle cx="17.5" cy="14.5" r="1.5"></circle>
+										<circle cx="22.5" cy="14.5" r="1.5"></circle>
+										<circle cx="12.5" cy="14.5" r="1.5"></circle>
+									</g>
+									<path fill="#66757F"
+										d="M13 19.062V21c0 4.971 4.029 9 9 9s9-4.029 9-9v-1.938H13z">
+									</path>
+									<path fill="#66757F"
+										d="M34 18a1 1 0 00-1 1v2c0 6.074-4.925 11-11 11s-11-4.926-11-11v-2a1 1 0 00-2 0v2c0 7.18 5.82 13 13 13s13-5.82 13-13v-2a1 1 0 00-1-1z">
+									</path>
+								</g>
+							</svg>
+
+						</span>Podcasts</a>
+					<a><span class="crayons-icon crayons-icon--default">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+								height="24">
+								<g transform="translate(4 4)">
+									<path fill="#31373D"
+										d="M34.074 18l-4.832 3H28v-4c0-.088-.02-.169-.026-.256C31.436 15.864 34 12.735 34 9a8 8 0 00-16.001 0c0 1.463.412 2.822 1.099 4H14.92c.047-.328.08-.66.08-1a7 7 0 10-14 0 6.995 6.995 0 004 6.317V29a4 4 0 004 4h15a4 4 0 004-4v-3h1.242l4.832 3H35V18h-.926zM28.727 3.977a5.713 5.713 0 012.984 4.961L28.18 8.35a2.276 2.276 0 00-.583-.982l1.13-3.391zm-.9 6.342l3.552.592a5.713 5.713 0 01-4.214 3.669 3.985 3.985 0 00-1.392-1.148l.625-2.19a2.425 2.425 0 001.429-.923zM26 3.285c.282 0 .557.027.828.067l-1.131 3.392c-.404.054-.772.21-1.081.446L21.42 5.592A5.703 5.703 0 0126 3.285zM20.285 9c0-.563.085-1.106.236-1.62l3.194 1.597-.002.023c0 .657.313 1.245.771 1.662L23.816 13h-1.871a5.665 5.665 0 01-1.66-4zm-9.088-.385A4.64 4.64 0 0112.667 12c0 .344-.043.677-.113 1H10.1c.145-.304.233-.641.233-1a2.32 2.32 0 00-.392-1.292l1.256-2.093zM8 7.333c.519 0 1.01.105 1.476.261L8.22 9.688c-.073-.007-.145-.022-.22-.022a2.32 2.32 0 00-1.292.392L4.615 8.803A4.64 4.64 0 018 7.333zM3.333 12c0-.519.105-1.01.261-1.477l2.095 1.257c-.007.073-.022.144-.022.22 0 .75.36 1.41.91 1.837a3.987 3.987 0 00-1.353 1.895C4.083 14.881 3.333 13.533 3.333 12z">
+									</path>
+									<circle fill="#8899A6" cx="24" cy="19" r="2"></circle>
+									<circle fill="#8899A6" cx="9" cy="19" r="2"></circle>
+									<path fill="#8899A6"
+										d="M24 27a2 2 0 00-2-2H11a2 2 0 00-2 2v6a2 2 0 002 2h11a2 2 0 002-2v-6z">
+									</path>
+								</g>
+							</svg>
+
+						</span>Videos</a>
+					<a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
+							<g class="nc-icon-wrapper">
+								<path fill="#FFD983"
+									d="M36.017 24.181L21.345 9.746C20.687 9.087 19.823 9 18.96 9H8.883C7.029 9 6 10.029 6 11.883v10.082c0 .861.089 1.723.746 2.38L21.3 39.017a3.287 3.287 0 004.688 0l10.059-10.088c1.31-1.312 1.28-3.438-.03-4.748zm-23.596-8.76a1.497 1.497 0 11-2.118-2.117 1.497 1.497 0 012.118 2.117z">
+								</path>
+								<path fill="#D99E82"
+									d="M13.952 11.772a3.66 3.66 0 00-5.179 0 3.663 3.663 0 105.18 5.18 3.664 3.664 0 00-.001-5.18zm-1.53 3.65a1.499 1.499 0 11-2.119-2.12 1.499 1.499 0 012.119 2.12z">
+								</path>
+								<path fill="#C1694F"
+									d="M12.507 14.501a1 1 0 11-1.415-1.414l8.485-8.485a1 1 0 111.415 1.414l-8.485 8.485z">
+								</path>
+							</g>
+						</svg>Tags</a>
+					<a class="pl-4 ml-2">More</a>
+				</nav>
+				<div class="a-l-card mt-5">
+					<img src="img/photos/ads.png" alt="aside-ad">
+					<h3>Do you have your sticker pack yet?</h3>
+				</div>
+			</aside>
+			<!------------------------------------------------------------------------CARDS--------------------------------------------------------------------------->
 			<section class="col-6">
 				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-				    <li class="nav-item" role="presentation">
-					<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-					    aria-controls="pills-home" aria-selected="true">Home</a>
-				    </li>
-				    <li class="nav-item" role="presentation">
-					<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-					    aria-controls="pills-profile" aria-selected="false">Profile</a>
-				    </li>
-				    <li class="nav-item" role="presentation">
-					<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-					    aria-controls="pills-contact" aria-selected="false">Contact</a>
-				    </li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+							role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+							role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
+							role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+					</li>
 				</ul>
-				
+
 				<nav>
-				    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-					<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-feed" role="tab"
-					    aria-controls="nav-home" aria-selected="true">Feed</a>
-					<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-					    aria-controls="nav-profile" aria-selected="false">Week</a>
-					<a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-					    aria-controls="nav-contact" aria-selected="false">Moth</a>
-					<!--<a class="nav-link" id="nav-1" data-toggle="tab" href="#nav-1" role="tab"
+					<div class="nav nav-tabs" id="nav-tab" role="tablist">
+						<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-feed"
+							role="tab" aria-controls="nav-home" aria-selected="true">Feed</a>
+						<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+							role="tab" aria-controls="nav-profile" aria-selected="false">Week</a>
+						<a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+							role="tab" aria-controls="nav-contact" aria-selected="false">Moth</a>
+						<!--<a class="nav-link" id="nav-1" data-toggle="tab" href="#nav-1" role="tab"
 					    aria-controls="nav-contact" aria-selected="false">Year</a>
 					<a class="nav-link" id="nav-2" data-toggle="tab" href="#nav-2" role="tab"
 					    aria-controls="nav-contact" aria-selected="false">Infinity</a>
 					<a class="nav-link" id="nav-3" data-toggle="tab" href="#nav-3" role="tab"
 					    aria-controls="nav-contact" aria-selected="false">Latest</a>-->
-				    </div>
+					</div>
 				</nav>
 				<div class="tab-content" id="nav-tabContent">
-				    <div class="tab-pane fade show active" id="nav-feed" role="tabpanel" aria-labelledby="nav-feed-tab">
-					<div class="card br-post">
-					    <img src="https://picsum.photos/540/280" class="card-img-top" alt="...">
-					    <div class="card-body pl-1 pr-1 mt-1">
-                            <div class="d-flex c-header">
-                                <div>
+					<div class="tab-pane fade show active" id="nav-feed" role="tabpanel"
+						aria-labelledby="nav-feed-tab">
+						<div class="card br-post">
+							<img src="https://picsum.photos/540/280" class="card-img-top" alt="...">
+							<div class="card-body pl-1 pr-1 mt-1">
+								<div class="d-flex c-header">
 									<div>
-										<img src="images/pics/hacker.jpg" alt="" class="br-100">
+										<div>
+											<img src="images/pics/hacker.jpg" alt=""
+												class="br-100">
+										</div>
 									</div>
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Nicholas Mendez</h6>
-                                    <h6>Jun 12</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">Develop and Deploy a server less python application that updates Twitter banner in real life</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-										<span class="custom-a">
-                                          <a>#showdev</a>
-										</span>
-                                        <a>#python</a>
-                                        <a>#serverless</a>
-                                        <a>#twitter</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">Add comment</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">7 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/alfred.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Alfred Pizana</h6>
-                                    <h6>June 10</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">Don´t use Singleton Pattern in your unit tests</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#testing</a>
-                                         <a>#cleancode</a>
-                                         <a>#stestdev</a>
-                                         <a>#tdd</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									<span class="not-b">8 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">Add comment</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">9 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/karen.jpeg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Silvia Snow</h6>
-                                    <h6>June 9</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">I have no idea what i´m doing</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#html</a>
-                                         <a>#css</a>
-                                         <a>#sass</a>
-                                         <a>#bootstrap</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									<span class="not-b">36 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">10 comments</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">5 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/me and michael.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Antonio Ibarra</h6>
-                                    <h6>Jun 5</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">I hope get to finish kodemia´s bootcamp</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#codenewbie</a>
-                                         <a>#noob</a>
-                                         <a>#html</a>
-                                         <a>#css</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									<span class="not-b">15 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">Add comment</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">4 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/hector.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Hector Alcaraz</h6>
-                                    <h6>Jun 1</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">Find a way to make your computer sound like a farm animal</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#sass</a>
-                                         <a>#gamer</a>
-                                         <a>#dev</a>
-                                         <a>#twitter</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									<span class="not-b">30 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">15 comments</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">10 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/sick.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Xochitl Moreno</h6>
-                                    <h6>May 30</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">What's the difference between var, let and const keywords?</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#discuss</a>
-                                         <a>#js</a>
-                                         <a>#node</a>
-                                         <a>#sass</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									<span class="not-b">8 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">Add comment</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">7 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/oscar.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Oscar Rodriguez</h6>
-                                    <h6>May 29</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">Learn React and Higher-Order Components By Building Netflix</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#react</a>
-                                         <a>#python</a>
-                                         <a>#serverless</a>
-                                         <a>#twitter</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									 <span class="not-b">5 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">Add comment</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">9 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/castuera.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Michael Scott</h6>
-                                    <h6>May 25</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">“I'm not superstitious, but I am a little stitious.”</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#netflix</a>
-                                         <a>#primevideo</a>
-                                         <a>#html</a>
-                                         <a>#twitter</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									<span class="not-b">10 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">2 comments</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">7 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/elvic.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Victor Madrigal</h6>
-                                    <h6>May 20</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">Can you be a programmer or game developer without math?</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#gamedev</a>
-                                         <a>#python</a>
-                                         <a>#dev</a>
-                                         <a>#coding</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									<span class="not-b"> 20 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">15 comments</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">5 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-					<div class="card mt-3 br-post">
-					    <div class="card-body pl-1 pr-1">
-                            <div class="d-flex c-header">
-                                <div>
-                                    <img src="images/pics/linx.jpg" alt="" class="br-100 pad">
-                                </div>
-                                <div class="d-flex c-name ml-2">
-                                    <h6 class="nickname mb-0">Lynx Pardelle</h6>
-                                    <h6>May 15</h6>
-                                </div>    
-                            </div>
-                            <div class="card-content mr-1 ml-5"> 
-						        <h4 class="card-title">Tips For Using Async/Await - Write Better JavaScript!</h4>
-						        <div class="row d-flex h-order">
-                                    <nav class="col-12">
-                                         <a>#bootstrap</a>
-                                         <a>#python</a>
-                                         <a>#javascript</a>
-                                         <a>#fullstack</a>
-                                    </nav>
-                                </div>
-								<div class=" d-flex row read mr-1">
-								  <div>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc" class="crayons-icon mb-1"><title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">Reactions</title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-									 <span class="not-b"> 15 reactions</span>
-									 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz" class="crayons-icon mb-1"><title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
-								      <button class="comment">Add comment</button>
-								  </div>
-								  <div class="row mr-3">
-						             <p class="card-text mb-0"><small class="text-muted">10 min read</small></p>
-								     <button class="save">Save</button>
-								  </div>
-							    </div>
-                            </div> 
-					    </div>
-					</div>
-			    </section>
-<!------------------------------------------------------------------ ASIDE RIGHT---------------------------------------------------------------------->
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Nicholas Mendez</h6>
+										<h6>Jun 12</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">Develop and Deploy a server less python
+										application that
+										updates Twitter banner in real life</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<span class="custom-a">
+												<a>#showdev</a>
+											</span>
+											<a>#python</a>
+											<a>#serverless</a>
+											<a>#twitter</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">Add comment</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">7
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/alfred.jpg" alt="" class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Alfred Pizana</h6>
+										<h6>June 10</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">Don´t use Singleton Pattern in your unit
+										tests</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#testing</a>
+											<a>#cleancode</a>
+											<a>#stestdev</a>
+											<a>#tdd</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b">8 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">Add comment</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">9
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/karen.jpeg" alt="" class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Silvia Snow</h6>
+										<h6>June 9</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">I have no idea what i´m doing</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#html</a>
+											<a>#css</a>
+											<a>#sass</a>
+											<a>#bootstrap</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b">36 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">10 comments</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">5
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/me and michael.jpg" alt=""
+											class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Antonio Ibarra</h6>
+										<h6>Jun 5</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">I hope get to finish kodemia´s bootcamp
+									</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#codenewbie</a>
+											<a>#noob</a>
+											<a>#html</a>
+											<a>#css</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b">15 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">Add comment</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">4
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/hector.jpg" alt="" class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Hector Alcaraz</h6>
+										<h6>Jun 1</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">Find a way to make your computer sound like
+										a farm animal
+									</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#sass</a>
+											<a>#gamer</a>
+											<a>#dev</a>
+											<a>#twitter</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b">30 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">15 comments</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">10
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/sick.jpg" alt="" class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Xochitl Moreno</h6>
+										<h6>May 30</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">What's the difference between var, let and
+										const keywords?
+									</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#discuss</a>
+											<a>#js</a>
+											<a>#node</a>
+											<a>#sass</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b">8 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">Add comment</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">7
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/oscar.jpg" alt="" class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Oscar Rodriguez</h6>
+										<h6>May 29</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">Learn React and Higher-Order Components By
+										Building Netflix
+									</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#react</a>
+											<a>#python</a>
+											<a>#serverless</a>
+											<a>#twitter</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b">5 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">Add comment</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">9
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/castuera.jpg" alt=""
+											class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Michael Scott</h6>
+										<h6>May 25</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">“I'm not superstitious, but I am a little
+										stitious.”</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#netflix</a>
+											<a>#primevideo</a>
+											<a>#html</a>
+											<a>#twitter</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b">10 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">2 comments</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">7
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/elvic.jpg" alt="" class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Victor Madrigal</h6>
+										<h6>May 20</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">Can you be a programmer or game developer
+										without math?</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#gamedev</a>
+											<a>#python</a>
+											<a>#dev</a>
+											<a>#coding</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b"> 20 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">15 comments</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">5
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3 br-post">
+							<div class="card-body pl-1 pr-1">
+								<div class="d-flex c-header">
+									<div>
+										<img src="images/pics/linx.jpg" alt="" class="br-100 pad">
+									</div>
+									<div class="d-flex c-name ml-2">
+										<h6 class="nickname mb-0">Lynx Pardelle</h6>
+										<h6>May 15</h6>
+									</div>
+								</div>
+								<div class="card-content mr-1 ml-5">
+									<h4 class="card-title">Tips For Using Async/Await - Write Better
+										JavaScript!</h4>
+									<div class="row d-flex h-order">
+										<nav class="col-12">
+											<a>#bootstrap</a>
+											<a>#python</a>
+											<a>#javascript</a>
+											<a>#fullstack</a>
+										</nav>
+									</div>
+									<div class=" d-flex row read mr-1">
+										<div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+												class="crayons-icon mb-1">
+												<title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+													Reactions</title>
+												<path
+													d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+												</path>
+											</svg>
+											<span class="not-b"> 15 reactions</span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" role="img"
+												aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+												class="crayons-icon mb-1">
+												<title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+													Comments</title>
+												<path
+													d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+												</path>
+											</svg>
+											<button class="comment">Add comment</button>
+										</div>
+										<div class="row mr-3">
+											<p class="card-text mb-0"><small class="text-muted">10
+													min read</small></p>
+											<button class="save">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+			</section>
+			<!------------------------------------------------------------------ ASIDE RIGHT---------------------------------------------------------------------->
 			<aside class="col-3">
-					<div class="card div-card mt-2" style="width: 18rem;">
-						<img class="img-aside-right" src="img/photos/changelog.png" alt="changelog">
-						<div class="card-body">
-							<p class="">New Forem Changelog Entries!</p>
-							<p class="c-text-color">-> "Lock Discussions on Posts"</p>
-							<p class="c-text-color">-> "Accessibility Enhancements"</p>
-						</div>
+				<div class="card div-card mt-2" style="width: 18rem;">
+					<img class="img-aside-right" src="img/photos/changelog.png" alt="changelog">
+					<div class="card-body">
+						<p class="">New Forem Changelog Entries!</p>
+						<p class="c-text-color">-> "Lock Discussions on Posts"</p>
+						<p class="c-text-color">-> "Accessibility Enhancements"</p>
 					</div>
-					
-					<div class="card mt-4 r-card-list" style="width: 18rem;">
-						<div class="card-header font-weight-bold">
-							<h4>Listings <span>See all</span></h4>						
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">React Developer - Full-Time, Remote</li>
-							<div>
-								<p class="pl-4 text-muted">jobs</p>
-							</div>
-							<li class="list-group-item">Course Launch:Competitive Programming - Crack Your Coding Interview</li>
-							<div class="pl-3">
-								<p class="text-muted">education</p>
-							</div>
-							<li class="list-group-item">DEVniverse Notion Template - The content creater's space </li>
-							<div class="pl-3">
-								<p class="text-muted">products</p>
-							</div>
-							<li class="list-group-item">Backkend Handbook for Ruby on Rails applications</li>	
-							<div class=" pl-3">
-								<p class="text-muted">products</p>
-							</div>
-							<li class="list-group-item">33 GitHub projects I have bookmarked and you should</li>
-								<div class="pl-3">
-									<p class="text-muted">misc</p>
-								</div>
-							<p class="text-center font-weight-bold">Create a Listing</p>
-						</ul>
-					</div>
+				</div>
 
-					<div class="card mt-4" style="width: 18rem;">
-						<div class="card-header font-weight-bold">
-							<h4>#news</h4>	
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Buckle Up For a Wild Decade in Cloud Computing</li>
-							<div class="pl-3">
-								<p class="text-muted">11 comments</p>
-							</div>
-							<li class="list-group-item">Game Dev Digest -Issue #98 - Multiplayer, starting shaders and more!</li>
-								<button type="button bg-primary" class="btn-new">New</button>
-							<li class="list-group-item">Our top tech news & programming sites</li>
-								<button type="button bg-primary" class="btn-new">New</button>
-							<li class="list-group-item">MoonZoon Dev News (4): Actix, Async CLI, Error Handling, Wasmpack installer</li>
-								<button type="button bg-primary" class="btn-new">New</button>
-							<li class="list-group-item">K*ssandra & the Community</li>
-								<button type="button bg-primary" class="btn-new">New</button>
-						</ul>
+				<div class="card mt-4 r-card-list" style="width: 18rem;">
+					<div class="card-header font-weight-bold">
+						<h4>Listings <span>See all</span></h4>
 					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">React Developer - Full-Time, Remote</li>
+						<div>
+							<p class="pl-4 text-muted">jobs</p>
+						</div>
+						<li class="list-group-item">Course Launch:Competitive Programming - Crack Your
+							Coding Interview
+						</li>
+						<div class="pl-3">
+							<p class="text-muted">education</p>
+						</div>
+						<li class="list-group-item">DEVniverse Notion Template - The content creater's space
+						</li>
+						<div class="pl-3">
+							<p class="text-muted">products</p>
+						</div>
+						<li class="list-group-item">Backkend Handbook for Ruby on Rails applications</li>
+						<div class=" pl-3">
+							<p class="text-muted">products</p>
+						</div>
+						<li class="list-group-item">33 GitHub projects I have bookmarked and you should</li>
+						<div class="pl-3">
+							<p class="text-muted">misc</p>
+						</div>
+						<p class="text-center font-weight-bold">Create a Listing</p>
+					</ul>
+				</div>
 
-					<div class="card mt-4" style="width: 18rem;">
-						<div class="card-header font-weight-bold">
-							<h4>#help</h4>	
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">2021 Best Laptops for Software Development</li>
-								<button type="button bg-primary" class="btn-new">New</button>
-							<li class="list-group-item">How can i create a dynamic menu</li>
-								<button type="button bg-primary" class="btn-new">New</button>
-						</ul>
+				<div class="card mt-4" style="width: 18rem;">
+					<div class="card-header font-weight-bold">
+						<h4>#news</h4>
 					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Buckle Up For a Wild Decade in Cloud Computing</li>
+						<div class="pl-3">
+							<p class="text-muted">11 comments</p>
+						</div>
+						<li class="list-group-item">Game Dev Digest -Issue #98 - Multiplayer, starting
+							shaders and more!
+						</li>
+						<button type="button bg-primary" class="btn-new">New</button>
+						<li class="list-group-item">Our top tech news & programming sites</li>
+						<button type="button bg-primary" class="btn-new">New</button>
+						<li class="list-group-item">MoonZoon Dev News (4): Actix, Async CLI, Error Handling,
+							Wasmpack
+							installer</li>
+						<button type="button bg-primary" class="btn-new">New</button>
+						<li class="list-group-item">K*ssandra & the Community</li>
+						<button type="button bg-primary" class="btn-new">New</button>
+					</ul>
+				</div>
 
-					<div class="card mt-4" style="width: 18rem;">
-						<div class="card-header font-weight-bold">
-							<h4>#discuss</h4>	
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">ALPHA REACT 18 HAS ARRIVED</li>
-								<button type="button bg-primary" class="btn-new">New</button>
-							<li class="list-group-item">Should You Really be Coding in Dark Mode?</li>
-								<div class="pl-3">
-									<p class="text-muted">41 comments</p>
-								</div>
-							<li class="list-group-item">What was your win this week?</li>
-								<div class="pl-3">
-									<p class="text-muted">10 comments</p>
-								</div>
-							<li class="list-group-item">How I got 1000 followers on DEV</li>
-							<div class="pl-3">
-								<p class="text-muted">4 comments</p>
-							</div>
-							<li class="list-group-item">How do you stay up to date with the latest developments in tech?</li>
-							<div class="pl-3">
-								<p class="text-muted">35 comments</p>
-							</div>
-						</ul>
+				<div class="card mt-4" style="width: 18rem;">
+					<div class="card-header font-weight-bold">
+						<h4>#help</h4>
 					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">2021 Best Laptops for Software Development</li>
+						<button type="button bg-primary" class="btn-new">New</button>
+						<li class="list-group-item">How can i create a dynamic menu</li>
+						<button type="button bg-primary" class="btn-new">New</button>
+					</ul>
+				</div>
+
+				<div class="card mt-4" style="width: 18rem;">
+					<div class="card-header font-weight-bold">
+						<h4>#discuss</h4>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">ALPHA REACT 18 HAS ARRIVED</li>
+						<button type="button bg-primary" class="btn-new">New</button>
+						<li class="list-group-item">Should You Really be Coding in Dark Mode?</li>
+						<div class="pl-3">
+							<p class="text-muted">41 comments</p>
+						</div>
+						<li class="list-group-item">What was your win this week?</li>
+						<div class="pl-3">
+							<p class="text-muted">10 comments</p>
+						</div>
+						<li class="list-group-item">How I got 1000 followers on DEV</li>
+						<div class="pl-3">
+							<p class="text-muted">4 comments</p>
+						</div>
+						<li class="list-group-item">How do you stay up to date with the latest developments
+							in tech?
+						</li>
+						<div class="pl-3">
+							<p class="text-muted">35 comments</p>
+						</div>
+					</ul>
+				</div>
 			</aside>
 		</div>
 	</main>
-<!---------------------CARD 2ND PAGE RIGHT ASIDE--------------------------------------------------->
-<aside>	
-	<div class="card" style="width: 18rem;">
-		<div class="card-body">
-			<div class="d-flex">
-				<img class="img-size" src="images/main/perfil4.jpg" alt="">
-				<h5 class="card-title">Simon Holdorf</h5>
-			</div>
-				<p class="card-text"> <img class="laptop-icon" src="images/aside1/microphone.jpg" alt="">Making the best platform for all developers --<br>http://thesmartcoder.dev <img class="laptop-icon" src="images/aside1/microphone.jpg" alt=""> <br>Programming is the best job in the world! <img class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon"> <img class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon"> Coder<img class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon"> Writer<img class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon"> <br>Building an Empire</p>
+	<!---------------------CARD 2ND PAGE RIGHT ASIDE--------------------------------------------------->
+	<aside>
+		<div class="card" style="width: 18rem;">
+			<div class="card-body">
+				<div class="d-flex">
+					<img class="img-size" src="images/main/perfil4.jpg" alt="">
+					<h5 class="card-title">Simon Holdorf</h5>
+				</div>
+				<p class="card-text"> <img class="laptop-icon" src="images/aside1/microphone.jpg" alt="">Making
+					the best
+					platform for all developers --<br>http://thesmartcoder.dev <img class="laptop-icon"
+						src="images/aside1/microphone.jpg" alt=""> <br>Programming is the best job in the
+					world! <img class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon"> <img
+						class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon"> Coder<img
+						class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon"> Writer<img
+						class="laptop-icon" src="images/aside1/microphone.jpg" alt="laptop-icon">
+					<br>Building an Empire
+				</p>
 				<button class="follow-btn" type="button">Follow</button>
-			<ul class="list-style">
-				<li><b class="simon-txt">WORK</b><br>Maker <span class="card-span">at</span> The Smart Coder</li><br>
-				<li><b class="simon-txt">LOCATION</b><br>Remote</li><br>
-				<li><b class="simon-txt">JOINED</b><br>Jul 29, 2019</li>
+				<ul class="list-style">
+					<li><b class="simon-txt">WORK</b><br>Maker <span class="card-span">at</span> The Smart
+						Coder</li>
+					<br>
+					<li><b class="simon-txt">LOCATION</b><br>Remote</li><br>
+					<li><b class="simon-txt">JOINED</b><br>Jul 29, 2019</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card mt-3" style="width: 18rem;">
+			<div class="card-header font-weight-bold">
+				<h5>More from <span class="c-text-color">Simon Holdorf</span></h5>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">Lesser-Known Yet Still Popular Java Script Frameworks for Front-End
+					Developers <br><span class="card-txt"> #javascript #webdev #beginners</span></li>
+				<li class="list-group-item">10 Awesome Free Courses for Devs by Devs <br><span class="card-txt">
+						#javascript #webdev #react #vue</span></li>
+				<li class="list-group-item">Java vs. JavaScript - What is the Difference?<br><span
+						class="card-txt">#javascript #java #webdev<br>#todayilearned</span></li>
 			</ul>
 		</div>
-	</div>
 
-	<div class="card mt-3" style="width: 18rem;">
-		<div class="card-header font-weight-bold">
-			<h5>More from <span class="c-text-color">Simon Holdorf</span></h5>
-		</div>
-		<ul class="list-group list-group-flush">
-			<li class="list-group-item">Lesser-Known Yet Still Popular Java Script Frameworks for Front-End Developers <br><span class="card-txt"> #javascript #webdev #beginners</span></li>
-			<li class="list-group-item">10 Awesome Free Courses for Devs by Devs <br><span class="card-txt"> #javascript #webdev #react #vue</span></li>
-			<li class="list-group-item">Java vs. JavaScript - What is the Difference?<br><span class="card-txt">#javascript #java #webdev<br>#todayilearned</span></li>
-		</ul>
-	</div>
+	</aside>
 
-</aside>
-
-<!--------------------------------------------------------------------------FOOTER--------------------------------------------------------------------------->
+	<!--------------------------------------------------------------------------FOOTER--------------------------------------------------------------------------->
 	<footer class="bg-gray ml-0 mr-0">
-      <div class="container-xl d-flex" >
-		<div class="row mt-3 ">
-			<nav class="col-12 mr-md-5 ml-md-5">
-				<a>Home</a>
-				<a>listings</a>
-				<a>Podcasts</a>
-				<a>Videos</a>
-				<a>Tags</a>
-				<a>Code of Conduct</a>
-				<a>FAQ</a>s just
-				<a>DEV Shop</a>
-				<a>Sponsors</a>
-				<a>About</a>
-				<a>Privacy Poacy</li>
-				<a>Terms of use</a>
-				<a>Contact</a>
-			</nav>
+		<div class="container-xl d-flex">
+			<div class="row mt-3 ">
+				<nav class="col-12 mr-md-5 ml-md-5">
+					<a>Home</a>
+					<a>listings</a>
+					<a>Podcasts</a>
+					<a>Videos</a>
+					<a>Tags</a>
+					<a>Code of Conduct</a>
+					<a>FAQ</a>s just
+					<a>DEV Shop</a>
+					<a>Sponsors</a>
+					<a>About</a>
+					<a>Privacy Poacy</li>
+						<a>Terms of use</a>
+						<a>Contact</a>
+				</nav>
+			</div>
+
+			<div class="pt-2 pb-2"> <a href="https://twitter.com/thepracticaldev" target="_blank"
+					class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						role="img" aria-labelledby="a4csmpur5bau3h8pgr0i56lh1mo9uiub" class="crayons-icon">
+						<title id="a4csmpur5bau3h8pgr0i56lh1mo9uiub">Twitter</title>
+						<path d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z"
+							fill="#65bbf2"></path>
+					</svg>
+
+				</a>
+				<a href="https://facebook.com/thepracticaldev" target="_blank"
+					class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						role="img" aria-labelledby="ac31fpoghxwkll3q0drxvun946pcwsjm" class="crayons-icon">
+						<title id="ac31fpoghxwkll3q0drxvun946pcwsjm">Facebook</title>
+						<path
+							d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z">
+						</path>
+					</svg>
+
+				</a>
+				<a href="https://github.com/thepracticaldev" target="_blank"
+					class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						role="img" aria-labelledby="ai6lld7kjm6poyq60j95yecmly52o9ed" class="crayons-icon">
+						<title id="ai6lld7kjm6poyq60j95yecmly52o9ed">Github</title>
+						<path
+							d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z">
+						</path>
+					</svg>
+
+				</a>
+				<a href="https://instagram.com/thepracticaldev" target="_blank"
+					class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						role="img" aria-labelledby="a9mxmwigmxprdyj9potffal635l5wjv" class="crayons-icon">
+						<title id="a9mxmwigmxprdyj9potffal635l5wjv">Instagram</title>
+						<path
+							d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z">
+						</path>
+					</svg>
+
+				</a>
+				<a href="https://twitch.com/thepracticaldev" target="_blank"
+					class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						role="img" aria-labelledby="amq08i61uidl7kemu36j24uvj7tdj05b" class="crayons-icon">
+						<title id="amq08i61uidl7kemu36j24uvj7tdj05b">Twitch</title>
+						<path
+							d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z">
+						</path>
+					</svg>
+
+				</a>
+			</div>
+			<p><span>DEV Community</span>-A constructive and inclusive social network for software. With you every
+				step
+				of your journey</p>
+			<p>Built on<span>Forem</span>-the<span>open source</span>software that powers <span>DEV</span>and
+				other
+				inclusive communties commuties.</p>
+			<p>Made with love and<span>Ruby on Rails.</span>DEV Community 2016-2021.</p>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				role="img" aria-labelledby="a50wz97mz5gmig7iz9e15galmubn0vpu"
+				class="crayons-icon crayons-icon--default">
+				<title id="a50wz97mz5gmig7iz9e15galmubn0vpu">Forem logo</title>
+				<g clip-path="url(#clip0)" fill="#1AB3A6">
+					<path
+						d="M4.603 1.438a8.056 8.056 0 017.643 5.478 8.543 8.543 0 00-3.023 5.968H8.054C3.606 12.884 0 9.296 0 4.87V1.468a.03.03 0 01.03-.03h4.573zM23.97 6.515a.03.03 0 01.03.03v2.833c0 4.11-3.354 7.442-7.491 7.442h-2.881v5.726h-2.305V14.53l.022-1.145c.294-3.843 3.526-6.87 7.469-6.87h5.155z">
+					</path>
+				</g>
+				<defs>
+					<clipPath id="clip0">
+						<path fill="#fff" d="M0 0h24v24H0z"></path>
+					</clipPath>
+				</defs>
+			</svg>
 		</div>
-
-		<div class="pt-2 pb-2"> <a href="https://twitter.com/thepracticaldev" target="_blank"
-				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-					role="img" aria-labelledby="a4csmpur5bau3h8pgr0i56lh1mo9uiub"
-					class="crayons-icon">
-					<title id="a4csmpur5bau3h8pgr0i56lh1mo9uiub">Twitter</title>
-					<path d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z"
-						fill="#65bbf2"></path>
-				</svg>
-
-			</a>
-			<a href="https://facebook.com/thepracticaldev" target="_blank"
-				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-					role="img" aria-labelledby="ac31fpoghxwkll3q0drxvun946pcwsjm"
-					class="crayons-icon">
-					<title id="ac31fpoghxwkll3q0drxvun946pcwsjm">Facebook</title>
-					<path
-						d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z">
-					</path>
-				</svg>
-
-			</a>
-			<a href="https://github.com/thepracticaldev" target="_blank"
-				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-					role="img" aria-labelledby="ai6lld7kjm6poyq60j95yecmly52o9ed"
-					class="crayons-icon">
-					<title id="ai6lld7kjm6poyq60j95yecmly52o9ed">Github</title>
-					<path
-						d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z">
-					</path>
-				</svg>
-
-			</a>
-			<a href="https://instagram.com/thepracticaldev" target="_blank"
-				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-					role="img" aria-labelledby="a9mxmwigmxprdyj9potffal635l5wjv"
-					class="crayons-icon">
-					<title id="a9mxmwigmxprdyj9potffal635l5wjv">Instagram</title>
-					<path
-						d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z">
-					</path>
-				</svg>
-
-			</a>
-			<a href="https://twitch.com/thepracticaldev" target="_blank"
-				class="crayons-link crayons-link--secondary mx-2" rel="noopener">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-					role="img" aria-labelledby="amq08i61uidl7kemu36j24uvj7tdj05b"
-					class="crayons-icon">
-					<title id="amq08i61uidl7kemu36j24uvj7tdj05b">Twitch</title>
-					<path
-						d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z">
-					</path>
-				</svg>
-
-			</a>
-		</div>
-		<p><span>DEV Community</span>-A constructive and inclusive social network for software. With you every
-			step
-			of your journey</p>
-		<p>Built on<span>Forem</span>-the<span>open source</span>software that powers <span>DEV</span>and other
-			inclusive communties commuties.</p>
-		<p>Made with love and<span>Ruby on Rails.</span>DEV Community 2016-2021.</p>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="a50wz97mz5gmig7iz9e15galmubn0vpu" class="crayons-icon crayons-icon--default"><title id="a50wz97mz5gmig7iz9e15galmubn0vpu">Forem logo</title>
-			<g clip-path="url(#clip0)" fill="#1AB3A6">
-				<path d="M4.603 1.438a8.056 8.056 0 017.643 5.478 8.543 8.543 0 00-3.023 5.968H8.054C3.606 12.884 0 9.296 0 4.87V1.468a.03.03 0 01.03-.03h4.573zM23.97 6.515a.03.03 0 01.03.03v2.833c0 4.11-3.354 7.442-7.491 7.442h-2.881v5.726h-2.305V14.53l.022-1.145c.294-3.843 3.526-6.87 7.469-6.87h5.155z"></path>
-			</g>
-			<defs>
-				<clipPath id="clip0">
-					<path fill="#fff" d="M0 0h24v24H0z"></path>
-				</clipPath>
-			</defs>
-		</svg>
-      </div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

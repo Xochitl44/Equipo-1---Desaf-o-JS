@@ -162,15 +162,19 @@ header{
 /* End of Sidebar */
 
 /* Aside Left */
+
+.icons{
+    flex-direction: column;
+}
 .a-l-text-color{
     text-align: center;
     color: red;
 }
 
 .a-l-card{
-    margin-top: 100vh;
-    width: 15vw;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
 }
 
 /* End of Aside Left */
@@ -314,7 +318,6 @@ h4:hover, li:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 a{

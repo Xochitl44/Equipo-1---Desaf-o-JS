@@ -265,22 +265,31 @@ margin-left: 15px;
 /* Aside Right */
 
 .div-card{
-    height: 25vh;
-}
-.img-aside-right{
-    padding: 1em;
-    border-radius: 8px;
+    /*height: 25vh;*/
+    .card-body{
+        padding-top: 0px;
+        p{
+            margin-bottom: 0px;
+        }
+    }
+    .img-aside-right{
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .c-text-color{
+        color: $main-blue;
+    }
+
+    
 }
 
-.c-text-color{
-    color: blue;
-}
+
 
 .btn-new{
-    background-color: blue;
+    background-color: $main-blue;
     border-radius: 8px;
     width: 15%;
-    margin-left: 1em;
+    margin-left: 1rem;
     color: white;
     font-size: small;
 }

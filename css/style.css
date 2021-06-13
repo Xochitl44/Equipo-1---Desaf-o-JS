@@ -34,6 +34,10 @@ header .navbar {
       flex-wrap: nowrap;
 }
 
+header .navbar .navbar-toggler {
+  margin-right: 1rem;
+}
+
 header .navbar .site-logo {
   padding: 0px;
   margin-right: 16px;

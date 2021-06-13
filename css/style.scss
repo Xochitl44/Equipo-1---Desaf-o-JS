@@ -31,6 +31,9 @@ header{
         background: transparent;
         justify-content: space-between;
         flex-wrap: nowrap;
+        .navbar-toggler{
+            margin-right: 1rem;
+        }
         .site-logo{
             padding: 0px;
             margin-right: 16px;

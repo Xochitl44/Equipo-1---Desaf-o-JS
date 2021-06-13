@@ -112,15 +112,27 @@ header .navbar .profile-badge + .dropdown-menu {
 /* Sidebar */
 /* End of Sidebar */
 /* Aside Left */
+.icons {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .a-l-text-color {
   text-align: center;
   color: red;
 }
 
 .a-l-card {
-  margin-top: 100vh;
-  width: 15vw;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
 }
 
 /* End of Aside Left */

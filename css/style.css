@@ -183,6 +183,38 @@ header .navbar .btn-create-post {
 
 /* End of Sidebar */
 /* Aside Left */
+.section-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.section-list .item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+.section-list .item-list:hover {
+  color: #323ebe;
+  background-color: rgba(8, 9, 10, 0.05);
+}
+
 .icons {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

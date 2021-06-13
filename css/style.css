@@ -224,9 +224,14 @@ header .navbar .btn-create-post {
           flex-direction: column;
 }
 
-.a-l-text-color {
+.ad-img-left {
+  border-radius: 6px;
+}
+
+.a-l-txt-color {
   text-align: center;
-  color: red;
+  color: #323ebe;
+  font-weight: bold;
 }
 
 .a-l-card {

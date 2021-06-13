@@ -4,8 +4,10 @@ $black-shadow: #08090a;
 $light-gray: #eef0f1;
 $profile-mask:  #4d5760;
 $main-blue:#323ebe;
+$main-black: #202428;
 body{
     background-color: $light-gray;
+    color: $main-black;
 }
 main{
     margin-top: 56px;

@@ -81,6 +81,10 @@ header {
   margin-left: 15px;
 }
 
+.not-b {
+  font-weight: lighter;
+}
+
 .c-name {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

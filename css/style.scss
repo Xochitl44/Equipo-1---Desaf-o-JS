@@ -9,6 +9,23 @@ $main-black: #202428;
 $hover-tabs-color: #3b49df;
 $transparent-blue-bg: rgba(59, 73, 223, 0.1);
 $radius: 5px;
+
+$reaction-color-red: #dc1818;
+$filter-reaction-color-red: invert(20%) sepia(94%) saturate(2822%) hue-rotate(351deg) brightness(88%) contrast(98%);
+$bg-reaction-color-red: rgba(220,24,24,.1);
+
+$reaction-color-light-blue:#26d9ca;
+$filter-reaction-color-light-blue: invert(94%) sepia(52%) saturate(6035%) hue-rotate(124deg) brightness(89%) contrast(88%);
+$bg-reaction-color-light-blue: rgba(38,217,202,.1);
+
+$reaction-color-blue:#3b49df;
+$filter-reaction-color-blue: invert(29%) sepia(63%) saturate(4445%) hue-rotate(231deg) brightness(87%) contrast(101%);;
+$bg-reaction-color-blue: rgba(59,73,223,.1);
+
+
+$filter-reaction-gray: invert(19%) sepia(12%) saturate(680%) hue-rotate(169deg) brightness(93%) contrast(84%);
+$bg-reaction-color-black: rgba(0,0,0,.04);
+
 body{
     background-color: $light-gray;
     color: $main-black;
@@ -291,6 +308,11 @@ header{
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
+        align-items: center;
+        .subtitle{
+            font-size: 1.25rem;
+            margin-bottom: 0px;
+        }
         .title{
             display:flex;
         }
@@ -298,6 +320,7 @@ header{
     }
     .nav.nav-tabs{
         border-bottom: none;
+       
         .nav-link{
             position: relative;
             border-radius: 5px;
@@ -408,25 +431,31 @@ margin-left: 15px;
 
 
 /*Card Main 2nd PAGE*/
-section{
+/*section{
     background-color: white;
-}
+}*/
 .card-style{
-    padding: 1em;
+    padding: 1rem;
 }
 
 .h-card{
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
-.1st-p-card{
-    margin-bottom: 10em;
+.first-p-card{
+    margin-bottom: 10rem;
 }
 
 .card-txt-2{
     color: black;
 }
-
+.card-post-detail{
+    .card-body{
+        img{
+            max-width: 100%;
+        }
+    }
+}
 
 /*End of Card Main 2nd PAGE*/
 
@@ -573,3 +602,94 @@ span{
     font-weight: bold;
 }
 /* End of Footer */
+
+
+
+/** ---------------------ASIDE LEFT POST DETAIL---------------------*/
+.post-detail-actions{
+    display: flex;
+    flex-direction: row;
+    
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 56px;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0px -1px 5px rgba(0,0,0,.2) ;
+
+    button{
+        border: none;
+        background: transparent;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+        
+        .icon{
+            padding: .5rem;
+            border-radius: 50%;
+            transition: all .1s linear;
+            img{
+                filter: $filter-reaction-gray;
+                transition: all .1s linear;
+            }
+        }
+        .counter{
+            color: $profile-mask;
+        }
+        &:hover{
+            &.heart{
+                .icon{
+                    background-color: $bg-reaction-color-red;
+                    img{
+                        filter: $filter-reaction-color-red;
+                    }
+                }
+            }
+            &.unicorn{
+                .icon{
+                    background-color: $bg-reaction-color-light-blue;
+                    img{
+                        filter: $filter-reaction-color-light-blue;
+                    }
+                }
+            }
+            &.save{
+                .icon{
+                    background-color: $bg-reaction-color-blue;
+                    img{
+                        filter: $filter-reaction-color-blue;
+                    }
+                }
+            }
+            &.more{
+                .icon{
+                    background-color: $bg-reaction-color-black;
+                    
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (min-width:768px) {
+    .post-detail-actions{
+        position: relative;
+        flex-direction: column;
+        height: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        z-index: unset;
+        button{
+            flex-direction: column;
+        }
+    }
+}

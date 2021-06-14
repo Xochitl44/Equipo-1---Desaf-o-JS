@@ -155,25 +155,49 @@
 		</div>
 
 	</div>
-	<main class="container-xl">
+	<main class="container-xl custom-container">
 
 
 		<div class="row">
 			<!-------------------------------------------------------------------ASIDE LEFT----------------------------------------------------------------------------------------->
-			<aside class="col-1">
-
+			<aside class="col-12 col-md-1">
+				<div class="post-detail-actions">
+					<button class="action heart">
+						<span class="icon">
+							<img src="img/icons/heart-action.svg" alt="like">
+						</span>
+						<span class="counter">100</span>
+					</button>
+					<button class="action unicorn">
+						<span class="icon">
+							<img src="img/icons/unicorn-action.svg" alt="unicorn">
+						</span>
+						<span class="counter">500</span>
+					</button>
+					<button class="action save">
+						<span class="icon">
+							<img src="img/icons/save-action.svg" alt="save">
+						</span>
+						<span class="counter">60</span>
+					</button>
+					<button class="action more">
+						<span class="icon">
+							<img src="img/icons/more-action.svg" alt="like">
+						</span>
+					</button>
+				</div>
 
 			</aside>
 			<!------------------------------------------------------------------------CARDS--------------------------------------------------------------------------->
-			<section class="col-7">
-				<div>
+			<section class="col-12 col-md-11 col-lg-8">
+				<div class="card">
 					<img src="img/photos/main card img.jpg" class="card-img-top"
 						alt="React Libraries To Use In 2021: 15 Top Picks">
-					<div class="card-body">
+					<div class="card-header">
 						<h1 class="card-text font-weight-bold">React Libraries To Use In 2021: 15 Top Picks</h>
 					</div>
 
-					<div>
+					<div class="card-body">
 						<p class="card-text">Yash Tiwari Jun 13 7 min read<img src="..." alt=""></p>
 						<p>React is a JavaScript library that lets you create a prime UI for both mobile and web
 							applications. It integrates seamlessly with other JavaScript frameworks and libraries and
@@ -192,7 +216,7 @@
 
 						<h2 class="h-card">1.<a href="https://react-query.tanstack.com/" target="_blank"><u>React
 									Query</u></a></h2>
-						<p><img class="1st-p-card" src="img/photos/react query.png" class="card-img-top"
+						<p><img class="first-p-card" src="img/photos/react query.png" class="card-img-top"
 								alt="React Query"><br>The process of fetching data with React usually involves a lot of
 							code. With React Query, you can reduce the amount of code you write when making network
 							requests. Using the hook useQuery, we can replace all the React code we had to write before.
@@ -362,8 +386,8 @@
 				</div>
 			</section>
 			<!------------------------------------------------------------------ ASIDE RIGHT---------------------------------------------------------------------->
-			<aside class="d-none d-xl-block col-xl-4">
-				<div class="card">
+			<aside class="d-none d-lg-block d-xl-block col-lg-3 col-xl-3">
+				<div class="card card-post-detail">
 					<div class="card-body">
 						<div class="d-flex">
 							<img class="img-size" src="images/main/perfil4.jpg" alt="">

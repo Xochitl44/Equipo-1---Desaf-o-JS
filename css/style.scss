@@ -533,6 +533,15 @@ div{
 
 /* Aside Right */
 
+.a-right{
+    display: flex;
+    justify-content: space-between;
+    .post-l{
+        text-decoration: none;
+        color: $main-blue;
+    }
+}
+
 .div-card{
     /*height: 25vh;*/
     .card-body{
@@ -697,9 +706,23 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 30px;
     }
 }
 
+.f-divider{
+position: relative;
+right: 100px;
+&::after{
+    content: " ";
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    border: none;
+    background-color:$black-shadow;
+    opacity: 0.10;
+}
+}
 
 a{
     padding: 10px;
@@ -707,6 +730,10 @@ a{
 
 .bg-gray{
     background-color: rgb(210, 214, 219);
+}
+.f-size{
+    text-align: center;
+    font-size: 90%;
 }
 
 span{

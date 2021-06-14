@@ -598,6 +598,20 @@ div .btn-card-5 {
 /*End of Card Main 2nd PAGE*/
 /* End of Main */
 /* Aside Right */
+.a-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.a-right .post-l {
+  text-decoration: none;
+  color: #323ebe;
+}
+
 .div-card {
   /*height: 25vh;*/
 }
@@ -776,6 +790,22 @@ footer > .custom-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 30px;
+}
+
+.f-divider {
+  position: relative;
+  right: 100px;
+}
+
+.f-divider::after {
+  content: " ";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  border: none;
+  background-color: #08090a;
+  opacity: 0.10;
 }
 
 a {
@@ -784,6 +814,11 @@ a {
 
 .bg-gray {
   background-color: #d2d6db;
+}
+
+.f-size {
+  text-align: center;
+  font-size: 90%;
 }
 
 span {

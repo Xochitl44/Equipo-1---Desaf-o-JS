@@ -386,6 +386,28 @@ header .navbar .btn-create-post {
   text-decoration: none;
 }
 
+/*Card Main 2nd PAGE*/
+section {
+  background-color: white;
+}
+
+.card-style {
+  padding: 1em;
+}
+
+.h-card {
+  margin-bottom: 1em;
+}
+
+.1st-p-card {
+  margin-bottom: 10em;
+}
+
+.card-txt-2 {
+  color: black;
+}
+
+/*End of Card Main 2nd PAGE*/
 /* End of Main */
 /* Aside Right */
 .div-card {

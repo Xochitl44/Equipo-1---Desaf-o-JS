@@ -348,6 +348,12 @@ header .navbar .btn-create-post:hover {
   width: auto;
 }
 
+.tags .tag-header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 /* End of Aside Left */
 /* Main */
 .cards-section .cards-navigation {
@@ -889,12 +895,16 @@ span {
     background-color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(72px + 6vh);
   }
   .post-detail-actions button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

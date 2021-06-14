@@ -303,6 +303,14 @@ header{
     width: auto;
 }
 
+.tags{
+
+.tag-header{
+    justify-content: space-between;
+}
+
+}
+
 /* End of Aside Left */
 
 /* Main */
@@ -790,8 +798,11 @@ span{
         z-index: unset;
         background-color: transparent;
         box-shadow: none;
+        position: sticky;
+        top: calc(72px + 6vh);
         button{
             flex-direction: column;
+            margin-left: 0px;
         }
     }
 }

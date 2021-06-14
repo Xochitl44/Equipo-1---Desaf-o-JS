@@ -497,6 +497,7 @@ header .navbar .btn-create-post {
 }
 
 /*Card Main 2nd PAGE*/
+<<<<<<< HEAD
 /*section{
     background-color: white;
 }*/
@@ -510,16 +511,88 @@ header .navbar .btn-create-post {
 
 .first-p-card {
   margin-bottom: 10rem;
+=======
+section .card {
+  background-color: white;
 }
 
-.card-txt-2 {
+section .h-card {
+  margin-bottom: 1em;
+}
+
+section .1st-p-card {
+  margin-bottom: 10em;
+>>>>>>> 4f1251e (discussion and main card changes)
+}
+
+section .card-txt-2 {
   color: black;
 }
 
+<<<<<<< HEAD
 .card-post-detail .card-body img {
   max-width: 100%;
 }
 
+=======
+section .card-format {
+  padding: 3em;
+}
+
+div .btn-card-2 {
+  background-color: #5c0066;
+  color: white;
+  border-radius: 6px;
+}
+
+div .btn-card-3 {
+  background-color: green;
+  color: white;
+  border-radius: 6px;
+  border-style: none;
+}
+
+div .btn-card-4 {
+  background-color: yellow;
+  color: black;
+  border-radius: 6px;
+  border-style: none;
+}
+
+div .btn-card-5 {
+  background-color: black;
+  color: lightsteelblue;
+  border-radius: 6px;
+}
+
+.img-yash {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+
+.date-txt {
+  color: gray;
+  font-size: small;
+  font-weight: lighter;
+  margin-left: 1em;
+}
+
+.img-discussion {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+
+/*.box-discussion{
+    width: 50px;
+    height: 50px;
+    border: 5px solid green;
+}
+*/
+>>>>>>> 4f1251e (discussion and main card changes)
 /*End of Card Main 2nd PAGE*/
 /* End of Main */
 /* Aside Right */
@@ -601,6 +674,7 @@ h4:hover, li:hover {
   font-size: small;
   font-weight: normal;
   padding-top: .25em;
+  padding-left: 2em;
 }
 
 .simon-txt {

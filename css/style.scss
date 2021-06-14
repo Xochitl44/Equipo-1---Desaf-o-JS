@@ -431,6 +431,7 @@ margin-left: 15px;
 
 
 /*Card Main 2nd PAGE*/
+<<<<<<< HEAD
 /*section{
     background-color: white;
 }*/
@@ -444,11 +445,78 @@ margin-left: 15px;
 
 .first-p-card{
     margin-bottom: 10rem;
+=======
+section{
+    .card{
+        background-color: white;
+    }
+        .h-card{
+            margin-bottom: 1em;
+        }
+        .1st-p-card{
+            margin-bottom: 10em;
+        }
+        .card-txt-2{
+            color: black;
+        }
+        .card-format{
+            padding: 3em
+        }
 }
 
-.card-txt-2{
-    color: black;
+div{
+    .btn-card-2{
+        background-color: hsl(294, 100%, 20%);
+        color: white;
+        border-radius: 6px;
+    }
+    .btn-card-3{
+        background-color: green;
+        color: white;
+        border-radius: 6px;
+        border-style: none;
+    }
+    .btn-card-4{
+        background-color: yellow;
+        color: black;
+        border-radius: 6px;
+        border-style: none;
+    }
+    .btn-card-5{
+        background-color: black;
+        color: lightsteelblue;
+        border-radius: 6px;
+    }
 }
+
+.img-yash{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-bottom: 1em;
+}
+
+.date-txt{
+    color: gray;
+    font-size: small;
+    font-weight: lighter;
+    margin-left: 1em;
+}
+
+.img-discussion{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-bottom: 1em;
+>>>>>>> 4f1251e (discussion and main card changes)
+}
+
+/*.box-discussion{
+    width: 50px;
+    height: 50px;
+    border: 5px solid green;
+}
+<<<<<<< HEAD
 .card-post-detail{
     .card-body{
         img{
@@ -456,6 +524,11 @@ margin-left: 15px;
         }
     }
 }
+=======
+*/
+
+
+>>>>>>> 4f1251e (discussion and main card changes)
 
 /*End of Card Main 2nd PAGE*/
 
@@ -484,8 +557,8 @@ margin-left: 15px;
 }
 
 .l-text{
-   margin-top: .3em;
-   font-size: small;
+    margin-top: .3em;
+    font-size: small;
 }
 
 .btn-new{
@@ -539,12 +612,16 @@ h4:hover, li:hover{
     font-size: small;
     font-weight: normal;
     padding-top: .25em;
+    padding-left: 2em;
 }
 
 .simon-txt{
     font-size: x-small;
     color: gray;
 }
+
+
+
 /* End of Aside Right */
 
 /*CARD 2ND PAGE "READ NEXT"*/

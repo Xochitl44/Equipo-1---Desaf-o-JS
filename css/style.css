@@ -103,6 +103,10 @@ header .navbar .btn-create-post {
   background-color: #323ebe;
 }
 
+header .navbar .btn-create-post:hover {
+  background-color: #2d37aa;
+}
+
 @media (min-width: 768px) {
   header .navbar .profile-badge {
     display: -webkit-box;
@@ -353,7 +357,7 @@ header .navbar .btn-create-post {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -362,6 +366,7 @@ header .navbar .btn-create-post {
 .cards-section .cards-navigation .subtitle {
   font-size: 1.25rem;
   margin-bottom: 0px;
+  font-weight: 700;
 }
 
 .cards-section .cards-navigation .title {
@@ -379,22 +384,24 @@ header .navbar .btn-create-post {
   border-radius: 5px;
   overflow: hidden;
   color: #202428;
+  color: #202428;
+  padding: 8px 12px;
 }
 
 .cards-section .nav.nav-tabs .nav-link.active {
   background-color: transparent;
   border: none;
-  font-size: 700;
+  font-weight: 500;
 }
 
 .cards-section .nav.nav-tabs .nav-link.active:after {
   content: " ";
   position: absolute;
   background: #323ebe;
-  height: 4px;
+  height: 3px;
   bottom: 0px;
-  left: 1rem;
-  right: 1rem;
+  left: .75rem;
+  right: .75rem;
 }
 
 .cards-section .nav.nav-tabs .nav-link.active:hover:after {
@@ -412,6 +419,7 @@ header .navbar .btn-create-post {
 
 .br-post {
   border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -497,24 +505,28 @@ header .navbar .btn-create-post {
 }
 
 /*Card Main 2nd PAGE*/
-section .card {
+section.post-detail .card {
   background-color: white;
 }
 
-section .h-card {
+section.post-detail .h-card {
   margin-bottom: 1em;
 }
 
-section .1st-p-card {
+section.post-detail .first-p-card {
   margin-bottom: 10em;
 }
 
-section .card-txt-2 {
+section.post-detail .card-txt-2 {
   color: black;
 }
 
-section .card-format {
+section.post-detail .card-format {
   padding: 3em;
+}
+
+section.post-detail img {
+  max-width: 100%;
 }
 
 div .btn-card-2 {
@@ -622,20 +634,64 @@ h4:hover, li:hover {
 }
 
 /*CARD 2ND PAGE RIGHT ASIDE*/
-.img-size {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  margin-bottom: 1em;
+.post-detail-profile {
+  top: 72px;
 }
 
-.follow-btn {
-  background-color: blue;
+.post-detail-profile .post-detail-profile-info {
+  border-top: 2rem solid #202428;
+  padding-top: 0px;
+}
+
+.post-detail-profile .post-detail-profile-info .card-header {
+  border: none;
+  background: transparent;
+  margin-top: -2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.post-detail-profile .post-detail-profile-info .card-header img {
+  margin-bottom: 0px;
+}
+
+.post-detail-profile .post-detail-profile-info .card-header .card-title {
+  margin-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-left: .5rem;
+  margin-bottom: .25rem;
+}
+
+.post-detail-profile .post-detail-profile-info .card-body .follow-btn {
+  background-color: #323ebe;
   width: 100%;
   height: 3em;
   color: white;
   font-weight: bold;
   border-radius: 8px;
+  border: none;
+  padding: .5rem 1rem;
+  height: auto;
+}
+
+.post-detail-profile .post-detail-profile-info .card-body .follow-btn:hover {
+  background-color: #2d37aa;
+}
+
+.img-size {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-bottom: 1em;
 }
 
 .laptop-icon {

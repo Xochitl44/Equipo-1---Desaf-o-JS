@@ -693,6 +693,11 @@ h4:hover, li:hover {
   background-color: #2d37aa;
 }
 
+.post-detail-profile .post-detail-profile-info .card-body .simon-txt {
+  font-size: .75rem;
+  color: #64707d;
+}
+
 .img-size {
   width: 50px;
   height: 50px;
@@ -721,11 +726,6 @@ h4:hover, li:hover {
   font-weight: normal;
   padding-top: .25em;
   padding-left: 2em;
-}
-
-.simon-txt {
-  font-size: x-small;
-  color: gray;
 }
 
 /* End of Aside Right */

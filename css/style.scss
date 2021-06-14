@@ -384,10 +384,11 @@ header{
 }
 
 .br-100{
-border-radius: 100%;
-height: 40px;
-margin-bottom: 7px;
-margin-left: 15px;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .not-b{
@@ -434,18 +435,73 @@ margin-left: 15px;
 .post-list{
     display: flex;
     align-items: center;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
     text-decoration: none;
-    padding: 5px;
+    /*padding: 5px;*/
     color: black;
-    
+    padding: 0px;
     &:hover{
         color: $main-blue;
         text-decoration: none;
+        cursor: pointer;
     }
 }
 
-
+.post-card{
+    .card-body{
+        .c-header{
+            .c-name{
+                p{
+                    margin-bottom: 0px;
+                }
+            }
+            
+        }
+        .card-content{
+            .card-title{
+                font-weight: 700;
+            }
+            .card-post-tags{
+                
+                .custom-a{
+                    padding: 0 8px;
+                    color: rgb(140, 255, 249);
+                }
+            }
+            nav{
+                a{
+                    color: $main-gray;
+                    font-size: 14px;
+                }
+            }
+            .read{
+                font-size: 14px;
+                color: #363d44;
+                font-weight: 700;
+                align-items: center;
+                button{
+                    color: #363d44;
+                    font-weight: 700;
+                }
+                .d-flex{
+                    align-items: center;
+                }
+                .save{
+                    padding: .25rem .5rem;
+                    font-weight: 400;
+                }
+            }
+            
+        }
+    }
+    &.featured-post-card{
+        .card-content{
+            .card-title{
+                font-size: 30px;
+            }
+        }
+    }
+}
 /*Card Main 2nd PAGE*/
 section.post-detail{
     .card{
@@ -547,7 +603,7 @@ div{
     }
     .c-text-color{
         color: $main-blue;
-        font-size: x-small;
+        /*font-size: x-small;*/
     }   
 
     

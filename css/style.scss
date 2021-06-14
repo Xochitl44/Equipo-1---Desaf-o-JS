@@ -493,6 +493,38 @@ h4:hover, li:hover{
 }
 /* End of Aside Right */
 
+/*CARD 2ND PAGE "READ NEXT"*/
+.title{
+    color: $main-black;
+    font-weight: bold;
+    
+    &:hover{
+        color: $main-black;
+        text-decoration: none;
+    }
+
+}
+.bg-post{
+    border-radius: 5px;
+
+}
+
+.ps-list{
+    padding: 0px;
+    color: $main-black;
+    &:hover{
+        color: $main-blue;
+        text-decoration: none;
+    }
+}
+
+.pt-card{
+    height: 60px;
+    border-radius: 100%;
+}
+
+
+/* END CARD 2ND PAGE "READ NEXT"*/
 /* Footer */
 footer{
     > .custom-container{

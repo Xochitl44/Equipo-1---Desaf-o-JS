@@ -611,6 +611,13 @@ h4:hover, li:hover{
                     background-color: darken($main-blue,5%);
                 }
             }
+            .list-style{
+                list-style-type: none;
+                padding: 0;
+                li{
+                    margin-bottom: .5rem;
+                }
+            }
             .simon-txt{
                 font-size: .75rem;
                 color: $main-gray;
@@ -631,12 +638,6 @@ h4:hover, li:hover{
 .laptop-icon{
     width: 20px;
     height: 20px;
-}
-
-.list-style{
-    list-style-type: none;
-    padding: 0;
-    margin: 1em 1em 1em 0;
 }
 
 .card-span{

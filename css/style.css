@@ -693,6 +693,15 @@ h4:hover, li:hover {
   background-color: #2d37aa;
 }
 
+.post-detail-profile .post-detail-profile-info .card-body .list-style {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-detail-profile .post-detail-profile-info .card-body .list-style li {
+  margin-bottom: .5rem;
+}
+
 .post-detail-profile .post-detail-profile-info .card-body .simon-txt {
   font-size: .75rem;
   color: #64707d;
@@ -708,12 +717,6 @@ h4:hover, li:hover {
 .laptop-icon {
   width: 20px;
   height: 20px;
-}
-
-.list-style {
-  list-style-type: none;
-  padding: 0;
-  margin: 1em 1em 1em 0;
 }
 
 .card-span {

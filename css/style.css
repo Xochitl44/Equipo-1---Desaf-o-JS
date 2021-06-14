@@ -772,6 +772,9 @@ span {
     right: auto;
     bottom: auto;
     z-index: unset;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .post-detail-actions button {
     -webkit-box-orient: vertical;

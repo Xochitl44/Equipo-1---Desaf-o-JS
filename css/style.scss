@@ -688,6 +688,8 @@ span{
         right: auto;
         bottom: auto;
         z-index: unset;
+        background-color: transparent;
+        box-shadow: none;
         button{
             flex-direction: column;
         }

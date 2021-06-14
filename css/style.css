@@ -161,6 +161,32 @@ header .navbar .btn-create-post {
   z-index: 1031;
 }
 
+.sidebar .sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(8, 9, 10, 0.1);
+  height: 56px;
+}
+
+.sidebar .sidebar-header .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.sidebar .sidebar-header button {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+}
+
 .sidebar .sidebar-content {
   background: white;
   position: relative;
@@ -176,6 +202,26 @@ header .navbar .btn-create-post {
   height: 100%;
 }
 
+.sidebar .sidebar-content .section-list {
+  padding: .5rem;
+}
+
+.sidebar .sidebar-content .section-list.collapse {
+  height: 19.2rem;
+}
+
+.sidebar .sidebar-content .section-list.show {
+  height: auto;
+}
+
+.sidebar .sidebar-content .section-list.show + .view-more-sections {
+  display: none;
+}
+
+.sidebar .sidebar-content .view-more-sections {
+  padding-left: 8px;
+}
+
 .sidebar .sidebar-overlay {
   background: #08090a;
   opacity: 0.5;
@@ -187,9 +233,15 @@ header .navbar .btn-create-post {
   z-index: -1;
 }
 
+.social-icons img, .social-icons path, .social-icons img path {
+  -webkit-filter: invert(34%) sepia(8%) saturate(836%) hue-rotate(167deg) brightness(88%) contrast(84%);
+          filter: invert(34%) sepia(8%) saturate(836%) hue-rotate(167deg) brightness(88%) contrast(84%);
+}
+
 /* End of Sidebar */
 /* Aside Left */
 .section-list {
+  font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,6 +252,19 @@ header .navbar .btn-create-post {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  overflow: hidden;
+}
+
+.section-list.collapse {
+  height: 18.4rem;
+}
+
+.section-list.show {
+  height: auto;
+}
+
+.section-list.show + .view-more-sections {
+  display: none;
 }
 
 .section-list .item-list {
@@ -209,14 +274,44 @@ header .navbar .btn-create-post {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 5px;
+  margin-left: 8px;
   text-decoration: none;
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
   color: black;
+  margin-left: 0px;
+}
+
+.section-list .item-list span {
+  margin-right: 8px;
+}
+
+.section-list .item-list span img {
+  width: 24px;
 }
 
 .section-list .item-list:hover {
+  color: #323ebe;
+  background-color: rgba(8, 9, 10, 0.05);
+}
+
+.view-more-sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view-more-sections button {
+  border: none;
+  background: transparent;
+  padding: 8px 8px 8px 40px;
+  color: #4d5760;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
+}
+
+.view-more-sections button:hover {
   color: #323ebe;
   background-color: rgba(8, 9, 10, 0.05);
 }
@@ -273,16 +368,15 @@ header .navbar .btn-create-post {
 
 .cards-section .nav.nav-tabs .nav-link {
   position: relative;
-}
-
-.cards-section .nav.nav-tabs .nav-link:hover {
-  color: #3b49df;
-  background-color: rgba(59, 73, 223, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  color: #202428;
 }
 
 .cards-section .nav.nav-tabs .nav-link.active {
   background-color: transparent;
   border: none;
+  font-size: 700;
 }
 
 .cards-section .nav.nav-tabs .nav-link.active:after {
@@ -298,6 +392,14 @@ header .navbar .btn-create-post {
 .cards-section .nav.nav-tabs .nav-link.active:hover:after {
   left: 0rem;
   right: 0rem;
+  border-radius: 0 0 5px 5px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.cards-section .nav.nav-tabs .nav-link:hover {
+  color: #3b49df;
+  background-color: rgba(59, 73, 223, 0.1);
 }
 
 .br-post {

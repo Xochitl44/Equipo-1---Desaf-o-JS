@@ -1,13 +1,14 @@
 /* Global Variables */
 
 $black-shadow: #08090a;
+$black-transparent: rgba(8,9,10,.1);
 $light-gray: #eef0f1;
 $profile-mask:  #4d5760;
 $main-blue:#323ebe;
 $main-black: #202428;
 $hover-tabs-color: #3b49df;
 $transparent-blue-bg: rgba(59, 73, 223, 0.1);
-
+$radius: 5px;
 body{
     background-color: $light-gray;
     color: $main-black;
@@ -149,6 +150,23 @@ header{
     bottom: 0px;
     right: 0px;
     z-index: 1031;
+    .sidebar-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem ;
+        border-bottom: 1px solid $black-transparent;
+        height: 56px;
+        .title{
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        button{
+            border: none;
+            background: transparent;
+            font-size: 1.5rem;
+        }
+    }
     .sidebar-content{
         background: white;
         position: relative;
@@ -157,6 +175,22 @@ header{
         display: flex;
         flex-direction: column;
         height: 100%;
+        .section-list
+        {
+            padding: .5rem;
+            &.collapse{
+                height: 19.2rem;
+            }
+            &.show{
+                height: auto;
+                & + .view-more-sections{
+                    display: none;
+                }
+            }
+        }
+        .view-more-sections{
+            padding-left: 8px;
+        }
     }
     .sidebar-overlay{
         background: #08090a;
@@ -169,22 +203,60 @@ header{
         z-index: -1;
     }
 }
+.social-icons{
+    img, path, img path{
+        filter: invert(34%) sepia(8%) saturate(836%) hue-rotate(167deg) brightness(88%) contrast(84%);
+    }
+}
 /* End of Sidebar */
 
 /* Aside Left */
 .section-list{
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    overflow: hidden;
+    &.collapse{
+        height: 18.4rem;
+    }
+    &.show{
+        height: auto;
+        & + .view-more-sections{
+            display: none;
+        }
+    }
     .item-list{
         display: flex;
         align-items: center;
-        margin-left: 5px;
+        margin-left: 8px;
         text-decoration: none;
-        padding: 10px;
+        padding: 8px;
         border-radius: 5px;
         color: black;
-        
+        margin-left: 0px;
+        span{
+            margin-right: 8px;
+            img{
+                width: 24px;
+            }
+        }
+        &:hover{
+            color: $main-blue;
+            background-color: rgba(8, 9, 10, 0.05);
+        }
+    }
+}
+.view-more-sections{
+    display: flex;
+    button{
+        border: none;
+        background: transparent;
+        padding: 8px 8px 8px 40px;
+        color: #4d5760;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: left;
         &:hover{
             color: $main-blue;
             background-color: rgba(8, 9, 10, 0.05);
@@ -228,13 +300,13 @@ header{
         border-bottom: none;
         .nav-link{
             position: relative;
-            &:hover{
-                color: $hover-tabs-color;
-                background-color: $transparent-blue-bg;
-            }
+            border-radius: 5px;
+            overflow: hidden;
+            color: $main-black;
             &.active{
                 background-color: transparent;
                 border: none;
+                font-size: 700;
                 &:after{
                     content: " ";
                     position: absolute;
@@ -243,13 +315,20 @@ header{
                     bottom: 0px;
                     left: 1rem;
                     right: 1rem;
+                    
                 }
                 &:hover{
                     &:after{
                         left: 0rem;
                         right: 0rem;
+                        border-radius: 0 0 $radius $radius;
+                        transition: all 0.2s linear;
                     }
                 }
+            }
+            &:hover{
+                color: $hover-tabs-color;
+                background-color: $transparent-blue-bg;
             }
 
         }

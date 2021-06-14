@@ -21,9 +21,10 @@
 				<div class="col-12">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
 						<div class="navbar-left d-flex align-items-center">
-							<button class="navbar-toggler" type="button" data-toggle="collapse"
-								data-target="#sidebar" aria-controls="navbarProfileInfo"
-								aria-expanded="false" aria-label="Toggle navigation">
+							<button class="navbar-toggler d-flex d-md-none" type="button"
+								data-toggle="collapse" data-target="#sidebar"
+								aria-controls="navbarProfileInfo" aria-expanded="false"
+								aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 							<a href="/" class="site-logo" aria-label="DEV Community Home">
@@ -35,14 +36,17 @@
 									</path>
 								</svg>
 							</a>
-							
+
 						</div>
 						<form class="seach">
 							<input class="form-control " type="search" placeholder="Search..."
 								aria-label="Search...">
 						</form>
 						<div class="navbar-right d-flex  align-items-center">
-							<button class="btn btn-primary btn-create-post">Create Post</button>
+							<button class="btn btn-primary btn-create-post d-none d-md-flex">Create
+								Post</button>
+							<a href="" class="d-flex d-md-none"><img src="img/icons/search.svg"
+									alt="seach"></a>
 							<a href=""><img src="img/icons/moderation.svg" alt="moderation"></a>
 							<a href=""><img src="img/icons/connect.svg" alt="connect"></a>
 							<a href=""><img src="img/icons/notifications.svg" alt="notifications"></a>
@@ -64,10 +68,11 @@
 
 									<li>
 										<a id="first-nav-link" href="#">
-											
-											  <span class="fw-medium block">alfredopizana</span>
-											  <small class="fs-s color-base-50">@alfredopizana</small>
-											
+
+											<span class="fw-medium block">alfredopizana</span>
+											<small
+												class="fs-s color-base-50">@alfredopizana</small>
+
 										</a>
 									</li>
 									<li><a class="dropdown-item" href="#">Dashboard</a></li>
@@ -87,20 +92,71 @@
 			</div>
 		</div>
 	</header>
-	<div class="sidebar" id="sidebar">
-		<button type="button" class="" aria-label="Close" data-toggle="collapse"
-		data-target="#sidebar"
-		aria-expanded="true" aria-label="Toggle navigation">
-			<span aria-hidden="true">&times;</span>
-		  </button>
+	<div class="sidebar collapse" id="sidebar">
+
 
 		<div class="sidebar-content">
-			<h5 class="h4">Collapsed content</h5>
-			<h5 class="h4">Collapsed content</h5>
-			<h5 class=" h4">Collapsed content</h5>
-			<h5 class="h4">Collapsed content</h5>
-				  <h5 class="h4">Collapsed content</h5>
-				  <span class="text-muted">Toggleable via the navbar brand.</span>
+			<div class="sidebar-header">
+				<span class="title">DEV Community</span>
+				<button type="button" class="" aria-label="Close" data-toggle="collapse" data-target="#sidebar"
+				aria-expanded="true" aria-label="Toggle navigation">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<nav class="d-flex icons section-list collapse" id="section-list" aria-expanded="false">
+				<a href="#" class="item-list">
+					<span><img src="img/icons/home.svg" alt=""></span>Home</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/readinglist.svg" alt=""></span>Reading List</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/listings.svg" alt=""></span>Listings</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/podcasts.svg" alt=""></span>Podcasts</a>
+				<a href="#" class="item-list">
+					<span class="crayons-icon crayons-icon--default"><img src="img/icons/videos.svg"
+							alt=""></span>Videos</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/tags.svg" alt=""></span>Tags</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/code-of-conduct.svg" alt=""></span>Code of Coduct</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/faq.svg" alt=""></span>FAQ</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/dev-shop.svg" alt=""></span>DEV Shop</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/about.svg" alt=""></span>About</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/privacy-policy.svg" alt=""></span>Privacy Policy</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/terms-of-use.svg" alt=""></span>Terms of use</a>
+				<a href="#" class="item-list">
+					<span><img src="img/icons/contact.svg" alt=""></span>Contact</a>
+
+				<div class="mt-5 social-icons"> 
+					<a href="https://twitter.com/thepracticaldev" target="_blank"
+						class="" rel="noopener">
+						<img src="img/icons/twitter.svg" alt="twitter">
+					</a>
+					<a href="https://facebook.com/thepracticaldev" target="_blank">
+						<img src="img/icons/facebook.svg" alt="facebook">
+					</a>
+					<a href="https://github.com/thepracticaldev" target="_blank">
+						<img src="img/icons/github.svg" alt="github">
+					</a>
+					<a href="https://instagram.com/thepracticaldev" target="_blank"
+						class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+						<img src="img/icons/instagram.svg" alt="instagram">
+					</a>
+					<a href="https://twitch.com/thepracticaldev" target="_blank"
+						class="crayons-link crayons-link--secondary mx-2" rel="noopener">
+						<img src="img/icons/twitch.svg" alt="twitch">
+	
+					</a>
+				</div>	
+			</nav>
+			<div class="view-more-sections">
+				<button data-toggle="collapse" data-target="#section-list">More...</button>
+			</div>
 		</div>
 		<div class="sidebar-overlay">
 

@@ -350,13 +350,6 @@ header .navbar .btn-create-post {
           justify-content: space-between;
 }
 
-.tags .hashtags {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 /* End of Aside Left */
 /* Main */
 .cards-section .cards-navigation {

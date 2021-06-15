@@ -36,6 +36,7 @@ header .navbar {
 
 header .navbar .navbar-toggler {
   margin-right: 1rem;
+  border: none;
 }
 
 header .navbar .site-logo {

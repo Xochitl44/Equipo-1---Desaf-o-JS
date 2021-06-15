@@ -623,7 +623,15 @@ div{
     margin-top: .3em;
     font-size: small;
 }
-
+.r-card-list{
+    .list-group-item{
+        background: #f9fafa;
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+        }
+    }
+}
 .btn-new{
     background-color: $main-blue;
     border-radius: 8px;

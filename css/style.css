@@ -690,6 +690,15 @@ div .btn-card-5 {
   font-size: small;
 }
 
+.r-card-list .list-group-item {
+  background: #f9fafa;
+  cursor: pointer;
+}
+
+.r-card-list .list-group-item:hover {
+  background-color: white;
+}
+
 .btn-new {
   background-color: #323ebe;
   border-radius: 8px;

@@ -102,9 +102,15 @@ const savePost = () => {
        extraImage : urlExtraImage //postImageExtra
     }
 
-    postsRef.push(postObject)
+    /// Obtengo el KEY generado en el post para enviarlo a la vista de detalle
+    let idPostReference  = postsRef.push(postObject)
+    let postID = idPostReference.key
+    
     console.log ("postObject: " , postObject)
+    console.log ("postID: " , postID)
 
+    window.location="http://localhost:5501/index2.html?postID=" + postID
+    
 }
 
 const uploadFile = (file) => {
@@ -177,7 +183,8 @@ $("#btn-upload").click(function (e) {
     e.preventDefault();      
     
 
-    alert($("#post-cover-image").val().length)
+    //alert($("#post-cover-image").val().length)
+    window.location="http://localhost:5501/index2.html"
     //console.log(fileCover)
     // let urlimage = uploadFile(fileCover)
     //console.log(urlimage)

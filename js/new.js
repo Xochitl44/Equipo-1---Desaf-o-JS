@@ -164,12 +164,20 @@ const uploadFile = (file) => {
 
 $("#btn-publish").click(function (e) { 
     e.preventDefault();  
-    //savePost()
-    uploadFile(fileCover)
+        //savePost()
+    // si no hay imagen solo se guarda el post sin la imagen
+    if  ($("#post-cover-image").val().length ==0)
+        savePost()
+    else 
+        uploadFile(fileCover)
+
 })
 
 $("#btn-upload").click(function (e) {     
-    e.preventDefault();            
+    e.preventDefault();      
+    
+
+    alert($("#post-cover-image").val().length)
     //console.log(fileCover)
     // let urlimage = uploadFile(fileCover)
     //console.log(urlimage)

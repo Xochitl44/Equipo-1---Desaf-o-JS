@@ -41,7 +41,7 @@ usersRef.on('value', snapshot => {
 
 
 postsRef.on('value', snapshot => {    
-    // console.log(snapshot.val())    
+    console.log(snapshot.val())    
     /*
     let postCollection = snapshot.val()
     for (post in postCollection) {

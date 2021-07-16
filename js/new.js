@@ -169,13 +169,28 @@ const uploadFile = (file) => {
 
 
 $("#btn-publish").click(function (e) { 
+
+    
+    
     e.preventDefault();  
+
+    /// solo se valida que el post tenga titulo 
+    let postTitle =  $("#post-title").val().trim()
+    let postContent =  $("#post-content").val().trim()
+
+    if (postTitle !== "" && postContent !== "" )
+    {
         //savePost()
-    // si no hay imagen solo se guarda el post sin la imagen
-    if  ($("#post-cover-image").val().length ==0)
-        savePost()
+        // si no hay imagen solo se guarda el post sin la imagen
+        if  ($("#post-cover-image").val().length ==0)
+            savePost()
+        else 
+            uploadFile(fileCover)
+    }
     else 
-        uploadFile(fileCover)
+    {
+        alert ("Datos incompletos del post (Titulo y Contenido son requeridos)")
+    }
 
 })
 

@@ -39,17 +39,16 @@
 		</div>
 	</header>    
 
-    <div class="card  mt-5">
+    <div class="card mt-5">
         <div class="card-header">
             <button class="" type="button">
                 <label for="post-cover-image">Add a cover image</label>
                 <input id="post-cover-image" type="file" accept="image/*" class="opacity-0 cursor-pointer" data-max-file-size-mb="25">
             </button>
         </div>
-        <div class="card-body">
-            <div>
-                <textarea class="" type="text" id="post-title" placeholder="New post title here..."></textarea>              
-            </div>           
+        
+            <textarea class=""  id="post-title" placeholder="New post title here..."></textarea>              
+            
             <input  id="post-tags" type="text" class="" name="" placeholder="Add up to 4 tags..." pattern="[0-9A-Za-z, ]+">          
             <div>
 <!--
@@ -62,8 +61,9 @@
                 </button>
 -->                                
             </div>
-          <textarea placeholder="Write your post content here..." class="" id="post-content" ></textarea>          
-        </div>
+          
+
+        <textarea placeholder="Write your post content here..." class="" id="post-content" ></textarea>          
         <div class="card-footer text-muted">
             <button class="" type="button" id="btn-publish">Publish</button>
             <button class="" type="button"id="btn-upload">Save <span class="hidden s:inline">draft</span></button>
@@ -73,6 +73,7 @@
             <button class="" type="button">Revert <span class="hidden s:inline">new changes</span></button>
         </div>
       </div>
+<!--      
       <div id="users-wrapper">
         <select  class="form-control" id="post-User">                       
         </select>
@@ -80,7 +81,7 @@
 
       <div id="posts-wrapper">        
       </div>
-
+-->
 
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->

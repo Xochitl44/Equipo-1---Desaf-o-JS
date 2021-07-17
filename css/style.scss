@@ -54,6 +54,7 @@ header{
         justify-content: space-between;
         flex-wrap: nowrap;
         .navbar-toggler{
+            
             margin-right: 1rem;
             border: none;
         }
@@ -165,8 +166,8 @@ header{
 /* Sidebar */
 
 .sidebar{
+    display: none;
     position: fixed;
-
     left: 0px;
     top: 0px;
     bottom: 0px;
@@ -194,7 +195,7 @@ header{
         position: relative;
         width: 90%;
         max-width: 300px;
-        display: flex;
+        display: none;
         flex-direction: column;
         height: 100%;
         .section-list
@@ -215,6 +216,7 @@ header{
         }
     }
     .sidebar-overlay{
+        display: none;
         background: #08090a;
         opacity: 0.5;
         position: absolute;

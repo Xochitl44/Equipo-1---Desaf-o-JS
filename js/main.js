@@ -1,3 +1,16 @@
+
+$("#hamburguer").click( () => {
+    $(".sidebar").addClass("d-flex");
+    $(".sidebar-content").addClass("d-flex");
+    $(".sidebar-overlay").addClass("d-block");
+});
+
+$("#close-sidebar").click( () => {
+    $(".sidebar").removeClass("d-flex");
+    $(".sidebar-content").removeClass("d-flex");
+    $(".sidebar-overlay").removeClass("d-block");
+});
+
 //Creamos una nueva instancia de nuestar db
 const database = firebase.database();
 
@@ -20,6 +33,8 @@ postsRef.on('value', snapshot => {
 const printPosts = (objectPosts,key) =>{
 
     let {date,likes,tags,title,urlCover,user} = objectPosts;
+    debugger
+    pri
     
     let expresion = /[ ,]/g
     let tagsPost = tags.split(expresion);
@@ -33,8 +48,9 @@ const printPosts = (objectPosts,key) =>{
         let name = snapshot.val().userName;
         let foto = snapshot.val().picture;
         let postCard;
-        if($("#posts").children().length===0){
-            postCard = `<div class="card br-post post-card featured-post-card">
+        let numberPostChildren = $("#posts").children().length
+        if(numberPostChildren===0){
+            postCard = `<div class="card br-post post-card featured-post-card" id="post${numberPostChildren}">
                     <img src="${urlCover}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="d-flex c-header">
@@ -87,7 +103,7 @@ const printPosts = (objectPosts,key) =>{
                     </div>
                     `
         }else{
-            postCard = `<div class="card br-post post-card featured-post-card">
+            postCard = `<div class="card br-post post-card featured-post-card" id="post${numberPostChildren}">
                             <div class="card-body">
                                 <div class="d-flex c-header">
                                     <img src="${foto}" alt="" class="br-100">
@@ -140,6 +156,9 @@ const printPosts = (objectPosts,key) =>{
                         `
         }
         $("#posts").append(postCard);
+        $(`#post${numberPostChildren}`).click(()=> {
+            window.location="index2.html?postID=" + key
+        });
     });
     
     
@@ -154,4 +173,5 @@ $("#inputValue2").keyup(function (e) {
         console.log(searchValue);
         window.location.href=`search.html?search=${searchValue}`;        
     }   
+
 });

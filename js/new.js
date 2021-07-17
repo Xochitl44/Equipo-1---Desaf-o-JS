@@ -69,7 +69,7 @@ $("#post-imageExtra").change(event => {
 
 
 const savePost = () => {
-   
+
     let date = new Date()
     let dd = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
     let mm = date.getMonth() < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1

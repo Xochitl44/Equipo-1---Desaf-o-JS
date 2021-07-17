@@ -49,9 +49,7 @@ p:hover {
 }
 
 /*create Post page*/
-.body-create {
-  background-color: grey;
-}
+
 /*Nav Bar Create Post*/
 .create-post {
   color: black;
@@ -67,9 +65,24 @@ p:hover {
 .cover-img {
   border: 2px;
   border-color: purple;
-  background-color: white;
+  background-color: purple;
   padding-left: 4em;
   margin-top: 3em;
+}
+
+.new-cover-img {
+  width: 20%;
+  height: 50px;
+  padding: 1em;
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+  margin-left: 4em;
+  border-color: darkgrey;
+  border: solid 2px;
+  box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 input {

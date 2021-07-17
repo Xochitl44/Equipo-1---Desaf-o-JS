@@ -15,12 +15,15 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/new.css">
     <title>New Post - DEV Community</title>
 </head>
 <body>
 	<!---------------------------------------------------------------------HEADER-------------------------------------------------------------------------------->
-	<header class="fixed-top body-create">
+	<header class="fixed-top">
 		<div class="container-xl custom-container">
 			<div class="row">
 				<div>
@@ -44,10 +47,10 @@
 <main>  
 <div class="body-createpost">
     <div class="row">
-        <div class="col-12">
-            <button class="cover-img" type="button">
+        <div class="col-12 mt-5">
+            <button class="new-cover-img opacity-0 cursor-pointer" type="button">
                 <label for="post-cover-image">Add a cover image</label>
-                <input id="post-cover-image" type="file" accept="image/*" class="opacity-0 cursor-pointer" data-max-file-size-mb="25">
+				<input id="cover-image-input" type="file" accept="image/*"  data-max-file-size-mb="25">
             </button>
         </div>
     <div class="pl-4">

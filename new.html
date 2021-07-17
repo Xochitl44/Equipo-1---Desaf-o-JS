@@ -9,18 +9,22 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
 		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/new.css">
     <title>New Post - DEV Community</title>
 </head>
 <body>
 	<!---------------------------------------------------------------------HEADER-------------------------------------------------------------------------------->
-	<header class="fixed-top">
+	<header class="fixed-top body-create">
 		<div class="container-xl custom-container">
 			<div class="row">
-				<div class="col-12">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<div class="navbar-left d-flex align-items-center">
-                           
+				<div>
+					<div class="navbar-left d-flex align-items-center">
 							<a href="/" class="site-logo" aria-label="DEV Community Home">
 								<svg width="50" height="40" viewBox="0 0 50 40"
 									xmlns="http://www.w3.org/2000/svg">
@@ -30,28 +34,40 @@
 									</path>
 								</svg>
 							</a>
-
-						</div>
-                                             
-					</nav>
-				</div>
+							<span class="create-post">Create Post</span>
+						</div>             
+					</div>
 			</div>
 		</div>
-	</header>    
-
-    <div class="card mt-5">
-        <div class="card-header">
-            <button class="" type="button">
+	</header>
+<!----------------------------------------MAIN POST BODY----------------->
+<main>  
+<div class="body-createpost">
+    <div class="row">
+        <div class="col-12">
+            <button class="cover-img" type="button">
                 <label for="post-cover-image">Add a cover image</label>
                 <input id="post-cover-image" type="file" accept="image/*" class="opacity-0 cursor-pointer" data-max-file-size-mb="25">
             </button>
         </div>
-        
-            <textarea class=""  id="post-title" placeholder="New post title here..."></textarea>              
-            
-            <input  id="post-tags" type="text" class="" name="" placeholder="Add up to 4 tags..." pattern="[0-9A-Za-z, ]+">          
+    <div class="pl-4">
+		<textarea class="new-post-title-here" id="post-title" placeholder="New post title here..."></textarea>    
+	</div>
+        <div class="add-up-to-4-tags">
+			<input class="add-up-to-4-tags" id="post-tags" type="text" name="" placeholder="Add up to 4 tags..." pattern="[0-9A-Za-z, ]+">
+		</div>
+	</div>
+			<button class="upload-img" type="button">
+				<svg width="24" height="24" viewBox="0 0 24 24" class="crayons-icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="a17qec5pfhrwzk9w4kg0tp62v27qqu9t"><title id="a17qec5pfhrwzk9w4kg0tp62v27qqu9t">Upload image</title><path d="M20 5H4v14l9.292-9.294a1 1 0 011.414 0L20 15.01V5zM2 3.993A1 1 0 012.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 01-.992.993H2.992A.993.993 0 012 20.007V3.993zM8 11a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                <label for="post-cover-image">Upload Image</label>
+                <input id="post-cover-image" type="file" accept="image/*" class="opacity-0 cursor-pointer" data-max-file-size-mb="25">
+            </button>
+	
+    
+
+        <!--            
             <div>
-<!--
+
                 <button class="" type="button">
                     <svg width="24" height="24" viewBox="0 0 24 24" class="" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="a17qec5pfhrwzk9w4kg0tp62v27qqu9t">
                         <title id="a17qec5pfhrwzk9w4kg0tp62v27qqu9t">Upload image</title>
@@ -59,26 +75,34 @@
                     </svg>Upload image
                     <input type="file" id="post-imageExtra" class="" multiple="" accept="image/*" data-max-file-size-mb="25" aria-label="Upload an image">
                 </button>
--->                                
+                             
             </div>
-          
+		-->
+        
+		<div>
+			<textarea placeholder="Write your post content here..." class="write-content" id="post-content" ></textarea> 
+		</div>      
+		
+</div>
+</main> 
 
-        <textarea placeholder="Write your post content here..." class="" id="post-content" ></textarea>          
-        <div class="card-footer text-muted">
-            <button class="" type="button" id="btn-publish">Publish</button>
-            <button class="" type="button"id="btn-upload">Save <span class="hidden s:inline">draft</span></button>
-            <button class="" title="Post options" type="button" id="post-options-btn" aria-expanded="false" aria-controls="post-options-dropdown" aria-haspopup="true">
+<footer>
+	<div class="row">	
+        <div class="card-footer col-12">
+            <button class="btn-publish" type="button" id="btn-publish">Publish</button>
+            <button class="save-draft" type="button"id="btn-upload">Save <span class="hidden s:inline">draft</span></button>
+            <button class="icon " title="Post options" type="button" id="post-options-btn" aria-expanded="false" aria-controls="post-options-dropdown" aria-haspopup="true">
                 <svg width="24" class="crayons-icon" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="75abcb76478519ca4eb9"><title id="75abcb76478519ca4eb9">Post options</title><path d="M12 1l9.5 5.5v11L12 23l-9.5-5.5v-11L12 1zm0 2.311L4.5 7.653v8.694l7.5 4.342 7.5-4.342V7.653L12 3.311zM12 16a4 4 0 110-8 4 4 0 010 8zm0-2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
             </button>
-            <button class="" type="button">Revert <span class="hidden s:inline">new changes</span></button>
+            <button class="revert-changes" type="button">Revert <span class="hidden s:inline">new changes</span></button>
         </div>
-      </div>
+	</div>
+</footer>
 <!--      
       <div id="users-wrapper">
         <select  class="form-control" id="post-User">                       
         </select>
       </div>
-
       <div id="posts-wrapper">        
       </div>
 -->

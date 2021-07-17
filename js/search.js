@@ -2,11 +2,26 @@ let database = firebase.database();
 let usersRef = database.ref("/users")
 let postsRef = database.ref("/posts");
 
+let searchParams = new URLSearchParams(window.location.search)
+//Obtiene el valor pet key de la url.
+const searchKeyParam = searchParams.get('search')
+console.log("la busqueda de la pagina es: " + searchKeyParam)
+
 $("#inputValue").keyup(function (e) { 
     if(e.which == 13) {
         let searchValue = e.target.value;
         console.log(searchValue);
         filterByTitle(searchValue);
+    }   
+});
+
+$("#inputValue2").keyup(function (e) { 
+    if(e.which == 13) {
+        let searchValue = e.target.value;
+        console.log(searchValue);
+        window.location.reload=`search.html?search=${searchValue}`;
+        $("#inputValue2").eq(0).val(searchKeyParam);
+        filterByTitle(searchKeyParam)
     }   
 });
 
@@ -30,6 +45,13 @@ const filterByTitle = (searchValue) => {
         for( result in filterResult ){
             let { content , date ,likes , tags , title , urlCover, user  } = filterResult[result];
             
+            let expresion = /[ ,]/g
+            let tagsPost = tags.split(expresion);
+            let tagsLinks=``;
+            tagsPost.forEach(element => {
+                tagsLinks+=`<a>#${element}</a>`;        
+            });
+
             console.log("");
             $("#nav-feed").append(`
                 <div class="card mt-3 br-post post-card">
@@ -46,12 +68,7 @@ const filterByTitle = (searchValue) => {
                                 <h4 class="card-title">${title}</h4>
                             </a>
                             <div class="d-flex h-order">
-                                <nav class="">
-                                    <a>#${tags}</a>
-                                    <a>#cleancode</a>
-                                    <a>#stestdev</a>
-                                    <a>#tdd</a>
-                                </nav>
+                                <nav class="card-post-tags">${tagsLinks}</nav>
                             </div>
                             <div class=" d-flex read">
                                 <div>

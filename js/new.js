@@ -1,3 +1,5 @@
+console.log(moment().format()); 
+
 //Creamos una nueva instancia de nuestar db
 let database = firebase.database();
 

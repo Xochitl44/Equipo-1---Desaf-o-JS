@@ -5,7 +5,6 @@ const database = firebase.database();
 const usersRef = database.ref("/users")
 const postsRef = database.ref("/posts")
 
-
 //Creamos un listener que este al pendiente de cualquier cambio en los usuarios
 postsRef.on('value', snapshot => {    
     $("#posts").empty();
@@ -147,3 +146,12 @@ const printPosts = (objectPosts,key) =>{
 
 
 }
+
+//Función para mandar a pagina de search.html anexando los buscado a la URL
+$("#inputValue2").keyup(function (e) { 
+    if(e.which == 13) {
+        let searchValue = e.target.value;
+        console.log(searchValue);
+        window.location.href=`search.html?search=${searchValue}`;        
+    }   
+});

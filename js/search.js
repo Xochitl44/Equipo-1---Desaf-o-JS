@@ -3,7 +3,8 @@ let usersRef = database.ref("/users")
 let postsRef = database.ref("/posts");
 
 let searchParams = new URLSearchParams(window.location.search)
-//Obtiene el valor pet key de la url.
+
+//Obtiene el valor key de la url.
 const searchKeyParam = searchParams.get('search')
 console.log("la busqueda de la pagina es: " + searchKeyParam)
 
@@ -19,14 +20,14 @@ $("#inputValue2").keyup(function (e) {
     if(e.which == 13) {
         let searchValue = e.target.value;
         console.log(searchValue);
-        window.location.reload=`search.html?search=${searchValue}`;
-        $("#inputValue2").eq(0).val(searchKeyParam);
-        filterByTitle(searchKeyParam)
+        window.location.href=`search.html?search=${searchValue}`;        
     }   
 });
 
+
+
 const filterByTitle = (searchValue) => { 
-    
+    $("#inputValue2").val(searchKeyParam);
     $("#nav-feed").empty();
     postsRef.on('value', snapshot => {    
     
@@ -46,13 +47,12 @@ const filterByTitle = (searchValue) => {
             let { content , date ,likes , tags , title , urlCover, user  } = filterResult[result];
             
             let expresion = /[ ,]/g
-            let tagsPost = tags.split(expresion);
+            let tagsPost = tags.toLowerCase().split(expresion);
             let tagsLinks=``;
             tagsPost.forEach(element => {
                 tagsLinks+=`<a>#${element}</a>`;        
             });
 
-            console.log("");
             $("#nav-feed").append(`
                 <div class="card mt-3 br-post post-card">
                     <div class="card-body">
@@ -123,4 +123,5 @@ const getuser = (user) => { usersRef.child(user).once('value',function(datos){
     }
 )}
 
+$(window).on("load", filterByTitle(searchKeyParam));
 

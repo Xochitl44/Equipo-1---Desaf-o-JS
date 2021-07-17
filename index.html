@@ -41,12 +41,12 @@
 						</div>
 						<form class="seach">
 							<input class="form-control " type="search" placeholder="Search..."
-								aria-label="Search...">
+								aria-label="Search..." id="searchInput">
 						</form>
 						<div class="navbar-right d-flex  align-items-center">
 							<button class="btn btn-primary btn-create-post d-none d-md-flex">Create
 								Post</button>
-							<a href="" class="d-flex d-md-none"><img src="img/icons/search.svg"
+							<a href="search.html" class="d-flex d-md-none"  id="searchButton"><img src="img/icons/search.svg"
 									alt="seach"></a>
 							<a href=""><img src="img/icons/moderation.svg" alt="moderation"></a>
 							<a href=""><img src="img/icons/connect.svg" alt="connect"></a>
@@ -481,6 +481,7 @@
 			</svg>
 		</div>
 	</footer>
+
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase.js"></script>
 
@@ -498,6 +499,7 @@
 		messagingSenderId: "886973721291",
 		appId: "1:886973721291:web:5993d4d8eaeea5989a894e"
 	};
+	
 	// Initialize Firebase
 	firebase.initializeApp(firebaseConfig);
 	</script>
@@ -507,8 +509,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
 		crossorigin="anonymous"></script>
-
 	<script src="./js/main.js"></script>
+	<script src="js/search.js"></script>
 </body>
 
 </html>

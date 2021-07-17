@@ -35,8 +35,10 @@ postsRef.child(postID).once('value',function(datos)
         
         $("#post-title").html(postTitle)
         $("#post-content").html( '<p>' +  postContent + '</p>')
+        
+        
         $("#post-like-counter").html (postLikes)
-
+        $(".class-add-like").attr("data-postlikekey",postID) 
        
         let año = postDate.substr(6,4)       
         let mes = postDate.substr(3,2)
@@ -64,4 +66,24 @@ postsRef.child(postID).once('value',function(datos)
     }
 )
 
+
+$(".class-add-like").click(function (e) { 
+    e.preventDefault();
+    //console.log(e.target)
+    let idpost = $(e.target).data("postlikekey")
+    addLike(idpost)
+});
+
+
+const addLike = ( postId ) => {
+    let currentLikes = 0
+    postsRef.child(postID).once('value',function(datos)
+    {
+        post=datos.val();
+        currentLikes=post.likes;        
+        database.ref(`posts/${postId}/likes`).set( currentLikes + 1)
+        $("#post-like-counter").html (currentLikes + 1)
+    })
+
+  }
 

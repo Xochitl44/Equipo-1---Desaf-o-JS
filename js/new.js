@@ -1,3 +1,5 @@
+console.log(moment().format()); 
+
 //Creamos una nueva instancia de nuestar db
 let database = firebase.database();
 
@@ -69,7 +71,7 @@ $("#post-imageExtra").change(event => {
 
 
 const savePost = () => {
-   
+
     let date = new Date()
     let dd = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
     let mm = date.getMonth() < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1

@@ -1,3 +1,16 @@
+
+$("#hamburguer").click( () => {
+    $(".sidebar").addClass("d-flex");
+    $(".sidebar-content").addClass("d-flex");
+    $(".sidebar-overlay").addClass("d-block");
+});
+
+$("#close-sidebar").click( () => {
+    $(".sidebar").removeClass("d-flex");
+    $(".sidebar-content").removeClass("d-flex");
+    $(".sidebar-overlay").removeClass("d-block");
+});
+
 //Creamos una nueva instancia de nuestar db
 const database = firebase.database();
 
@@ -160,4 +173,5 @@ $("#inputValue2").keyup(function (e) {
         console.log(searchValue);
         window.location.href=`search.html?search=${searchValue}`;        
     }   
+
 });

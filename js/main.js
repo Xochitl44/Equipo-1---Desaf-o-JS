@@ -47,7 +47,7 @@ const printPosts = (objectPosts,key) =>{
         let postCard;
         let numberPostChildren = $("#posts").children().length
         if(numberPostChildren===0){
-            postCard = `<div class="card br-post post-card featured-post-card mx-2 my-2" id="post${numberPostChildren}">
+            postCard = `<div class="card br-post post-card featured-post-card mx-2 my-2fit" id="post${numberPostChildren}">
                     <img src="${urlCover}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="d-flex c-header">

@@ -1,4 +1,4 @@
-console.log(moment().format()); 
+
 
 //Creamos una nueva instancia de nuestar db
 let database = firebase.database();
@@ -78,6 +78,9 @@ const savePost = () => {
     let yyyy = date.getFullYear()
     let postDate = `${dd}/${mm}/${yyyy}`    
 
+    postDate = moment().format()
+
+
     let postCoverImage =  $("#post-cover-image").val()
     let postTitle =  $("#post-title").val()
     let postTags =  $("#post-tags").val()
@@ -85,7 +88,7 @@ const savePost = () => {
     let postLikes =  0
     let postImageExtra = $("#post-imageExtra").val()
     let postUser =  $("#post-User").val()
-    postUser = "-MejMSqgvlkYFWIMHiSV"  // Xochitl
+    postUser = "-MejKvOK1E-5hGfJ6rIF"  // Jesus
 
     /*    
     let urlImageCover = uploadFile(fileCover)
@@ -207,6 +210,34 @@ $("#btn-upload").click(function (e) {
     //console.log(urlimage)
 })
 
+
+const changePostDate = ( postID ) => {
+    let currentDate = ""
+    postsRef.child(postID).once('value',function(datos)
+    {
+        post=datos.val();
+        console.log(post)
+        currentDate=post.date;     
+        console.log("antes", currenDate)
+        currentDate = moment(currentDate).format()
+        console.log("despues",currentDate)           
+        // database.ref(`posts/${postId}/date`).set( currentDate)
+        
+    })
+
+  }
+
+const changeUser = ( userId, picture ) => {
+    let user = ""
+    usersRef.child(userId).once('value',function(datos)
+    {
+        user=datos.val();
+        //currentLikes=user.picture;        
+        database.ref(`users/${userId}/picture`).set( picture)
+        
+    })
+
+  }
 
 
 

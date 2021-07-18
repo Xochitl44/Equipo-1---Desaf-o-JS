@@ -6,7 +6,6 @@ let postsRef = database.ref("/posts");
 let searchParams = new URLSearchParams(window.location.search)
 
 //Obtiene el valor key de la url del site 
-
 const searchKeyParam = searchParams.get('search')
 console.log("la busqueda de la pagina es: " + searchKeyParam)
 
@@ -266,6 +265,7 @@ const getuser = (user) => { usersRef.child(user).once('value',function(datos){
     }
 )}
 
+// Manda a llamar las busquedas e imprimir las cards una vez la pagina esta cargada
 $(window).on("load", console.log( 'Ya se cargó la pagina y se buscará', searchKeyParam ) );
 $(window).on("load", filterByTitle(searchKeyParam));
 

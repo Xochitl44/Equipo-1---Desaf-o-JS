@@ -109,12 +109,12 @@ p:hover {
   border-width: 5px;
   border-radius: 10px;
   background-color: white;
-  border: solid 1px darkgrey;
+  //border: solid 1px darkgrey;
   padding: 0%;
 }
 
 .new-cover-img {
-  width: 250px;
+  width: 180px;
   height: 50px;
   overflow: hidden;
   text-align: center;
@@ -122,17 +122,17 @@ p:hover {
   margin-left: 4em;
   padding: 0.9em;
   padding-left: 0%;
-  border-color: darkgrey;
-  border: solid 2px;
-  box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
+  //border-color: rgb(139, 135, 135) ;
+  border: solid 2px rgb(139, 135, 135);
+  //box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
   border-radius: 6px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  opacity: 3;
+  opacity: 3;  
 }
 
 .new-post-title-here {
-  width: 100%;
+  width: 90%;
   height: 60px;
   font-size: 30px;
   box-shadow: none;
@@ -157,7 +157,7 @@ p:hover {
   outline: none;
 }
 
-/*
+
 .upload-img {
   border: none;
   width: 100%;
@@ -172,20 +172,21 @@ p:hover {
   overflow: hidden;
   margin: 5em;
 }
-*/
+
 
 .upload-image {
-  width: 250px;
+  width: 100%;
   height: 50px;
   overflow: hidden;
   text-align: center;
-  background-color: white;
-  margin-left: 4em;
+  background-color: rgb(241, 241, 241);
+  //margin-left: 1em;
   padding: 0.9em;
   border-color: darkgrey;
   border: solid 2px;
-  box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
-  border-radius: 6px;
+  border: none;
+  //box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
+  //border-radius: 6px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   opacity: 3;
@@ -197,7 +198,7 @@ textarea {
 .write-content {
   border: none;
   width: 100%;
-  height: 500px;
+  height: 250px;
   font-size: 20px;
   box-shadow: none;
   outline: none;
@@ -1103,3 +1104,19 @@ bg-inverted-hover: var(--button-ghost-inverted-bg-hover);
 color-inverted: var(--accent-danger);
 color-inverted-hover: var(--accent-danger-lighter);
 */
+
+.clase-textarea
+
+{
+  //margin-right: 100px !important;
+  overflow:hidden;
+  height: 40px;
+}
+
+
+.clase-tags
+{
+  width: 95%;
+  border: none;
+  margin-left: 12px;
+}

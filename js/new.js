@@ -15,23 +15,6 @@ var storageRef = firebase.storage().ref();
 var urlImageCover = ""
 var urlExtraImage = ""
 
-/*   ORH: TEMPORAL PARA CREAR USUARIOS
-let userObject = {
-    userName: "Xochitl",    
-    picture: "https://avatars.githubusercontent.com/u/84822138?v=4"
-}
-const saveUser = () => {
-    usersRef.push(userObject)
-}
-    <option value="-MejJl7qB95TMv3oQWwY">Alex</option>
-    <option value="-MejKUt5xyvnoiRGyTXd">Oscar</option>
-    <option value="-MejKvOK1E-5hGfJ6rIF">Jesus</option>
-    <option value="-MejLARNwMGk-GFtXmt5">Carlos</option>
-    <option value="-MejLObt9Q0Tl6_b2c7-">Ubaldo</option>
-    <option value="-MejMSqgvlkYFWIMHiSV">Xochitl</option>
-    <option value="user1">Xoch</option>
-*/
-
 //Creamos un listener que este al pendiente de cualquier cambio en los usuarios
 usersRef.on('value', snapshot => {
     let usersCollection = snapshot.val()
@@ -43,19 +26,8 @@ usersRef.on('value', snapshot => {
     }
 })
 
-
 postsRef.on('value', snapshot => {    
     console.log(snapshot.val())    
-    /*
-    let postCollection = snapshot.val()
-    for (post in postCollection) {
-        let { content , date ,likes , tags , title , urlCover, user  } = postCollection[post]
-        console.log( title , user , content )
-        $("#post-User").append(`
-             <h3>${userName}/${user}/${content} </h3>
-        `)
-    }
-    */
 })
 
 //Creamos la variable que guardará el archivo que voy a subir
@@ -69,6 +41,7 @@ $("#post-cover-image").change(event => {
         $("#preview").hide()
         $("#labelAddImage").text('Add a cover image')
         $("#btnremove").hide()
+        $('#button-cover-image').css('width', '180px')
     }
     else
     {   
@@ -76,7 +49,8 @@ $("#post-cover-image").change(event => {
         $("#btnRemove").show()
         $("#labelAddImage").text('Change')  
         var TmpPath = URL.createObjectURL(event.target.files[0])    
-        $("#imagepreview").attr("src", TmpPath);    
+        $("#imagepreview").attr("src", TmpPath);  
+        $('#button-cover-image').css('width', '100px')  
     }
 })
 
@@ -97,21 +71,17 @@ const savePost = () => {
 
     postDate = moment().format()
 
-
-    let postCoverImage =  $("#post-cover-image").val()
+    // let postCoverImage =  $("#post-cover-image").val()
     let postTitle =  $("#post-title").val()
     let postTags =  $("#post-tags").val()
     let postContent =  $("#post-content").val()
     let postLikes =  0
-    let postImageExtra = $("#post-imageExtra").val()
+    // let postImageExtra = $("#post-imageExtra").val()
     let postUser =  $("#post-User").val()
     postUser = "-MejKvOK1E-5hGfJ6rIF"  // Jesus
 
-    /*    
-    let urlImageCover = uploadFile(fileCover)
-    let urlExtraImage = uploadFile(fileExtra)    
-    */
-
+    postTags = postTags.trim()
+    
     let postObject = 
     {
        content : postContent,
@@ -182,12 +152,7 @@ const uploadFile = (file) => {
                 }
                 
             )
-            /*
-            console.log("antes de regresar",  urlResult)
-            return urlResult
-            */
 }
-
 
 
 $("#btn-publish").click(function (e) { 
@@ -230,6 +195,58 @@ $("#btnRemove").click(function (e) {
     $("#preview").hide()
     $("#btnRemove").hide()    
     $("#labelAddImage").text('Add a cover image')  
+    $('#button-cover-image').css('width', '180px')
 });
 
 
+
+var textarea = document.getElementById('post-title');
+textarea.addEventListener('keydown', autosize);
+
+function autosize(){
+    var el = this;
+    setTimeout(function(){
+      el.style.cssText = 'height:auto; padding:0';
+      el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    },0);
+  }
+
+
+  $("#boton-cerrar").click(function (e) { 
+      e.preventDefault();
+      
+      window.location = "http://localhost:5501/index.html"
+  });
+
+  /*   ORH: TEMPORAL PARA CREAR USUARIOS
+let userObject = {
+    userName: "Xochitl",    
+    picture: "https://avatars.githubusercontent.com/u/84822138?v=4"
+}
+const saveUser = () => {
+    usersRef.push(userObject)
+}
+    <option value="-MejJl7qB95TMv3oQWwY">Alex</option>
+    <option value="-MejKUt5xyvnoiRGyTXd">Oscar</option>
+    <option value="-MejKvOK1E-5hGfJ6rIF">Jesus</option>
+    <option value="-MejLARNwMGk-GFtXmt5">Carlos</option>
+    <option value="-MejLObt9Q0Tl6_b2c7-">Ubaldo</option>
+    <option value="-MejMSqgvlkYFWIMHiSV">Xochitl</option>
+    <option value="user1">Xoch</option>
+*/
+
+/*
+postsRef.on('value', snapshot => {    
+    console.log(snapshot.val())    
+    
+    let postCollection = snapshot.val()
+    for (post in postCollection) {
+        let { content , date ,likes , tags , title , urlCover, user  } = postCollection[post]
+        console.log( title , user , content )
+        $("#post-User").append(`
+             <h3>${userName}/${user}/${content} </h3>
+        `)
+    }
+    
+})
+*/

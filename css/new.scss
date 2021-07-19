@@ -1084,3 +1084,22 @@ span {
     }
   }
 }
+
+.botonRemover {
+  background: #f0f0f0;
+  color: #dc1818;
+  box-shadow: none;
+  height: 30px;
+}
+
+.botonRemover:hover {
+  background-color: yellow;
+  color: #dc1818;
+  box-shadow: none;
+}
+/*
+bg-inverted: var(--button-ghost-inverted-bg);
+bg-inverted-hover: var(--button-ghost-inverted-bg-hover);
+color-inverted: var(--accent-danger);
+color-inverted-hover: var(--accent-danger-lighter);
+*/

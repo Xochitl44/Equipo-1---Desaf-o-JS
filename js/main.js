@@ -31,9 +31,8 @@ postsRef.on('value', snapshot => {
 })
 
 const printPosts = (objectPosts,key) =>{
-
-    let {date,likes,tags,title,urlCover,user} = objectPosts;
-    //date = moment(date).startOf('hour').fromNow()
+    let {date,likes,tags,title,urlCover,user} = objectPosts;   
+    date = moment(date).format("MMM DD")
     let expresion = /[ ,]/g
     let tagsPost = tags.split(expresion);
     let tagsLinks=``;
@@ -48,7 +47,7 @@ const printPosts = (objectPosts,key) =>{
         let postCard;
         let numberPostChildren = $("#posts").children().length
         if(numberPostChildren===0){
-            postCard = `<div class="card br-post post-card featured-post-card" id="post${numberPostChildren}">
+            postCard = `<div class="card br-post post-card featured-post-card mx-2 my-2" id="post${numberPostChildren}">
                     <img src="${urlCover}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="d-flex c-header">
@@ -101,7 +100,7 @@ const printPosts = (objectPosts,key) =>{
                     </div>
                     `
         }else{
-            postCard = `<div class="card br-post post-card featured-post-card" id="post${numberPostChildren}">
+            postCard = `<div class="card br-post post-card featured-post-card mx-2 my-2" id="post${numberPostChildren}">
                             <div class="card-body">
                                 <div class="d-flex c-header">
                                     <img src="${foto}" alt="" class="br-100">

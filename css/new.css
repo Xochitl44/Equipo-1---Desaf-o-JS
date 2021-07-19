@@ -87,19 +87,12 @@ p:hover {
 }
 
 .new-cover-img {
-<<<<<<< HEAD
   width: 250px;
   height: 50px;
-=======
-  width: 180px;
-  height: 50px;
-  padding: 10px;
->>>>>>> 4c1e77e9f57f5b0c0a82ad88661f704153a81488
   overflow: hidden;
   text-align: center;
   background-color: white;
   margin-left: 4em;
-<<<<<<< HEAD
   padding: 0.9em;
   padding-left: 0%;
   border-color: darkgrey;
@@ -110,20 +103,6 @@ p:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   opacity: 3;
-=======
-  border: solid 2px darkgrey;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  border-radius: 0.5rem;
-}
-
-.new-cover-img label {
-  margin: 0;
-}
-
-input {
-  opacity: 0.00001;
->>>>>>> 4c1e77e9f57f5b0c0a82ad88661f704153a81488
 }
 
 .new-post-title-here {

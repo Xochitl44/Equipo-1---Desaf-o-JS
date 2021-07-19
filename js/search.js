@@ -38,7 +38,8 @@ const filterByTitle = (searchValue) => {
         let postKeys = Object.keys(postCollection);
 
         let filterResult = postKeys.reduce( ( accum, current ) => {
-            let postTitle = postCollection[current].title.toLowerCase();
+            let 
+            postTitle = postCollection[current].title.toLowerCase();
             return postTitle.includes(searchValue.toLowerCase()) ? {...accum, [current]:postCollection[current]} : accum;
         }, {} );
 
@@ -77,7 +78,7 @@ const filterByTitle = (searchValue) => {
                     usuario=snapshot.val();                    
                     postUserName= usuario.userName;
                     postUserPict= usuario.picture;
-                              
+                        
                     let postCard = `
                         <div class="card mt-3 br-post post-card">
                             <div class="card-body">

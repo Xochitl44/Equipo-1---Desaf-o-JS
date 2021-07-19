@@ -18,6 +18,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/new.css">
     <title>New Post - DEV Community</title>
 </head>
@@ -26,8 +29,9 @@
 	<header class="fixed-top">
 		<div class="container-xl custom-container">
 			<div class="row">
-				<div>
-					<div class="navbar-left d-flex align-items-center">
+				<div class="col-12 p-0">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<div class="navbar-left d-flex align-items-center">
 							<a href="/" class="site-logo" aria-label="DEV Community Home">
 								<svg width="50" height="40" viewBox="0 0 50 40"
 									xmlns="http://www.w3.org/2000/svg">
@@ -37,16 +41,44 @@
 									</path>
 								</svg>
 							</a>
-							<span class="create-post">Create Post</span>
-						</div>             
+
+							<span class="create-post pl-3">Create Post</span>
+							<div>
+
+							<div class="nav-tabs" id="nav-tab" role="tablist">
+								<a class="nav-link-new active" id="nav-feed-tab" data-toggle="tab" href="#nav-feed"
+									role="tab" aria-controls="nav-feed" aria-selected="true">Edit</a>
+								<a class="nav-link-new" id="nav-week-tab" data-toggle="tab" href="#nav-week"
+									role="tab" aria-controls="nav-week" aria-selected="false">Preview</a>
+						</div>   
+					</div>
 					</div>
 			</div>
 		</div>
+	</nav>
 	</header>
 <!----------------------------------------MAIN POST BODY----------------->
-<main>  
-<div class="body-createpost">
+<main class="create-post-main">  
+<div class="body-createpost col-12 col-lg-8">
     <div class="row">
+<<<<<<< HEAD
+        <div class="col-12 mt-5 pl-0">
+            <button class="new-cover-img opacity-0 cursor-pointer" type="button">
+                <label for="post-cover-image">Add a cover image</label>
+				<input id="cover-image-input" type="file" accept="image/*"  data-max-file-size-mb="25">
+            </button>
+        </div>
+	</div>
+    	<div class="pl-5 mt-4">
+			<textarea class="new-post-title-here" id="post-title" placeholder="New post title here..."></textarea>   
+		</div>
+		<div>
+			<input id="post-tags" type="text" class="add-up-to-4-tags" name="postTags" placeholder="Add up to 4 tags..." pattern="[0-9A-Za-z, ]+">  
+		</div>
+	
+			<div class="col-12 mt-5 pl-0">
+				<button class="new-cover-img pl-0" type="button">
+=======
         <div class=" mt-5">
 			
 			<div class="d-flex justify-content-start align-items-start ">					
@@ -76,13 +108,13 @@
 
 
 			<button class="upload-img" type="button">
+>>>>>>> 4c1e77e9f57f5b0c0a82ad88661f704153a81488
 				<svg width="24" height="24" viewBox="0 0 24 24" class="crayons-icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="a17qec5pfhrwzk9w4kg0tp62v27qqu9t"><title id="a17qec5pfhrwzk9w4kg0tp62v27qqu9t">Upload image</title><path d="M20 5H4v14l9.292-9.294a1 1 0 011.414 0L20 15.01V5zM2 3.993A1 1 0 012.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 01-.992.993H2.992A.993.993 0 012 20.007V3.993zM8 11a2 2 0 110-4 2 2 0 010 4z"></path></svg>
                 <label for="post-cover-image">Upload Image</label>
                 <input id="post-cover-image" type="file" accept="image/*" class="opacity-0 cursor-pointer" data-max-file-size-mb="25">
-            </button>
-	
-    
-
+            	</button>
+			</div>
+		
         <!--            
             <div>
 
@@ -93,7 +125,6 @@
                     </svg>Upload image
                     <input type="file" id="post-imageExtra" class="" multiple="" accept="image/*" data-max-file-size-mb="25" aria-label="Upload an image">
                 </button>
-                             
             </div>
 		-->
         
@@ -102,17 +133,18 @@
 		</div>      
 		
 </div>
+
 </main> 
 
-<footer>
-	<div class="row">	
-        <div class="card-footer col-12">
+<footer class="div-footer">
+		<div class="col-12">
             <button class="btn-publish" type="button" id="btn-publish">Publish</button>
-            <button class="save-draft" type="button"id="btn-upload">Save <span class="hidden s:inline">draft</span></button>
+            <button class="save-draft pl-1" type="button"id="btn-upload">Save <span class="hidden s:inline">draft</span></button>
             <button class="icon " title="Post options" type="button" id="post-options-btn" aria-expanded="false" aria-controls="post-options-dropdown" aria-haspopup="true">
                 <svg width="24" class="crayons-icon" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="75abcb76478519ca4eb9"><title id="75abcb76478519ca4eb9">Post options</title><path d="M12 1l9.5 5.5v11L12 23l-9.5-5.5v-11L12 1zm0 2.311L4.5 7.653v8.694l7.5 4.342 7.5-4.342V7.653L12 3.311zM12 16a4 4 0 110-8 4 4 0 010 8zm0-2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
             </button>
             <button class="revert-changes" type="button">Revert <span class="hidden s:inline">new changes</span></button>
+		</div>
         </div>
 	</div>
 </footer>

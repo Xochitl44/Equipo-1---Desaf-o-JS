@@ -19,13 +19,27 @@ const usersRef = database.ref("/users")
 const postsRef = database.ref("/posts")
 
 //Creamos un listener que este al pendiente de cualquier cambio en los usuarios
-postsRef.on('value', snapshot => {    
-    $("#posts").empty();
-
+postsRef.on('value', snapshot => {
     let postCollection = snapshot.val();
+
+    $("#posts").empty();
+    
+    $(`#nav-week-tab`).click(()=> {
+        $("#posts").empty();
+        const filteredByWeek = filterByWeek(postCollection) 
+        const filteredByMonth = filterByWeek(postCollection) 
+        const filteredByYear = filterByWeek(postCollection) 
+
+        for (key in filteredByWeek) {  
+            printPosts(filteredByWeek[key],key);
+            
+        }
+    });
+
     for (key in postCollection) {  
         printPosts(postCollection[key],key);
     }
+  
 })
 
 const printPosts = (objectPosts,key) =>{
@@ -156,10 +170,6 @@ const printPosts = (objectPosts,key) =>{
             window.location="index2.html?postID=" + key
         });
     });
-    
-    
-
-
 }
 
 //Función para mandar a pagina de search.html anexando los buscado a la URL
@@ -173,46 +183,61 @@ $("#inputValue2").keyup(function (e) {
 });
 
 //Función para filtrar por week desde home page 
-/*postRef.on('value', snapshot => {    
-    $("#nav-week-tab").empty();
-
-    let postCollection = snapshot.val();
-    for (key in postCollection) {  
-        filterByWeek(postCollection[key],key);
-    }
-});
-
-
-const filterByWeek = (objectPosts,key) => {  
-    let postCollection = snapshot.val();
-        let postValues = Object.values(postCollection);
-        let postKeys = Object.keys(postCollection);
-
-        let filterResult = postKeys.reduce( ( accum, current ) => {
-            let postWeek = postCollection[current];
-            return postWeek.includes(objectPosts) ? {...accum, [current]:postCollection[current]} : accum;
-    }, {});
-    
-    //console.log(postWeek)
-    //Console.log(filterResult);
-
-    for (postWeek in filterResult) {        
-        {date} = objectPosts;
-    
-        var oneWeekAgo = new Date();
+const filterByWeek = (postCollection) => {     
+    let filteredResult = {}
+    for (key in postCollection) {
+        let postObject = postCollection[key]
+        const oneWeekAgo = new Date();
         oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-        let findDate = moment(date).isBetween(oneWeekAgo, new Date());
+        let findWeekDate = moment(postObject.date).isBetween(oneWeekAgo, new Date());
+        if (findWeekDate){
+            filteredResult[key] = postObject
         }
-    });
+    }
+    return filteredResult
+}
 
-    $(`#nav-week-tab`).click(filterByWeek())=> {
-*/
+
+
+
 //Función para filtrar por month desde home page
+const filterByMonth = (postCollection) => {     
+    let filteredMonthResult = {}
+    for (key in postCollection) {
+        let postObject = postCollection[key]
+        const oneMonthAgo = new Date();
+        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+        let findMonthDate = moment(date).isBefore(oneMonthAgo, new Date());
+        if (findMonthDate){
+            filteredResult[key] = postObject
+        }
+    }
+    return filteredResult
+}
 
 //Función para filtrar por  year desde home page
-
+const filterByYear = (postCollection) => {     
+    let filteredYearResult = {}
+    for (key in postCollection) {
+        let postObject = postCollection[key]
+        const oneYearAgo = new Date();
+        oneYearAgo.setFullYear(oneYearAgo.getFullYear() + 1)
+        let findYear = moment(date).isBefore(oneYearAgo, new Date());
+        if (findYearDate){
+            filteredResult[key] = postObject
+        }
+    }
+    return filteredResult
+}
 
 //Función para filtrar  infinity  desde home page
 
 
 //Función para filtrar por latest desde home page
+/*
+    var latestDate = new Date();
+    latestDate.setFullYear(oneYearAgo.getFullYear() + 1)
+    let findMonthYear = moment(date).isBetween(latestDate, new Date());
+    }
+});
+*/

@@ -86,7 +86,11 @@ p:hover {
 }
 
 .new-cover-img {
+<<<<<<< HEAD
+  width: 250px;
+=======
   width: 180px;
+>>>>>>> d4e666fa43b37c79158530b6ed752d2f3fa879d8
   height: 50px;
   overflow: hidden;
   text-align: center;

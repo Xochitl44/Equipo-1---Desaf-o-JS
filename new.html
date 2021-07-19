@@ -50,7 +50,27 @@
 									role="tab" aria-controls="nav-feed" aria-selected="true">Edit</a>
 								<a class="nav-link-new" id="nav-week-tab" data-toggle="tab" href="#nav-week"
 									role="tab" aria-controls="nav-week" aria-selected="false">Preview</a>
-						</div>   
+								<button class="crayons-btn crayons-btn--ghost crayons-btn--icon " type="button" id="boton-cerrar" >
+									<svg width="24" height="24" viewBox="0 0 24 24" class="crayons-icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="as1mn15llu5e032u2pgzlc6yhvss2myk">
+										<title id="as1mn15llu5e032u2pgzlc6yhvss2myk">Close the editor</title>
+										<path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path>
+									</svg>
+								</button>									
+
+							</div>   
+<!--
+							<div class="crayons-article-form__close">
+								<button class="crayons-btn crayons-btn--ghost crayons-btn--icon" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" class="crayons-icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="as1mn15llu5e032u2pgzlc6yhvss2myk">
+										<title id="as1mn15llu5e032u2pgzlc6yhvss2myk">Close the editor</title>
+										<path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path>
+									</svg>
+								</button>
+							</div>											
+-->
+					
+
+
 					</div>
 					</div>
 			</div>
@@ -59,61 +79,47 @@
 	</header>
 <!----------------------------------------MAIN POST BODY----------------->
 <main class="create-post-main">  
-<div class="body-createpost col-12 col-lg-8">
-    <div class="row">
-<<<<<<< HEAD
-        <div class="col-12 mt-5 pl-0">
-            <button class="new-cover-img opacity-0 cursor-pointer" type="button">
-                <label for="post-cover-image">Add a cover image</label>
-				<input id="cover-image-input" type="file" accept="image/*"  data-max-file-size-mb="25">
-            </button>
-        </div>
-	</div>
-    	<div class="pl-5 mt-4">
-			<textarea class="new-post-title-here" id="post-title" placeholder="New post title here..."></textarea>   
-		</div>
-		<div>
-			<input id="post-tags" type="text" class="add-up-to-4-tags" name="postTags" placeholder="Add up to 4 tags..." pattern="[0-9A-Za-z, ]+">  
-		</div>
-	
-			<div class="col-12 mt-5 pl-0">
-				<button class="new-cover-img pl-0" type="button">
-=======
-        <div class=" mt-5">
-			
-			<div class="d-flex justify-content-start align-items-start ">					
-			<div class="" id="preview">
-				<img src="" id="imagepreview" class="" width="250" height="105" alt="Post cover" style="padding-left: 60px;" >
-			</div>	
-			
-				<button class="new-cover-img opacity-0 cursor-pointer" type="button">
-					<label for="post-cover-image" id="labelAddImage">Add a cover image</label>
-					<input id="cover-image-input" type="file" accept="image/*"  data-max-file-size-mb="25">
-				</button>
-				<a  class="btn btn-outline-danger ml-4 mt-1" type="button" id="btnRemove">Remove</a>
-			</div>					
-        </div>
-	
-		<div class="d-flex flex-column">
-			<div class="pl-4">
-				<textarea class="new-post-title-here" id="post-title" placeholder="New post title here..."></textarea>    
+	<div class="body-createpost col-12 col-lg-8">
+    	<div class="row d-flex flex-column">
+			<div class=" mt-5">				
+				<div class="d-flex flex-column justify-content-start align-items-start flex-md-row">					
+					<div class="" id="preview">
+						<img src="" id="imagepreview" class="" width="250" height="105" alt="Post cover" style="padding-left: 60px;" >
+					</div>	
+				
+					<div class="d-flex flex-row  mt-sm-3">
+						<button class="new-cover-img cursor-pointer" type="button" id="button-cover-image" >
+							<label for="post-cover-image" id="labelAddImage">Add a cover image</label>
+							<input id="cover-image-input" type="file" accept="image/*"  data-max-file-size-mb="25">
+						</button>
+						<a  class="btn btn-outline-danger ml-4 mt-1" type="button" id="btnRemove">Remove</a>
+					</div>
+				</div>					
 			</div>
-			<div class="">
-				<input class="" id="post-tags" type="text" name="" placeholder="Add up to 4 tags..." pattern="[0-9A-Za-z, ]+">
-			</div>
-		</div>
 		
+			<div class="">
+				<div class="pl-4 ">
+					<textarea class="new-post-title-here clase-textarea" id="post-title" placeholder="New post title here..." cols="40"></textarea>    
+				</div>
+			</div>			
+		</div>
+		<div class="mt-1">
+			<input class="clase-tags" id="post-tags" type="text" name="" placeholder="Add up to 4 tags..." pattern="[0-9A-Za-z, ]+">
+		</div>
 
+		<button class="upload-image" type="button">
+			<svg width="24" height="24" viewBox="0 0 24 24" class="crayons-icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="a17qec5pfhrwzk9w4kg0tp62v27qqu9t"><title id="a17qec5pfhrwzk9w4kg0tp62v27qqu9t">Upload image</title><path d="M20 5H4v14l9.292-9.294a1 1 0 011.414 0L20 15.01V5zM2 3.993A1 1 0 012.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 01-.992.993H2.992A.993.993 0 012 20.007V3.993zM8 11a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+			<label for="" style="border: none;">Upload Image</label>
+			<input id="post-cover-image" type="file" accept="image/*" class="opacity-0 cursor-pointer" style="visibility: hidden;" data-max-file-size-mb="25">
+		</button>
+		<div>
+			<div class="body-createpost col-12 col-lg-8">
+				<textarea placeholder="Write your post content here..." class="write-content" id="post-content" ></textarea> 
+			</div>
+		</div>  		
 	</div>
 
-
-			<button class="upload-img" type="button">
->>>>>>> 4c1e77e9f57f5b0c0a82ad88661f704153a81488
-				<svg width="24" height="24" viewBox="0 0 24 24" class="crayons-icon" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="a17qec5pfhrwzk9w4kg0tp62v27qqu9t"><title id="a17qec5pfhrwzk9w4kg0tp62v27qqu9t">Upload image</title><path d="M20 5H4v14l9.292-9.294a1 1 0 011.414 0L20 15.01V5zM2 3.993A1 1 0 012.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 01-.992.993H2.992A.993.993 0 012 20.007V3.993zM8 11a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-                <label for="post-cover-image">Upload Image</label>
-                <input id="post-cover-image" type="file" accept="image/*" class="opacity-0 cursor-pointer" data-max-file-size-mb="25">
-            	</button>
-			</div>
+	
 		
         <!--            
             <div>
@@ -128,9 +134,7 @@
             </div>
 		-->
         
-		<div>
-			<textarea placeholder="Write your post content here..." class="write-content" id="post-content" ></textarea> 
-		</div>      
+    
 		
 </div>
 

@@ -215,7 +215,7 @@ function autosize(){
   $("#boton-cerrar").click(function (e) { 
       e.preventDefault();
       
-      window.location = "http://localhost:5501/index.html"
+      window.location = "./index.html"
   });
 
   /*   ORH: TEMPORAL PARA CREAR USUARIOS

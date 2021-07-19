@@ -57,7 +57,7 @@ const printPosts = (objectPosts,key) =>{
                                 </div>
                             </div>
                             <div class="card-content pl-5 pt-2">
-                                <a href="" class="post-list"> 
+                                <a class="post-list"> 
                                     <h4 class="card-title">${title}</h4>
                                 </a>
                                 <div class="d-flex h-order">

@@ -23,10 +23,8 @@ postsRef.on('value', snapshot => {
     $("#posts").empty();
 
     let postCollection = snapshot.val();
-    let iterador=0;
     for (key in postCollection) {  
         printPosts(postCollection[key],key);
-        iterador++;     
     }
 })
 

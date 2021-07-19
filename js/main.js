@@ -30,7 +30,8 @@ postsRef.on('value', snapshot => {
 
 const printPosts = (objectPosts,key) =>{
     let {date,likes,tags,title,urlCover,user} = objectPosts;   
-    date = moment(date).format("MMM DD")
+    date = moment(date).format("MMM DD");
+    tags = !tags ? tags="news": tags        
     let expresion = /[ ,]/g
     let tagsPost = tags.split(expresion);
     let tagsLinks=``;
@@ -56,7 +57,7 @@ const printPosts = (objectPosts,key) =>{
                                 </div>
                             </div>
                             <div class="card-content pl-5 pt-2">
-                                <a href="index2.html" class="post-list"> 
+                                <a href="" class="post-list"> 
                                     <h4 class="card-title">${title}</h4>
                                 </a>
                                 <div class="d-flex h-order">

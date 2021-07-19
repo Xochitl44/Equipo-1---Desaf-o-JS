@@ -25,77 +25,146 @@ p:hover {
   color: black;
 }
 
+.create-post-main {
+  padding-left: 12%;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  position: absolute;
+  right: 1rem;
+  top: 0%;
+  padding: 1rem;
+  margin-top: 0%;
+}
+
+.nav-tabs .nav-link-new {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #202428;
+  color: #202428;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.nav-tabs .nav-link-new.active {
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link-new.active:after {
+  content: " ";
+  position: absolute;
+  background: #323ebe;
+  height: 3px;
+  bottom: 0px;
+  left: 0.75rem;
+  right: 0.75rem;
+}
+
+.nav-tabs .nav-link-new.active:hover:after {
+  left: 0rem;
+  right: 0rem;
+  border-radius: 0 0 5px 5px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.nav-tabs .nav-link-new:hover {
+  color: #3b49df;
+  background-color: rgba(59, 73, 223, 0.1);
+}
+
 /*Body Create Post*/
 .body-createpost {
   border-width: 5px;
   border-radius: 10px;
   background-color: white;
-}
-
-.cover-img {
-  border: 2px;
-  border-color: purple;
-  background-color: purple;
-  padding-left: 4em;
-  margin-top: 3em;
+  border: solid 1px darkgrey;
+  padding: 0%;
 }
 
 .new-cover-img {
-  width: 20%;
+  width: 250px;
   height: 50px;
-  padding: 1em;
   overflow: hidden;
   text-align: center;
   background-color: white;
   margin-left: 4em;
+  padding: 0.9em;
+  padding-left: 0%;
   border-color: darkgrey;
   border: solid 2px;
   -webkit-box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
           box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
+  border-radius: 6px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-}
-
-input {
-  opacity: 0.00001;
+  opacity: 3;
 }
 
 .new-post-title-here {
-  border: none;
   width: 100%;
-  height: 100px;
+  height: 60px;
   font-size: 30px;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  font-family: "Roboto Mono", monospace;
-  padding-left: 2em;
+  font-family: "Hind Siliguri", sans-serif;
+  margin-top: 1em;
+  border: none;
+  resize: none;
+  color: black;
 }
 
 .add-up-to-4-tags {
-  border: none;
-  width: 90%;
-  height: 100%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
+  width: 100%;
+  height: 20px;
   font-family: "Roboto Mono", monospace;
   font-size: medium;
+  padding-left: 3em;
+  color: red;
   background-color: white;
-  padding-left: 2em;
-}
-
-.upload-img {
   border: none;
-  width: 1000px;
-  height: 80px;
-  font-size: larger;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  margin-top: 3em;
+}
+
+/*
+.upload-img {
+  border: none;
+  width: 100%;
+  height: 60px;
+  font-size: larger;
+  box-shadow: none;
+  outline: none;
   text-align: start;
-  padding-left: 3em;
+  padding-left: 5em;
+  background-color: yellow;
+  opacity: 3;
+  overflow: hidden;
+  margin: 5em;
+}
+*/
+.upload-image {
+  width: 250px;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+  margin-left: 4em;
+  padding: 0.9em;
+  border-color: darkgrey;
+  border: solid 2px;
+  -webkit-box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
+          box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  opacity: 3;
 }
 
 textarea {
@@ -106,22 +175,34 @@ textarea {
   border: none;
   width: 100%;
   height: 500px;
-  font-size: 30px;
+  font-size: 20px;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
   font-family: "Roboto Mono", monospace;
-  margin-top: 3em;
-  padding-left: 2em;
+  margin-top: 1em;
+  padding-left: 2.5em;
 }
 
 /*create post "footer"*/
+.card-footer {
+  border-top: none;
+  padding-left: 5em;
+  background-color: none;
+  width: 50%;
+  height: 50%;
+}
+
+.div-footer {
+  padding-left: 10em;
+}
+
 .btn-publish {
   border: none;
   border-radius: 6px;
   background-color: #3b49df;
   color: white;
-  width: 80px;
+  width: 90px;
   height: 40px;
   outline: none;
   font-weight: bold;
@@ -130,10 +211,11 @@ textarea {
 .save-draft {
   border: none;
   border-radius: 6px;
-  background-color: #64707d;
-  color: white;
+  background-color: lightgrey;
+  color: black;
   width: 100px;
   height: 40px;
+  font-weight: bolder;
 }
 
 .icon {
@@ -168,7 +250,7 @@ header .navbar .navbar-toggler {
   border: none;
 }
 
-header .navbar .site-logo {
+header .navbar .logo {
   padding: 0px;
   margin-right: 16px;
 }

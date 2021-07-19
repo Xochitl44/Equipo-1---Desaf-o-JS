@@ -33,9 +33,7 @@ postsRef.on('value', snapshot => {
 const printPosts = (objectPosts,key) =>{
 
     let {date,likes,tags,title,urlCover,user} = objectPosts;
-    debugger
-    pri
-    
+    //date = moment(date).startOf('hour').fromNow()
     let expresion = /[ ,]/g
     let tagsPost = tags.split(expresion);
     let tagsLinks=``;
@@ -175,3 +173,48 @@ $("#inputValue2").keyup(function (e) {
     }   
 
 });
+
+//Función para filtrar por week desde home page 
+/*postRef.on('value', snapshot => {    
+    $("#nav-week-tab").empty();
+
+    let postCollection = snapshot.val();
+    for (key in postCollection) {  
+        filterByWeek(postCollection[key],key);
+    }
+});
+
+
+const filterByWeek = (objectPosts,key) => {  
+    let postCollection = snapshot.val();
+        let postValues = Object.values(postCollection);
+        let postKeys = Object.keys(postCollection);
+
+        let filterResult = postKeys.reduce( ( accum, current ) => {
+            let postWeek = postCollection[current];
+            return postWeek.includes(objectPosts) ? {...accum, [current]:postCollection[current]} : accum;
+    }, {});
+    
+    //console.log(postWeek)
+    //Console.log(filterResult);
+
+    for (postWeek in filterResult) {        
+        {date} = objectPosts;
+    
+        var oneWeekAgo = new Date();
+        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+        let findDate = moment(date).isBetween(oneWeekAgo, new Date());
+        }
+    });
+
+    $(`#nav-week-tab`).click(filterByWeek())=> {
+*/
+//Función para filtrar por month desde home page
+
+//Función para filtrar por  year desde home page
+
+
+//Función para filtrar  infinity  desde home page
+
+
+//Función para filtrar por latest desde home page

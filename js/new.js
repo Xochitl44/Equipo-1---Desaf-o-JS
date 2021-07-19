@@ -1,3 +1,5 @@
+$("#preview").hide()
+$("#btnRemove").hide()
 
 
 //Creamos una nueva instancia de nuestar db
@@ -60,7 +62,22 @@ postsRef.on('value', snapshot => {
 var fileCover
 $("#post-cover-image").change(event => {
     console.log(event.target.files[0])
-    fileCover = event.target.files[0]
+    fileCover = event.target.files[0]    
+
+    if (fileCover === undefined)
+    {
+        $("#preview").hide()
+        $("#labelAddImage").text('Add a cover image')
+        $("#btnremove").hide()
+    }
+    else
+    {   
+        $("#preview").show()
+        $("#btnRemove").show()
+        $("#labelAddImage").text('Change')  
+        var TmpPath = URL.createObjectURL(event.target.files[0])    
+        $("#imagepreview").attr("src", TmpPath);    
+    }
 })
 
 var fileExtra
@@ -174,9 +191,6 @@ const uploadFile = (file) => {
 
 
 $("#btn-publish").click(function (e) { 
-
-    
-    
     e.preventDefault();  
 
     /// solo se valida que el post tenga titulo 
@@ -210,34 +224,12 @@ $("#btn-upload").click(function (e) {
     //console.log(urlimage)
 })
 
-
-const changePostDate = ( postID ) => {
-    let currentDate = ""
-    postsRef.child(postID).once('value',function(datos)
-    {
-        post=datos.val();
-        console.log(post)
-        currentDate=post.date;     
-        console.log("antes", currenDate)
-        currentDate = moment(currentDate).format()
-        console.log("despues",currentDate)           
-        // database.ref(`posts/${postId}/date`).set( currentDate)
-        
-    })
-
-  }
-
-const changeUser = ( userId, picture ) => {
-    let user = ""
-    usersRef.child(userId).once('value',function(datos)
-    {
-        user=datos.val();
-        //currentLikes=user.picture;        
-        database.ref(`users/${userId}/picture`).set( picture)
-        
-    })
-
-  }
-
+$("#btnRemove").click(function (e) { 
+    e.preventDefault();
+   
+    $("#preview").hide()
+    $("#btnRemove").hide()    
+    $("#labelAddImage").text('Add a cover image')  
+});
 
 

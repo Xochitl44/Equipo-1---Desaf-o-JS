@@ -1,3 +1,4 @@
+
 //Creamos una nueva instancia de nuestar db
 let database = firebase.database();
 
@@ -83,7 +84,11 @@ const savePost = () => {
     let postLikes =  0
     let postImageExtra = $("#post-imageExtra").val()
     let postUser =  $("#post-User").val()
+
     postUser = "-MejMSqgvlkYFWIMHiSV"  // Xochitl
+
+    postUser = "-MejKvOK1E-5hGfJ6rIF"  // Jesus
+
 
     /*    
     let urlImageCover = uploadFile(fileCover)
@@ -204,6 +209,7 @@ $("#btn-upload").click(function (e) {
     // let urlimage = uploadFile(fileCover)
     //console.log(urlimage)
 
+
 })
 
 let reations = $(not-b) 
@@ -219,5 +225,43 @@ const addlike = ( postID ) => {
     postColections[not-b].likes = currentLikes + 1
     console.log(postColections[postID].likes)
 }
+
+
+
+const changePostDate = ( postID ) => {
+    let currentDate = ""
+    postsRef.child(postID).once('value',function(datos)
+    {
+        post=datos.val();
+        console.log(post)
+        currentDate=post.date;     
+        console.log("antes", currenDate)
+        currentDate = moment(currentDate).format()
+        console.log("despues",currentDate)           
+        // database.ref(`posts/${postId}/date`).set( currentDate)
+        
+    })
+
+  }
+
+const changeUser = ( userId, picture ) => {
+    let user = ""
+    usersRef.child(userId).once('value',function(datos)
+    {
+        user=datos.val();
+        //currentLikes=user.picture;        
+        database.ref(`users/${userId}/picture`).set( picture)
+        
+    })
+
+  }
+  //funcion para el fltrado de tags por "titulo"
+
+let result = object.keys(postCollections).reduce( (accum, current ) => {
+    console.log( postCollections[current].title.toLowerCase() )
+    return postCollections[current].title.toLowerCase().includes('titulo') ?
+    {...accum, [current]:postCollections[current]} : accum
+},{})
+console.log(result)
 
 

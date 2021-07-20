@@ -64,6 +64,7 @@ const filterByTitle = (searchValue) => {
 
             let expresion = /[ ,]/g
             let tagsPost = e.tags.toLowerCase().split(expresion);
+            console.log(tagsPost);
             let tagsLinks=``;
             tagsPost.forEach(element => {
                 tagsLinks+=`<a>#${element}</a>`;        
@@ -92,7 +93,7 @@ const filterByTitle = (searchValue) => {
                                         <h4 class="card-title">${e.title}</h4>
                                     </a>
                                     <div class="d-flex h-order">
-                                        <nav class="card-post-tags">${e.tagsLinks}</nav>
+                                        <nav class="card-post-tags">${tagsLinks}</nav>
                                     </div>
                                     <div class=" d-flex read">
                                         <div>
@@ -164,7 +165,7 @@ const filterByTitle = (searchValue) => {
                                         <h4 class="card-title">${e.title}</h4>
                                     </a>
                                     <div class="d-flex h-order">
-                                        <nav class="card-post-tags">${e.tagsLinks}</nav>
+                                        <nav class="card-post-tags">${tagsLinks}</nav>
                                     </div>
                                     <div class=" d-flex read">
                                         <div>
@@ -236,7 +237,7 @@ const filterByTitle = (searchValue) => {
                                         <h4 class="card-title">${e.title}</h4>
                                     </a>
                                     <div class="d-flex h-order">
-                                        <nav class="card-post-tags">${e.tagsLinks}</nav>
+                                        <nav class="card-post-tags">${tagsLinks}</nav>
                                     </div>
                                     <div class=" d-flex read">
                                         <div>

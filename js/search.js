@@ -38,12 +38,14 @@ const filterByTitle = (searchValue) => {
         let postKeys = Object.keys(postCollection);
 
         let filterResult = postKeys.reduce( ( accum, current ) => {
-            let 
-            postTitle = postCollection[current].title.toLowerCase();
+            console.log(current);
+            let postTitle = postCollection[current].title.toLowerCase();
+            
             return postTitle.includes(searchValue.toLowerCase()) ? {...accum, [current]:postCollection[current]} : accum;
         }, {} );
 
         let datesKeysArray = Object.keys(postCollection).reduce( ( accum, current ) => {
+            console.log(current);
             let postTitle = postCollection[current].title.toLowerCase();
             return postTitle.includes(searchKeyParam.toLowerCase()) ? [...accum, {...postCollection[current], id:current}] : accum;
         }, [] ); 

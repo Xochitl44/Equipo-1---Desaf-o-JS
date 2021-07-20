@@ -1,7 +1,6 @@
 $("#preview").hide()
 $("#btnRemove").hide()
 
-
 //Creamos una nueva instancia de nuestar db
 let database = firebase.database();
 
@@ -62,26 +61,41 @@ $("#post-imageExtra").change(event => {
 
 
 const savePost = () => {
-
+   
     let date = new Date()
     let dd = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
     let mm = date.getMonth() < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
     let yyyy = date.getFullYear()
     let postDate = `${dd}/${mm}/${yyyy}`    
 
+    let postCoverImage =  $("#post-cover-image").val()
+
     postDate = moment().format()
 
     // let postCoverImage =  $("#post-cover-image").val()
+
     let postTitle =  $("#post-title").val()
     let postTags =  $("#post-tags").val()
     let postContent =  $("#post-content").val()
     let postLikes =  0
     // let postImageExtra = $("#post-imageExtra").val()
     let postUser =  $("#post-User").val()
+
+    postUser = "-MejMSqgvlkYFWIMHiSV"  // Xochitl
+
     postUser = "-MejKvOK1E-5hGfJ6rIF"  // Jesus
+
+
+
+    /*    
+    let urlImageCover = uploadFile(fileCover)
+    let urlExtraImage = uploadFile(fileExtra)    
+    */
+
 
     postTags = postTags.trim()
     
+
     let postObject = 
     {
        content : postContent,
@@ -187,7 +201,10 @@ $("#btn-upload").click(function (e) {
     //console.log(fileCover)
     // let urlimage = uploadFile(fileCover)
     //console.log(urlimage)
+
+
 })
+
 
 $("#btnRemove").click(function (e) { 
     e.preventDefault();
@@ -197,6 +214,7 @@ $("#btnRemove").click(function (e) {
     $("#labelAddImage").text('Add a cover image')  
     $('#button-cover-image').css('width', '180px')
 });
+
 
 
 
@@ -210,7 +228,14 @@ function autosize(){
       el.style.cssText = 'height:' + el.scrollHeight + 'px';
     },0);
   }
+  //funcion para el fltrado de tags por "titulo"
 
+let result = object.keys(postCollections).reduce( (accum, current ) => {
+    console.log( postCollections[current].title.toLowerCase() )
+    return postCollections[current].title.toLowerCase().includes('titulo') ?
+    {...accum, [current]:postCollections[current]} : accum
+},{})
+console.log(result)
 
   $("#boton-cerrar").click(function (e) { 
       e.preventDefault();

@@ -47,10 +47,12 @@ const printPosts = (objectPosts,key) =>{
     date = moment(date).format("MMM DD");
     tags = !tags ? tags="news": tags        
     let expresion = /[ ,]/g
+    tags = !tags ? tags="news": tags
     let tagsPost = tags.split(expresion);
     let tagsLinks=``;
     tagsPost.forEach(element => {
         tagsLinks+=`<a>#${element}</a>`;        
+    
     });
     
     usersRef.child(user).once('value').then((snapshot) => {
@@ -182,6 +184,62 @@ $("#inputValue2").keyup(function (e) {
 
 });
 
+const filterBytags = (tag) => {
+    postsRef.on('value', snapshot => {    
+        //console.log(snapshot.val())
+        //$("#posts").empty();
+    
+        let postCollection = snapshot.val();
+       /* let result = Object.keys(postCollections).reduce( (accum, current ) => {
+            //console.log( postCollections[current].tags.toLowerCase() )
+            return postCollections[current].tags.includes(tag) ?
+            {...accum, [current]:postCollections[current]} : accum
+        },{})*/
+        let datesKeysArray = Object.keys(postCollection).reduce( ( accum, current ) => {
+            console.log(current)
+            let postTitle = postCollection[current]?.tags || "";
+            console.log(postTitle)
+            return postTitle.includes(tag) ? [...accum, {...postCollection[current], id:current}] : accum;
+        }, [] ); 
+        console.log(datesKeysArray)
+        let asideListings = `<div class="card mt-4" >
+        <div class="card-header font-weight-bold">
+            <h4><a>#news</a></h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Buckle Up For a Wild Decade in Cloud Computing
+                <div>
+                    <p class="text-muted l-text">11 comments</p>
+                </div>
+            </li>
+            <li class="list-group-item">Game Dev Digest -Issue #98 - Multiplayer, starting
+                shaders and more!
+                <div>
+                    <button type="button bg-primary" class="btn-new">New</button>
+                </div>
+            </li>
+            <li class="list-group-item">Our top tech news & programming sites
+                <div>
+                    <button type="button bg-primary" class="btn-new">New</button>
+                </div>
+            </li>
+            <li class="list-group-item">MoonZoon Dev News (4): Actix, Async CLI, Error Handling,
+                Wasmpack installer
+                <div>
+                    <button type="button bg-primary" class="btn-new">New</button>
+                </div>
+            </li>
+            <li class="list-group-item">K*ssandra & the Community
+                <div>
+                    <button type="button bg-primary" class="btn-new">New</button>
+                </div>
+            </li>
+        </ul>
+    </div>`
+    $ ("#tagsaside").append(asideListings)
+    })
+}
+
 //Función para filtrar por week desde home page 
 const filterByWeek = (postCollection) => {     
     let filteredResult = {}
@@ -241,3 +299,4 @@ const filterByYear = (postCollection) => {
     }
 });
 */
+

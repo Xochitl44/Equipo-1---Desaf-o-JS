@@ -1,3 +1,5 @@
+$("#preview").hide()
+$("#btnRemove").hide()
 
 //Creamos una nueva instancia de nuestar db
 let database = firebase.database();
@@ -12,23 +14,6 @@ var storageRef = firebase.storage().ref();
 var urlImageCover = ""
 var urlExtraImage = ""
 
-/*   ORH: TEMPORAL PARA CREAR USUARIOS
-let userObject = {
-    userName: "Xochitl",    
-    picture: "https://avatars.githubusercontent.com/u/84822138?v=4"
-}
-const saveUser = () => {
-    usersRef.push(userObject)
-}
-    <option value="-MejJl7qB95TMv3oQWwY">Alex</option>
-    <option value="-MejKUt5xyvnoiRGyTXd">Oscar</option>
-    <option value="-MejKvOK1E-5hGfJ6rIF">Jesus</option>
-    <option value="-MejLARNwMGk-GFtXmt5">Carlos</option>
-    <option value="-MejLObt9Q0Tl6_b2c7-">Ubaldo</option>
-    <option value="-MejMSqgvlkYFWIMHiSV">Xochitl</option>
-    <option value="user1">Xoch</option>
-*/
-
 //Creamos un listener que este al pendiente de cualquier cambio en los usuarios
 usersRef.on('value', snapshot => {
     let usersCollection = snapshot.val()
@@ -40,26 +25,32 @@ usersRef.on('value', snapshot => {
     }
 })
 
-
 postsRef.on('value', snapshot => {    
     console.log(snapshot.val())    
-    /*
-    let postCollection = snapshot.val()
-    for (post in postCollection) {
-        let { content , date ,likes , tags , title , urlCover, user  } = postCollection[post]
-        console.log( title , user , content )
-        $("#post-User").append(`
-             <h3>${userName}/${user}/${content} </h3>
-        `)
-    }
-    */
 })
 
 //Creamos la variable que guardará el archivo que voy a subir
 var fileCover
 $("#post-cover-image").change(event => {
     console.log(event.target.files[0])
-    fileCover = event.target.files[0]
+    fileCover = event.target.files[0]    
+
+    if (fileCover === undefined)
+    {
+        $("#preview").hide()
+        $("#labelAddImage").text('Add a cover image')
+        $("#btnremove").hide()
+        $('#button-cover-image').css('width', '180px')
+    }
+    else
+    {   
+        $("#preview").show()
+        $("#btnRemove").show()
+        $("#labelAddImage").text('Change')  
+        var TmpPath = URL.createObjectURL(event.target.files[0])    
+        $("#imagepreview").attr("src", TmpPath);  
+        $('#button-cover-image').css('width', '100px')  
+    }
 })
 
 var fileExtra
@@ -78,11 +69,16 @@ const savePost = () => {
     let postDate = `${dd}/${mm}/${yyyy}`    
 
     let postCoverImage =  $("#post-cover-image").val()
+
+    postDate = moment().format()
+
+    // let postCoverImage =  $("#post-cover-image").val()
+
     let postTitle =  $("#post-title").val()
     let postTags =  $("#post-tags").val()
     let postContent =  $("#post-content").val()
     let postLikes =  0
-    let postImageExtra = $("#post-imageExtra").val()
+    // let postImageExtra = $("#post-imageExtra").val()
     let postUser =  $("#post-User").val()
 
     postUser = "-MejMSqgvlkYFWIMHiSV"  // Xochitl
@@ -90,10 +86,15 @@ const savePost = () => {
     postUser = "-MejKvOK1E-5hGfJ6rIF"  // Jesus
 
 
+
     /*    
     let urlImageCover = uploadFile(fileCover)
     let urlExtraImage = uploadFile(fileExtra)    
     */
+
+
+    postTags = postTags.trim()
+    
 
     let postObject = 
     {
@@ -165,18 +166,10 @@ const uploadFile = (file) => {
                 }
                 
             )
-            /*
-            console.log("antes de regresar",  urlResult)
-            return urlResult
-            */
 }
 
 
-
 $("#btn-publish").click(function (e) { 
-
-    
-    
     e.preventDefault();  
 
     /// solo se valida que el post tenga titulo 
@@ -212,48 +205,28 @@ $("#btn-upload").click(function (e) {
 
 })
 
-let reations = $(not-b) 
 
-const saveReactions = (not-b) => {
-    let {likes} = postColections[not_b]
-    return likes
-    //console.log (likes)
-}
-saveReactions(not-b)
-const addlike = ( postID ) => {
-    let currentLikes = saveReactions(not-b)
-    postColections[not-b].likes = currentLikes + 1
-    console.log(postColections[postID].likes)
-}
+$("#btnRemove").click(function (e) { 
+    e.preventDefault();
+   
+    $("#preview").hide()
+    $("#btnRemove").hide()    
+    $("#labelAddImage").text('Add a cover image')  
+    $('#button-cover-image').css('width', '180px')
+});
 
 
 
-const changePostDate = ( postID ) => {
-    let currentDate = ""
-    postsRef.child(postID).once('value',function(datos)
-    {
-        post=datos.val();
-        console.log(post)
-        currentDate=post.date;     
-        console.log("antes", currenDate)
-        currentDate = moment(currentDate).format()
-        console.log("despues",currentDate)           
-        // database.ref(`posts/${postId}/date`).set( currentDate)
-        
-    })
 
-  }
+var textarea = document.getElementById('post-title');
+textarea.addEventListener('keydown', autosize);
 
-const changeUser = ( userId, picture ) => {
-    let user = ""
-    usersRef.child(userId).once('value',function(datos)
-    {
-        user=datos.val();
-        //currentLikes=user.picture;        
-        database.ref(`users/${userId}/picture`).set( picture)
-        
-    })
-
+function autosize(){
+    var el = this;
+    setTimeout(function(){
+      el.style.cssText = 'height:auto; padding:0';
+      el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    },0);
   }
   //funcion para el fltrado de tags por "titulo"
 
@@ -264,4 +237,41 @@ let result = object.keys(postCollections).reduce( (accum, current ) => {
 },{})
 console.log(result)
 
+  $("#boton-cerrar").click(function (e) { 
+      e.preventDefault();
+      
+      window.location = "./index.html"
+  });
 
+  /*   ORH: TEMPORAL PARA CREAR USUARIOS
+let userObject = {
+    userName: "Xochitl",    
+    picture: "https://avatars.githubusercontent.com/u/84822138?v=4"
+}
+const saveUser = () => {
+    usersRef.push(userObject)
+}
+    <option value="-MejJl7qB95TMv3oQWwY">Alex</option>
+    <option value="-MejKUt5xyvnoiRGyTXd">Oscar</option>
+    <option value="-MejKvOK1E-5hGfJ6rIF">Jesus</option>
+    <option value="-MejLARNwMGk-GFtXmt5">Carlos</option>
+    <option value="-MejLObt9Q0Tl6_b2c7-">Ubaldo</option>
+    <option value="-MejMSqgvlkYFWIMHiSV">Xochitl</option>
+    <option value="user1">Xoch</option>
+*/
+
+/*
+postsRef.on('value', snapshot => {    
+    console.log(snapshot.val())    
+    
+    let postCollection = snapshot.val()
+    for (post in postCollection) {
+        let { content , date ,likes , tags , title , urlCover, user  } = postCollection[post]
+        console.log( title , user , content )
+        $("#post-User").append(`
+             <h3>${userName}/${user}/${content} </h3>
+        `)
+    }
+    
+})
+*/

@@ -21,25 +21,50 @@ const postsRef = database.ref("/posts")
 //Creamos un listener que este al pendiente de cualquier cambio en los usuarios
 postsRef.on('value', snapshot => {
     let postCollection = snapshot.val();
-
+    
     $("#posts").empty();
     
     $(`#nav-week-tab`).click(()=> {
         $("#posts").empty();
-        const filteredByWeek = filterByWeek(postCollection) 
-        const filteredByMonth = filterByWeek(postCollection) 
-        const filteredByYear = filterByWeek(postCollection) 
+        const filteredByWeek = filterByWeek(postCollection)  
 
         for (key in filteredByWeek) {  
             printPosts(filteredByWeek[key],key);
             
         }
     });
+    $(`#nav-month-tab`).click(()=> {
+        $("#posts").empty();
+        const filteredByMonth = filterByMonth(postCollection) 
 
+        for (key in filteredByMonth) {  
+            printPosts(filteredByMonth[key],key);
+            
+        }
+    });    
+    $(`#nav-year`).click(()=> {
+        $("#posts").empty();        
+        const filteredByYear = filterByYear(postCollection) 
+
+        for (key in filteredByYear) {  
+            printPosts(filteredByYear[key],key);
+            
+        }
+    });
+    $(`#nav-latest`).click(()=> {
+        $("#posts").empty();        
+        const filteredByLatest = filterByLatest(postCollection) 
+
+        for (key in filteredByLatest) {  
+            printPosts(filteredByLatest[key],key);            
+        }
+    });
+    filterBytags(postCollection,"news");
+    filterBytags(postCollection,"help");
     for (key in postCollection) {  
         printPosts(postCollection[key],key);
     }
-  
+    
 })
 
 const printPosts = (objectPosts,key) =>{
@@ -184,12 +209,12 @@ $("#inputValue2").keyup(function (e) {
 
 });
 
-const filterBytags = (tag) => {
-    postsRef.on('value', snapshot => {    
+const filterBytags = (postCollection,tag) => {
+    //postsRef.on('value', snapshot => {    
         //console.log(snapshot.val())
         //$("#posts").empty();
     
-        let postCollection = snapshot.val();
+        //let postCollection = snapshot.val();
        /* let result = Object.keys(postCollections).reduce( (accum, current ) => {
             //console.log( postCollections[current].tags.toLowerCase() )
             return postCollections[current].tags.includes(tag) ?
@@ -202,42 +227,20 @@ const filterBytags = (tag) => {
             return postTitle.includes(tag) ? [...accum, {...postCollection[current], id:current}] : accum;
         }, [] ); 
         console.log(datesKeysArray)
-        let asideListings = `<div class="card mt-4" >
-        <div class="card-header font-weight-bold">
-            <h4><a>#news</a></h4>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Buckle Up For a Wild Decade in Cloud Computing
-                <div>
+        datesKeysArray.forEach((objecto)=>{
+            let {title}=objecto
+            let asideListings = `
+            <li class="list-group-item">${title} <div>
                     <p class="text-muted l-text">11 comments</p>
                 </div>
-            </li>
-            <li class="list-group-item">Game Dev Digest -Issue #98 - Multiplayer, starting
-                shaders and more!
-                <div>
-                    <button type="button bg-primary" class="btn-new">New</button>
-                </div>
-            </li>
-            <li class="list-group-item">Our top tech news & programming sites
-                <div>
-                    <button type="button bg-primary" class="btn-new">New</button>
-                </div>
-            </li>
-            <li class="list-group-item">MoonZoon Dev News (4): Actix, Async CLI, Error Handling,
-                Wasmpack installer
-                <div>
-                    <button type="button bg-primary" class="btn-new">New</button>
-                </div>
-            </li>
-            <li class="list-group-item">K*ssandra & the Community
-                <div>
-                    <button type="button bg-primary" class="btn-new">New</button>
-                </div>
-            </li>
-        </ul>
-    </div>`
-    $ ("#tagsaside").append(asideListings)
-    })
+            </li>`
+            if(tag==="news"){
+                $("#ul-news").append(asideListings)
+            }else{
+                $("#ul-help").append(asideListings)
+            }
+        });
+    //}
 }
 
 //Función para filtrar por week desde home page 
@@ -260,12 +263,12 @@ const filterByWeek = (postCollection) => {
 
 //Función para filtrar por month desde home page
 const filterByMonth = (postCollection) => {     
-    let filteredMonthResult = {}
+    let filteredResult = {}
     for (key in postCollection) {
         let postObject = postCollection[key]
         const oneMonthAgo = new Date();
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-        let findMonthDate = moment(date).isBefore(oneMonthAgo, new Date());
+        let findMonthDate = moment(postObject.date).isBefore(oneMonthAgo, new Date());
         if (findMonthDate){
             filteredResult[key] = postObject
         }
@@ -275,14 +278,28 @@ const filterByMonth = (postCollection) => {
 
 //Función para filtrar por  year desde home page
 const filterByYear = (postCollection) => {     
-    let filteredYearResult = {}
+    let filteredResult = {}
     for (key in postCollection) {
         let postObject = postCollection[key]
         const oneYearAgo = new Date();
-        oneYearAgo.setFullYear(oneYearAgo.getFullYear() + 1)
-        let findYear = moment(date).isBefore(oneYearAgo, new Date());
+        oneYearAgo.setDate(oneYearAgo.getDate() - 365)
+        let findYearDate = moment(postObject.date).isBefore(oneYearAgo, new Date());
         if (findYearDate){
             filteredResult[key] = postObject
+        }
+    }
+    return filteredResult
+}
+
+const filterByLatest = (postCollection) => {     
+    let filteredResult = {}
+    for (key in postCollection) {
+        let postObject = postCollection[key]
+        const oneDayAgo = new Date();
+        oneDayAgo.setDate(oneDayAgo.getDate() - 1)
+        let findLatesDate = moment(postObject.date).isBefore(oneDayAgo, new Date());
+        if (findYearDate){
+            findLatesDate[key] = postObject
         }
     }
     return filteredResult

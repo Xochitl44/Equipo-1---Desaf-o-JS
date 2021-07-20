@@ -60,18 +60,16 @@ const filterByTitle = (searchValue) => {
         //console.log(postCollection); // Imprime objeto con sus llaves
         //console.log(filterResult); // Imprime objeto filtrado con sus llaves
 
-        for( result in filterResult ){
-            let { content , date ,likes , tags , title , urlCover, user  } = filterResult[result];
-            
+        datesKeysArray.forEach( (e) => {
+
             let expresion = /[ ,]/g
-            let tagsPost = tags.toLowerCase().split(expresion);
+            let tagsPost = e.tags.toLowerCase().split(expresion);
             let tagsLinks=``;
             tagsPost.forEach(element => {
                 tagsLinks+=`<a>#${element}</a>`;        
             });
-
             
-            usersRef.child(user).get().then((snapshot) =>
+            usersRef.child(e.user).get().then((snapshot) =>
             {
                     let postUserName = ""
                     let postUserPict = ""
@@ -86,15 +84,15 @@ const filterByTitle = (searchValue) => {
                                         <img src="${postUserPict}" alt="" class="br-100 pad"> 
                                     <div class="d-flex c-name">
                                         <h6 class="nickname mb-0">${postUserName}</h6> 
-                                        <p>${moment(date).format('MMM DD')}</p>
+                                        <p>${moment(e.date).format('MMM DD')}</p>
                                     </div>
                                 </div>
                                 <div class="card-content pl-5 pt-2">
-                                    <a href="index2.html?postID=${result}" class="post-list">
-                                        <h4 class="card-title">${title}</h4>
+                                    <a href="index2.html?postID=${e.result}" class="post-list">
+                                        <h4 class="card-title">${e.title}</h4>
                                     </a>
                                     <div class="d-flex h-order">
-                                        <nav class="card-post-tags">${tagsLinks}</nav>
+                                        <nav class="card-post-tags">${e.tagsLinks}</nav>
                                     </div>
                                     <div class=" d-flex read">
                                         <div>
@@ -108,7 +106,7 @@ const filterByTitle = (searchValue) => {
                                                     d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
                                                 </path>
                                             </svg>
-                                            <span class="not-b">${likes} reactions</span>
+                                            <span class="not-b">${e.likes} reactions</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                 height="24" role="img"
                                                 aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
@@ -133,7 +131,7 @@ const filterByTitle = (searchValue) => {
                         `;
                         $("#nav-feed").append(postCard) 
             })   /// termina el user.ref
-        }
+        });
 
         orderedByNewestDateArray.forEach( (e) => {
             let expresion = /[ ,]/g
@@ -143,59 +141,68 @@ const filterByTitle = (searchValue) => {
                 tagsLinks+=`<a>#${element}</a>`;        
             });
 
-            let postCard = `
-                <div class="card mt-3 br-post post-card">
-                    <div class="card-body">
-                        <div class="d-flex c-header">
-                                <img src="images/pics/alfred.jpg" alt="" class="br-100 pad"> <!-- foto de usuario -->
-                            <div class="d-flex c-name">
-                                <h6 class="nickname mb-0">Alfred Pizana</h6> <!-- nombre de usuario -->
-                                <p>${e.date}</p>
+            usersRef.child(e.user).get().then((snapshot) =>
+            {
+                    let postUserName = ""
+                    let postUserPict = ""
+                    usuario=snapshot.val();                    
+                    postUserName= usuario.userName;
+                    postUserPict= usuario.picture;
+                        
+                    let postCard = `
+                        <div class="card mt-3 br-post post-card">
+                            <div class="card-body">
+                                <div class="d-flex c-header">
+                                        <img src="${postUserPict}" alt="" class="br-100 pad"> 
+                                    <div class="d-flex c-name">
+                                        <h6 class="nickname mb-0">${postUserName}</h6> 
+                                        <p>${moment(e.date).format('MMM DD')}</p>
+                                    </div>
+                                </div>
+                                <div class="card-content pl-5 pt-2">
+                                    <a href="index2.html?postID=${e.result}" class="post-list">
+                                        <h4 class="card-title">${e.title}</h4>
+                                    </a>
+                                    <div class="d-flex h-order">
+                                        <nav class="card-post-tags">${e.tagsLinks}</nav>
+                                    </div>
+                                    <div class=" d-flex read">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" role="img"
+                                                aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+                                                class="crayons-icon mb-1">
+                                                <title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+                                                    Reactions</title>
+                                                <path
+                                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                                </path>
+                                            </svg>
+                                            <span class="not-b">${e.likes} reactions</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" role="img"
+                                                aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+                                                class="crayons-icon mb-1">
+                                                <title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+                                                    Comments</title>
+                                                <path
+                                                    d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                                                </path>
+                                            </svg>
+                                            <button class="comment">Add comment</button>
+                                        </div>
+                                        <div class="d-flex">
+                                            <p class="card-text mb-0"><small class="text-muted">9
+                                                    min read</small></p>
+                                            <button class="save">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-content pl-5 pt-2">
-                            <a href="index2.html?postID=${e}" class="post-list">
-                                <h4 class="card-title">${e.title}</h4>
-                            </a>
-                            <div class="d-flex h-order">
-                                <nav class="card-post-tags">${tagsLinks}</nav>
-                            </div>
-                            <div class=" d-flex read">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" role="img"
-                                        aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
-                                        class="crayons-icon mb-1">
-                                        <title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
-                                            Reactions</title>
-                                        <path
-                                            d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
-                                        </path>
-                                    </svg>
-                                    <span class="not-b">8 reactions</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" role="img"
-                                        aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
-                                        class="crayons-icon mb-1">
-                                        <title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
-                                            Comments</title>
-                                        <path
-                                            d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
-                                        </path>
-                                    </svg>
-                                    <button class="comment">Add comment</button>
-                                </div>
-                                <div class="d-flex">
-                                    <p class="card-text mb-0"><small class="text-muted">9
-                                            min read</small></p>
-                                    <button class="save">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `;
-            $("#nav-week").append(postCard) 
+                        `;
+                        $("#nav-week").append(postCard) 
+            })   /// termina el user.ref
         });
         
         orderedByOldestDateArray.forEach( (e) => {
@@ -206,59 +213,68 @@ const filterByTitle = (searchValue) => {
                 tagsLinks+=`<a>#${element}</a>`;        
             });
 
-            let postCard = `
-                <div class="card mt-3 br-post post-card">
-                    <div class="card-body">
-                        <div class="d-flex c-header">
-                                <img src="images/pics/alfred.jpg" alt="" class="br-100 pad"> <!-- foto de usuario -->
-                            <div class="d-flex c-name">
-                                <h6 class="nickname mb-0">Alfred Pizana</h6> <!-- nombre de usuario -->
-                                <p>${e.date}</p>
+            usersRef.child(e.user).get().then((snapshot) =>
+            {
+                    let postUserName = ""
+                    let postUserPict = ""
+                    usuario=snapshot.val();                    
+                    postUserName= usuario.userName;
+                    postUserPict= usuario.picture;
+                        
+                    let postCard = `
+                        <div class="card mt-3 br-post post-card">
+                            <div class="card-body">
+                                <div class="d-flex c-header">
+                                        <img src="${postUserPict}" alt="" class="br-100 pad"> 
+                                    <div class="d-flex c-name">
+                                        <h6 class="nickname mb-0">${postUserName}</h6> 
+                                        <p>${moment(e.date).format('MMM DD')}</p>
+                                    </div>
+                                </div>
+                                <div class="card-content pl-5 pt-2">
+                                    <a href="index2.html?postID=${e.result}" class="post-list">
+                                        <h4 class="card-title">${e.title}</h4>
+                                    </a>
+                                    <div class="d-flex h-order">
+                                        <nav class="card-post-tags">${e.tagsLinks}</nav>
+                                    </div>
+                                    <div class=" d-flex read">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" role="img"
+                                                aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
+                                                class="crayons-icon mb-1">
+                                                <title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
+                                                    Reactions</title>
+                                                <path
+                                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                                </path>
+                                            </svg>
+                                            <span class="not-b">${e.likes} reactions</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" role="img"
+                                                aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
+                                                class="crayons-icon mb-1">
+                                                <title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
+                                                    Comments</title>
+                                                <path
+                                                    d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                                                </path>
+                                            </svg>
+                                            <button class="comment">Add comment</button>
+                                        </div>
+                                        <div class="d-flex">
+                                            <p class="card-text mb-0"><small class="text-muted">9
+                                                    min read</small></p>
+                                            <button class="save">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-content pl-5 pt-2">
-                            <a href="index2.html?postID=${e}" class="post-list">
-                                <h4 class="card-title">${e.title}</h4>
-                            </a>
-                            <div class="d-flex h-order">
-                                <nav class="card-post-tags">${tagsLinks}</nav>
-                            </div>
-                            <div class=" d-flex read">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" role="img"
-                                        aria-labelledby="ah0ho4vrguhqcalal3r0v1fzvlxju7zc"
-                                        class="crayons-icon mb-1">
-                                        <title id="ah0ho4vrguhqcalal3r0v1fzvlxju7zc">
-                                            Reactions</title>
-                                        <path
-                                            d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
-                                        </path>
-                                    </svg>
-                                    <span class="not-b">8 reactions</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" role="img"
-                                        aria-labelledby="aavwx5vmqdgx8wvzfg593jo469ge3dnz"
-                                        class="crayons-icon mb-1">
-                                        <title id="aavwx5vmqdgx8wvzfg593jo469ge3dnz">
-                                            Comments</title>
-                                        <path
-                                            d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
-                                        </path>
-                                    </svg>
-                                    <button class="comment">Add comment</button>
-                                </div>
-                                <div class="d-flex">
-                                    <p class="card-text mb-0"><small class="text-muted">9
-                                            min read</small></p>
-                                    <button class="save">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `;
-            $("#nav-month").append(postCard) 
+                        `;
+                        $("#nav-month").append(postCard) 
+            })   /// termina el user.ref
         });
     })
 }

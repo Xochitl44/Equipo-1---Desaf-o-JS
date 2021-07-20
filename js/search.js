@@ -88,7 +88,7 @@ const filterByTitle = (searchValue) => {
                                     </div>
                                 </div>
                                 <div class="card-content pl-5 pt-2">
-                                    <a href="index2.html?postID=${e.result}" class="post-list">
+                                    <a href="index2.html?postID=${e.id}" class="post-list">
                                         <h4 class="card-title">${e.title}</h4>
                                     </a>
                                     <div class="d-flex h-order">
@@ -160,7 +160,7 @@ const filterByTitle = (searchValue) => {
                                     </div>
                                 </div>
                                 <div class="card-content pl-5 pt-2">
-                                    <a href="index2.html?postID=${e.result}" class="post-list">
+                                    <a href="index2.html?postID=${e.id}" class="post-list">
                                         <h4 class="card-title">${e.title}</h4>
                                     </a>
                                     <div class="d-flex h-order">
@@ -232,7 +232,7 @@ const filterByTitle = (searchValue) => {
                                     </div>
                                 </div>
                                 <div class="card-content pl-5 pt-2">
-                                    <a href="index2.html?postID=${e.result}" class="post-list">
+                                    <a href="index2.html?postID=${e.id}" class="post-list">
                                         <h4 class="card-title">${e.title}</h4>
                                     </a>
                                     <div class="d-flex h-order">

@@ -21,25 +21,50 @@ const postsRef = database.ref("/posts")
 //Creamos un listener que este al pendiente de cualquier cambio en los usuarios
 postsRef.on('value', snapshot => {
     let postCollection = snapshot.val();
-
+    
     $("#posts").empty();
     
     $(`#nav-week-tab`).click(()=> {
         $("#posts").empty();
-        const filteredByWeek = filterByWeek(postCollection) 
-        const filteredByMonth = filterByWeek(postCollection) 
-        const filteredByYear = filterByWeek(postCollection) 
+        const filteredByWeek = filterByWeek(postCollection)  
 
         for (key in filteredByWeek) {  
             printPosts(filteredByWeek[key],key);
             
         }
     });
+    $(`#nav-month-tab`).click(()=> {
+        $("#posts").empty();
+        const filteredByMonth = filterByMonth(postCollection) 
 
+        for (key in filteredByMonth) {  
+            printPosts(filteredByMonth[key],key);
+            
+        }
+    });    
+    $(`#nav-year`).click(()=> {
+        $("#posts").empty();        
+        const filteredByYear = filterByYear(postCollection) 
+
+        for (key in filteredByYear) {  
+            printPosts(filteredByYear[key],key);
+            
+        }
+    });
+    $(`#nav-latest`).click(()=> {
+        $("#posts").empty();        
+        const filteredByLatest = filterByLatest(postCollection) 
+
+        for (key in filteredByLatest) {  
+            printPosts(filteredByLatest[key],key);            
+        }
+    });
+    filterBytags(postCollection,"news");
+    filterBytags(postCollection,"help");
     for (key in postCollection) {  
         printPosts(postCollection[key],key);
     }
-  
+    
 })
 
 const printPosts = (objectPosts,key) =>{
@@ -47,10 +72,12 @@ const printPosts = (objectPosts,key) =>{
     date = moment(date).format("MMM DD");
     tags = !tags ? tags="news": tags        
     let expresion = /[ ,]/g
+    tags = !tags ? tags="news": tags
     let tagsPost = tags.split(expresion);
     let tagsLinks=``;
     tagsPost.forEach(element => {
         tagsLinks+=`<a>#${element}</a>`;        
+    
     });
     
     usersRef.child(user).once('value').then((snapshot) => {
@@ -182,6 +209,40 @@ $("#inputValue2").keyup(function (e) {
 
 });
 
+const filterBytags = (postCollection,tag) => {
+    //postsRef.on('value', snapshot => {    
+        //console.log(snapshot.val())
+        //$("#posts").empty();
+    
+        //let postCollection = snapshot.val();
+       /* let result = Object.keys(postCollections).reduce( (accum, current ) => {
+            //console.log( postCollections[current].tags.toLowerCase() )
+            return postCollections[current].tags.includes(tag) ?
+            {...accum, [current]:postCollections[current]} : accum
+        },{})*/
+        let datesKeysArray = Object.keys(postCollection).reduce( ( accum, current ) => {
+            console.log(current)
+            let postTitle = postCollection[current]?.tags || "";
+            console.log(postTitle)
+            return postTitle.includes(tag) ? [...accum, {...postCollection[current], id:current}] : accum;
+        }, [] ); 
+        console.log(datesKeysArray)
+        datesKeysArray.forEach((objecto)=>{
+            let {title}=objecto
+            let asideListings = `
+            <li class="list-group-item">${title} <div>
+                    <p class="text-muted l-text">11 comments</p>
+                </div>
+            </li>`
+            if(tag==="news"){
+                $("#ul-news").append(asideListings)
+            }else{
+                $("#ul-help").append(asideListings)
+            }
+        });
+    //}
+}
+
 //Función para filtrar por week desde home page 
 const filterByWeek = (postCollection) => {     
     let filteredResult = {}
@@ -202,12 +263,12 @@ const filterByWeek = (postCollection) => {
 
 //Función para filtrar por month desde home page
 const filterByMonth = (postCollection) => {     
-    let filteredMonthResult = {}
+    let filteredResult = {}
     for (key in postCollection) {
         let postObject = postCollection[key]
         const oneMonthAgo = new Date();
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-        let findMonthDate = moment(date).isBefore(oneMonthAgo, new Date());
+        let findMonthDate = moment(postObject.date).isBefore(oneMonthAgo, new Date());
         if (findMonthDate){
             filteredResult[key] = postObject
         }
@@ -217,14 +278,28 @@ const filterByMonth = (postCollection) => {
 
 //Función para filtrar por  year desde home page
 const filterByYear = (postCollection) => {     
-    let filteredYearResult = {}
+    let filteredResult = {}
     for (key in postCollection) {
         let postObject = postCollection[key]
         const oneYearAgo = new Date();
-        oneYearAgo.setFullYear(oneYearAgo.getFullYear() + 1)
-        let findYear = moment(date).isBefore(oneYearAgo, new Date());
+        oneYearAgo.setDate(oneYearAgo.getDate() - 365)
+        let findYearDate = moment(postObject.date).isBefore(oneYearAgo, new Date());
         if (findYearDate){
             filteredResult[key] = postObject
+        }
+    }
+    return filteredResult
+}
+
+const filterByLatest = (postCollection) => {     
+    let filteredResult = {}
+    for (key in postCollection) {
+        let postObject = postCollection[key]
+        const oneDayAgo = new Date();
+        oneDayAgo.setDate(oneDayAgo.getDate() - 1)
+        let findLatesDate = moment(postObject.date).isBefore(oneDayAgo, new Date());
+        if (findYearDate){
+            findLatesDate[key] = postObject
         }
     }
     return filteredResult
@@ -241,3 +316,4 @@ const filterByYear = (postCollection) => {
     }
 });
 */
+

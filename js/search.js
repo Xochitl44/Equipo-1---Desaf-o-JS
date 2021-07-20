@@ -38,13 +38,7 @@ const filterByTitle = (searchValue) => {
         let postKeys = Object.keys(postCollection);
 
         let filterResult = postKeys.reduce( ( accum, current ) => {
-<<<<<<< HEAD
             let postTitle = postCollection[current].title.toLowerCase();
-=======
-            console.log(current);
-            let postTitle = postCollection[current].title.toLowerCase();
-            
->>>>>>> bda2fa496842f44b123fd16208b9df67f8559f74
             return postTitle.includes(searchValue.toLowerCase()) ? {...accum, [current]:postCollection[current]} : accum;
         }, {} );
 
